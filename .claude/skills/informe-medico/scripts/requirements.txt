@@ -1,0 +1,6 @@
+opencv-python-headless
+numpy
+pillow
+python-docx
+pypdf
+# pillow-heif   # solo si las fotos llegan en .heic

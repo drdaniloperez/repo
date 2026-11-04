@@ -27,6 +27,18 @@ Si no aparece, búscala (`ls /Volumes`, `ls "/Volumes/Rodolfo SSD"`) y confirma 
    - Medidas que siempre reporta y en qué orden; valores de referencia que él cita.
    - Cómo redacta la conclusión/impresión diagnóstica y las recomendaciones.
    - 1–2 ejemplos completos **anonimizados**.
+   **Imágenes de los ecos** (el extractor con `--con-imagenes` guarda las imágenes de cada .docx en
+   `~/informes-extraidos/imagenes/`): estudia en 15–20 informes de eco de distintos tipos y escribe
+   `formatos/eco-imagenes.md` con:
+   - Cómo están recortadas: pantalla completa o solo la imagen, proporción (4:3, 16:9…) y resolución
+     → valor de `--aspecto` y `--margen` para `recortar_pantalla.py`.
+   - Cuántas imágenes por informe, en qué orden por tipo de estudio, si llevan pie/rótulo.
+   - Maquetación: columnas, ancho en cm, si van al final, en página aparte o intercaladas
+     (mira `word/document.xml` de 2–3 ejemplos: tablas, `wp:extent`, saltos de página).
+   - Membrete/encabezado/pie: si todos usan el mismo, guarda un `.docx` de membrete **vacío, sin
+     datos de pacientes**, en `formatos/membrete.docx` para `armar_informe_docx.py --plantilla`.
+   Comprueba el recorte: pasa 3–5 fotos de prueba de Danilo por `recortar_pantalla.py` y compáralas
+   con sus imágenes ya recortadas.
 4. **Anonimizar SIEMPRE** antes de escribir en el repo: nombres, cédulas, fechas de nacimiento,
    teléfonos, direcciones, n.º de historia, nombres de otros médicos o pacientes → `[NOMBRE]`,
    `[CI]`, `[EDAD]`, `[FECHA]`, etc. Revisa con `grep` que no quede ningún dato real. Los textos

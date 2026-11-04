@@ -7,7 +7,8 @@ Uso (en el equipo donde está conectado el disco):
 
 Escribe en --salida (por defecto ~/informes-extraidos, FUERA del repo, porque contiene datos de pacientes):
     textos/<ruta-relativa>.txt   texto plano de cada archivo
-    inventario.csv               archivo, extensión, tamaño, tipo sugerido, primera línea, n.º de caracteres
+    imagenes/<ruta-relativa>/    imágenes incrustadas en cada .docx (solo con --con-imagenes)
+    inventario.csv               archivo, extensión, tamaño, tipo sugerido, primera línea, caracteres, n.º de imágenes
 
 Formatos: .docx .docm .dotx (sin dependencias), .pdf (pypdf o pdftotext), .doc .rtf .odt .pages
 (textutil en macOS, o antiword / LibreOffice si están instalados), .txt.
@@ -95,6 +96,19 @@ def extraer(ruta: Path) -> str:
     return texto_otro(ruta)
 
 
+def imagenes_docx(ruta: Path, destino: Path | None) -> int:
+    """Cuenta (y opcionalmente guarda) las imágenes incrustadas de un .docx."""
+    if ruta.suffix.lower() not in {".docx", ".docm", ".dotx"}:
+        return 0
+    with zipfile.ZipFile(ruta) as z:
+        medios = [n for n in z.namelist() if n.startswith("word/media/")]
+        if destino and medios:
+            destino.mkdir(parents=True, exist_ok=True)
+            for n in medios:
+                (destino / Path(n).name).write_bytes(z.read(n))
+    return len(medios)
+
+
 def clasificar(texto: str, nombre: str) -> str:
     muestra = (nombre + "\n" + texto[:3000]).lower()
     for tipo, patron in TIPOS:
@@ -107,6 +121,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("origen", type=Path, help="Carpeta con los informes de ejemplo")
     ap.add_argument("--salida", type=Path, default=Path.home() / "informes-extraidos")
+    ap.add_argument("--con-imagenes", action="store_true", help="Guarda también las imágenes incrustadas de los .docx")
     args = ap.parse_args()
 
     if not args.origen.is_dir():
@@ -123,17 +138,18 @@ def main() -> None:
             destino = textos / rel.with_suffix(rel.suffix + ".txt")
             destino.parent.mkdir(parents=True, exist_ok=True)
             destino.write_text(texto, encoding="utf-8")
+            n_img = imagenes_docx(ruta, args.salida / "imagenes" / rel if args.con_imagenes else None)
             primera = next((l.strip() for l in texto.splitlines() if l.strip()), "")
-            filas.append([str(rel), ruta.suffix.lower(), ruta.stat().st_size, clasificar(texto, ruta.name), primera[:120], len(texto)])
+            filas.append([str(rel), ruta.suffix.lower(), ruta.stat().st_size, clasificar(texto, ruta.name), primera[:120], len(texto), n_img])
         except Exception as e:  # noqa: BLE001 — seguimos con el resto
             errores += 1
-            filas.append([str(rel), ruta.suffix.lower(), ruta.stat().st_size, "ERROR", str(e)[:120], 0])
+            filas.append([str(rel), ruta.suffix.lower(), ruta.stat().st_size, "ERROR", str(e)[:120], 0, 0])
         if i % 100 == 0:
             print(f"  {i}/{len(archivos)}…")
 
     with open(args.salida / "inventario.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["archivo", "extension", "bytes", "tipo_sugerido", "primera_linea", "caracteres"])
+        w.writerow(["archivo", "extension", "bytes", "tipo_sugerido", "primera_linea", "caracteres", "imagenes"])
         w.writerows(filas)
 
     conteo = {}

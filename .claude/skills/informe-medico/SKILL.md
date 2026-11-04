@@ -1,6 +1,6 @@
 ---
 name: informe-medico
-description: Redacta documentos médicos de Danilo (informes médicos, ecosonogramas, informes de hospitalización, extensión de hospitalización, procedimientos quirúrgicos, constancias, referencias, récipes) copiando SU formato y estilo, a partir de los datos positivos que él dicte, y le pregunta lo que falta (medidas, hallazgos, procedimientos, diagnósticos omitidos). Úsala cuando pida "hazme un informe", "redacta un eco", "informe de hospitalización", "extensión", "informe operatorio", o dicte datos de un paciente. También para "aprende mis formatos" / analizar sus ejemplos del disco Rodolfo SSD.
+description: Redacta documentos médicos de Danilo (informes médicos, ecosonogramas, informes de hospitalización, extensión de hospitalización, procedimientos quirúrgicos, constancias, referencias, récipes) copiando SU formato y estilo, a partir de los datos positivos que él dicte, y le pregunta lo que falta (medidas, hallazgos, procedimientos, diagnósticos omitidos). Si envía fotos de la pantalla del ecosonógrafo, las recorta a la medida exacta de la pantalla, las ordena, extrae las medidas y arma el informe con las imágenes. Úsala cuando pida "hazme un informe", "redacta un eco", "informe de hospitalización", "extensión", "informe operatorio", dicte datos de un paciente o mande fotos de un eco. También para "aprende mis formatos" / analizar sus ejemplos del disco Rodolfo SSD.
 ---
 
 # Informe médico
@@ -26,6 +26,11 @@ Deduce el tipo por lo dictado; pregunta solo si es ambiguo.
 | Informe de hospitalización y de extensión de hospitalización | `tipos/hospitalizacion.md` |
 | Informe de procedimiento quirúrgico / operatorio | `tipos/procedimiento-quirurgico.md` |
 | Otro (constancia, récipe, reposo, carta) | El formato aprendido más parecido; si no hay, uno sobrio con los mismos datos de identificación y firma |
+
+## 1b. Si envía fotos de la pantalla del ecosonógrafo
+Sigue `imagenes-eco.md` de forma automática, sin esperar a que lo pida: recortar cada foto a la
+medida exacta de la pantalla, verificar cada recorte, identificar y ordenar las imágenes, extraer las
+medidas en pantalla y, con los datos del paciente, redactar el informe y armar el Word con las imágenes.
 
 ## 2. Extraer lo dictado
 Ordena lo que Danilo dijo en: identificación del paciente, motivo/indicación, hallazgos positivos,
