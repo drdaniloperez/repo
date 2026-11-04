@@ -13,8 +13,12 @@ Vive en GitHub para que cualquier sesión (nube, escritorio, móvil, terminal) t
 
 - **Todo lo nuevo se guarda aquí.** Cuando cree una skill, un agente, un comando o un dato a recordar,
   va dentro de este repo (ver estructura abajo), nunca solo en `~/.claude` local.
-- **Persistir = commit + push.** Las sesiones en la nube son efímeras: tras crear o cambiar algo del
-  cerebro, haz commit con un mensaje claro y `git push` a la rama de trabajo. Si no se sube, se pierde.
+- **Persistir = commit + push a la rama principal.** La rama principal del cerebro es
+  `claude/zealous-cray-ira4xc` (no existe `main`). Las sesiones en la nube son efímeras: tras crear o
+  cambiar algo del cerebro, haz commit con un mensaje claro y súbelo a la rama principal. Si la sesión
+  trabaja en otra rama, haz además `git fetch origin claude/zealous-cray-ira4xc`, integra (rebase) y
+  `git push origin HEAD:claude/zealous-cray-ira4xc`. Tengo autorizado ese push. Lo que no llega a la
+  rama principal se pierde en la próxima sesión.
 - **"Recuerda que…"** → usa la skill `recordar` para guardarlo en `memoria/`.
 - **"Crea una skill / agente…"** → usa la skill `crear-herramienta`.
 - Idioma por defecto: español.

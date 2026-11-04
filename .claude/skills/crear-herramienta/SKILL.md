@@ -36,5 +36,5 @@ Edita `.claude/settings.json` (JSON válido; fusiona, no sobrescribas).
 
 ## Al terminar
 1. Añade una línea en la tabla "Herramientas" de `README.md`.
-2. Commit (`skill: <nombre>` / `agente: <nombre>` / `config: …`) y `git push` a la rama actual.
+2. Commit (`skill: <nombre>` / `agente: <nombre>` / `config: …`) y súbelo a la rama principal `claude/zealous-cray-ira4xc` (ver reglas en `CLAUDE.md`).
 3. Recuerda al usuario: en una sesión nueva ya estará disponible; en local, `git pull` en su clon.

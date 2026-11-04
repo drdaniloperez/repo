@@ -9,8 +9,8 @@ disponible desde cualquier dispositivo y en las sesiones en la nube.
   `CLAUDE.md` (que importa `memoria/`), las skills de `.claude/skills/` y los agentes de `.claude/agents/`.
 - **Equipo local:** clona el repo y ejecuta `./scripts/instalar-local.sh` para que todo esté
   disponible en cualquier proyecto. Sincroniza con `git pull`.
-- **Lo que crees se guarda aquí:** Claude hace commit + push de cada cambio para que no se pierda
-  cuando la sesión en la nube termina.
+- **Lo que crees se guarda aquí:** Claude hace commit + push de cada cambio a la rama principal
+  `claude/zealous-cray-ira4xc` para que no se pierda cuando la sesión en la nube termina.
 
 ## Uso rápido
 

@@ -13,5 +13,5 @@ description: Guarda un dato, preferencia o aprendizaje en la memoria permanente 
      "Memoria" de `CLAUDE.md`.
 2. Si el dato contradice algo existente, actualiza la entrada en lugar de duplicarla.
 3. Nunca guardes contraseñas, tokens ni claves: este repo se sincroniza con GitHub.
-4. Haz commit (`memoria: <resumen>`) y `git push` a la rama actual.
+4. Haz commit (`memoria: <resumen>`) y súbelo a la rama principal `claude/zealous-cray-ira4xc` (ver reglas en `CLAUDE.md`).
 5. Confirma al usuario en una línea qué guardaste y dónde.
