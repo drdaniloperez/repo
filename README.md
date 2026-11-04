@@ -18,6 +18,7 @@ disponible desde cualquier dispositivo y en las sesiones en la nube.
 |---|---|
 | Que recuerde algo | "Recuerda que…" (skill `recordar`) |
 | Crear una skill o agente | "Crea una skill que…" (skill `crear-herramienta`) |
+| Un informe médico / eco / hospitalización / operatorio | Dicta los datos positivos (skill `informe-medico`) |
 
 ## Herramientas
 
@@ -25,6 +26,7 @@ disponible desde cualquier dispositivo y en las sesiones en la nube.
 |---|---|---|
 | Skill | `recordar` | Guarda datos en `memoria/` y los sube a GitHub |
 | Skill | `crear-herramienta` | Crea skills, agentes y ajustes dentro del cerebro |
+| Skill | `informe-medico` | Redacta informes médicos, ecos, hospitalización, extensión y operatorios con mi formato; pide lo que falte |
 | Agente | `investigador` | Investiga y devuelve un resumen con evidencia |
 
 ## Estructura
