@@ -53,7 +53,7 @@ def html_mes(año, mes):
                 stats[g]["fs"] += 1
             elif wd == QX:
                 cls += " qx"
-                cuerpo += '<div class="qxbar">QUIRÓFANO ELECTIVO</div>'
+                cuerpo += '<div class="qxbar">QUIRÓFANO<br>ELECTIVO</div>'
             elif wd in CONSULTA:
                 c = CONSULTA[wd]
                 stats[c]["c"] += 1
@@ -72,35 +72,35 @@ def html_mes(año, mes):
 *{{box-sizing:border-box;margin:0;padding:0}}
 body{{font-family:Inter,sans-serif;background:#fff;color:#1d2433;width:1600px;padding:40px 48px}}
 header{{display:flex;align-items:center;gap:32px;padding-bottom:22px;border-bottom:4px solid #D7322B;margin-bottom:22px}}
-header img{{height:72px}}
+header img{{height:86px}}
 .tit{{flex:1}}
-.tit h1{{font-size:30px;font-weight:800;letter-spacing:-.3px}}
-.tit h2{{font-size:18px;font-weight:500;color:#5a6478;margin-top:4px}}
+.tit h1{{font-size:38px;font-weight:800;letter-spacing:-.3px}}
+.tit h2{{font-size:23px;font-weight:500;color:#5a6478;margin-top:4px}}
 .mes{{text-align:right}}
-.mes .m{{font-size:40px;font-weight:800;color:#D7322B;line-height:1;text-transform:uppercase}}
-.mes .y{{font-size:20px;font-weight:600;color:#5a6478}}
+.mes .m{{font-size:54px;font-weight:800;color:#D7322B;line-height:1;text-transform:uppercase}}
+.mes .y{{font-size:26px;font-weight:600;color:#5a6478}}
 .reglas{{display:flex;gap:12px;margin:20px 0 18px;flex-wrap:wrap}}
 .reglas div{{background:#f3f5f9;border-radius:999px;padding:8px 16px;font-size:15px;font-weight:500;color:#39445a}}
 .grid{{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}}
-.hd{{background:#1d2a44;color:#fff;font-weight:700;font-size:16px;text-align:center;padding:11px 0;border-radius:8px}}
+.hd{{background:#1d2a44;color:#fff;font-weight:700;font-size:23px;text-align:center;padding:13px 0;border-radius:8px}}
 .hd.we{{background:#5a6478}}
-.cell{{min-height:132px;border:1px solid #e2e6ee;border-radius:10px;padding:9px 10px;display:flex;flex-direction:column;gap:6px;background:#fff}}
+.cell{{min-height:178px;border:1px solid #d5dae4;border-radius:10px;padding:8px 9px;display:flex;flex-direction:column;gap:7px;background:#fff}}
 .cell.out{{background:#f7f8fa;border-style:dashed}}
 .cell.fs{{background:#f5f6f9}}
 .cell.qx{{background:#fff7f6;border-color:#f3c9c6}}
-.num{{font-size:20px;font-weight:800;color:#1d2433}}
-.chip{{border-radius:7px;padding:6px 9px;font-size:16px;display:flex;justify-content:space-between;align-items:center}}
-.chip .tag{{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;opacity:.8}}
-.qxbar{{background:#D7322B;color:#fff;font-weight:700;font-size:13px;letter-spacing:.5px;text-align:center;border-radius:7px;padding:7px 4px}}
+.num{{font-size:34px;line-height:1.05;font-weight:800;color:#1d2433}}
+.chip{{border-radius:8px;padding:5px 9px;font-size:24px;line-height:1.15;display:flex;flex-direction:column}}
+.chip .tag{{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;opacity:.8}}
+.qxbar{{background:#D7322B;color:#fff;font-weight:800;font-size:18px;line-height:1.2;letter-spacing:.4px;text-align:center;border-radius:8px;padding:9px 4px}}
 .pie{{display:flex;gap:28px;margin-top:24px;align-items:flex-start}}
-table{{border-collapse:collapse;font-size:16px;flex:1.4}}
-th{{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:#5a6478;padding:8px 12px;border-bottom:2px solid #1d2a44}}
-td{{padding:9px 12px;border-bottom:1px solid #e2e6ee;font-weight:500}}
+table{{border-collapse:collapse;font-size:23px;flex:1.4}}
+th{{text-align:left;font-size:16px;text-transform:uppercase;letter-spacing:.6px;color:#5a6478;padding:8px 12px;border-bottom:2px solid #1d2a44}}
+td{{padding:11px 12px;border-bottom:1px solid #e2e6ee;font-weight:500}}
 td:nth-child(n+3),th:nth-child(n+3){{text-align:center}}
-.dot{{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:10px;vertical-align:-1px}}
+.dot{{display:inline-block;width:16px;height:16px;border-radius:50%;margin-right:10px;vertical-align:-1px}}
 .nota{{flex:1;background:#f3f5f9;border-radius:12px;padding:16px 20px;font-size:14.5px;line-height:1.6;color:#39445a}}
 .nota b{{color:#1d2433}}
-footer{{margin-top:18px;font-size:12.5px;color:#8a93a6;text-align:right}}
+footer{{margin-top:18px;font-size:16px;color:#8a93a6;text-align:right}}
 </style></head><body>
 <header><img src="data:image/png;base64,{logo64}" alt="PDVSA">
 <div class="tit"><h1>Hospital Jesús Farías · Cirugía Pediátrica</h1>
