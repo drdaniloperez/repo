@@ -349,6 +349,16 @@ def detectar(img, preferir="exterior"):
         bordes = cv2.Canny(gris, 20, 60)
         mejor = max(buenos, key=lambda b: (0.6 * exterior_uniforme(gris, bordes, b[1], escala)[0]
                                            + 0.25 * min(1, b[3] / area / 0.5) + 0.15 * b[0]))
+        # si dentro hay otro contorno separado por una franja lisa (marco del monitor), la pantalla es el interior
+        for _ in range(3):
+            ext_mejor = exterior_uniforme(gris, bordes, mejor[1], escala)[0]
+            internos = [b for b in buenos if 0.4 < b[3] / mejor[3] < 0.985 and contenido(mejor[1], b[1])
+                        and exterior_uniforme(gris, bordes, b[1], escala)[0] >= 0.9
+                        and (exterior_uniforme(gris, bordes, b[1], escala)[0] > ext_mejor + 0.05
+                             or franja_uniforme(gris, bordes, mejor[1], b[1], escala))]
+            if not internos:
+                break
+            mejor = max(internos, key=lambda b: b[3])
         p, q, metodo, _ = mejor
         return p, refinar(img, q), metodo
     if preferir == "pantalla":
