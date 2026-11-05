@@ -10,7 +10,7 @@ Uso:
 --manifiesto  JSON: [{"ruta": "01_x.jpg", "pie": "Hígado - corte longitudinal"}, ...]  (o usa --imagenes a.jpg b.jpg …)
 --plantilla   .docx con el membrete/encabezado/pie de página de Danilo (SIN datos de pacientes); se conserva su
               encabezado, pie, márgenes y estilos, y se reemplaza el cuerpo.
---centro      colinas | san-jose | pdvsa → membrete con el LOGO de esa institución (formatos/logos/) y la tabla
+--centro      colinas | san-jose | pdvsa | razetti → membrete con el LOGO de esa institución (formatos/logos/) y la tabla
               Px | Ci | Edad | Fecha (--px --ci --edad --fecha) como en los informes de Danilo; --titulo es el título.
 --firma       imagen de firma/sello (solo local; nunca se guarda en el repo), se coloca antes del bloque de firma
               (la línea que empieza por "Dr.").
@@ -90,11 +90,11 @@ def membrete(doc, centro, titulo, px, ci, edad, fecha):
         sec.left_margin = sec.right_margin = Cm(2.54)
         sec.top_margin, sec.bottom_margin = Cm(1.5), Cm(1.5)
     doc.styles["Normal"].font.name = "Calibri"  # fuente de sus informes
-    if info["posicion"] == "arriba-izquierda" and centro == "colinas":
+    if info.get("titulo_al_lado"):
         t = doc.add_table(rows=1, cols=2)
         borde_tabla(t, False)
         t.cell(0, 0).paragraphs[0].add_run().add_picture(str(logo), **tam)
-        anchos_columnas(t, (5.5, 11.0))
+        anchos_columnas(t, (info["ancho_cm"] + 0.7, 16.5 - info["ancho_cm"] - 0.7))
         p = t.cell(0, 1).paragraphs[0]
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         agregar_runs(p, f"**{titulo}**")
@@ -171,7 +171,7 @@ def main():
     ap.add_argument("--imagenes-en", choices=["final", "pagina-nueva"], default="final")
     ap.add_argument("--pies", action="store_true", help="Muestra el pie (órgano/corte) bajo cada imagen")
     ap.add_argument("--salida", required=True)
-    ap.add_argument("--centro", choices=["colinas", "san-jose", "pdvsa"])
+    ap.add_argument("--centro", choices=["colinas", "san-jose", "pdvsa", "razetti"])
     ap.add_argument("--titulo", default="INFORME ECOGRÁFICO")
     ap.add_argument("--px", default="")
     ap.add_argument("--ci", default="")

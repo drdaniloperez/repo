@@ -11,7 +11,8 @@
   "texto_en_pantalla_eco": [
    "CENTRO DE ESPECIALIDADES M"
   ],
-  "alto_cm": 2.3
+  "alto_cm": 2.3,
+  "titulo_al_lado": true
  },
  "pdvsa": {
   "nombre": "Hospital Jesús Farías (PDVSA)",
@@ -42,5 +43,19 @@
    "POLICLINICA SAN JOSE"
   ],
   "alto_cm": 1.4
+ },
+ "razetti": {
+  "nombre": "Hospital Universitario Dr. Luis Razetti (Barcelona, Anzoátegui) — Servicio de Cirugía Pediátrica",
+  "archivo": "hulr-luis-razetti.png",
+  "md5_en_docx": [
+   "8f9a5458354c4a7f195738a58a8c5ecb"
+  ],
+  "ancho_cm": 2.6,
+  "alto_cm": 2.6,
+  "posicion": "arriba-izquierda",
+  "titulo_al_lado": true,
+  "titulo": "a la derecha del logo, centrado, negrita (PROVISIONAL: confirmar con un informe real)",
+  "texto_en_pantalla_eco": [],
+  "nota": "Logo enviado por Danilo (se borró el ícono de búsqueda superpuesto). Sin informes de ejemplo aún."
  }
 }

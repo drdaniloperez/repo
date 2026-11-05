@@ -9,7 +9,7 @@ así quedan idénticos el logo, la tabla, las fuentes, la firma/sello y el bloqu
 | **Centro de Especialidades Médicas Colina** (archivos "COLINA…/colinas…") | Logo COLINA arriba a la izquierda; título a su derecha | Tabla de 1 fila × 4 (Px, Ci, Edad, Fecha) con borde. Texto con etiqueta en negrita. Firma+sello como imagen sobre el nombre. Equipo Mindray (portátil). |
 | **Policlínica San José** | Logo SAN JOSÉ centrado arriba; título centrado debajo | Misma tabla. Todo el texto en negrita. |
 | **Hospital Jesús Farías (PDVSA)** — donde trabaja; pocos ecos allí | Logo PDVSA arriba a la izquierda; título centrado | Misma tabla. Todo el texto en negrita. Equipo Mindray de carro. |
-| **Hospital Universitario Dr. Luis Razetti** (Barcelona, Anzoátegui) — servicio de Cirugía Pediátrica | ⚠ Pendiente: aún no hay logo ni informes de ejemplo | Pedir a Danilo el logo y 2–3 informes de ese hospital antes del primer documento. |
+| **Hospital Universitario Dr. Luis Razetti** (Barcelona, Anzoátegui) — servicio de Cirugía Pediátrica | Escudo H.U.L.R. (logo ya guardado) | ⚠ Diseño PROVISIONAL (logo 2.6 cm a la izquierda, título al lado): aún no hay informes de ejemplo; pedirlos y ajustar. |
 
 Bloque de firma (texto, centrado y en negrita, debajo de la imagen de firma y sello): nombre,
 "CIRUJANO PEDIATRA-ECOGRAFISTA", registros MPPS/CMA y RIF. Se copia del modelo; no se reescribe.
@@ -21,6 +21,7 @@ Guardados en `formatos/logos/` (son públicos; la firma y el sello NO se guardan
 | `colinas.png` | COLINA — Centro de Especialidades Médicas | 4.8 × 2.3 cm, arriba a la izquierda, título a la derecha |
 | `pdvsa-jesus-farias.png` | Hospital Jesús Farías (PDVSA) — logo oficial que envió Danilo, alta resolución | 6.0 × 1.7 cm, arriba a la izquierda, título centrado debajo |
 | `san-jose.png` | Policlínica San José | 8.9 × 1.4 cm, centrado, título centrado debajo |
+| `hulr-luis-razetti.png` | Hospital Universitario Dr. Luis Razetti | 2.6 × 2.6 cm, arriba a la izquierda, título a la derecha (provisional) |
 
 `logos.json` guarda además la huella (md5) del logo tal como está dentro de sus .docx:
 - `informe_desde_modelo.py` reconoce la institución del modelo por su logo y **se detiene si no es la

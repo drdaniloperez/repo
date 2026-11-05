@@ -5,7 +5,7 @@ Conserva del modelo: logo/membrete, título, tabla de identificación, márgenes
 firma/sello (imágenes pequeñas) y bloque de firma. Reemplaza: datos del paciente, hallazgos, conclusión e imágenes.
 
 Uso:
-  python3 informe_desde_modelo.py --modelo "<informe anterior>.docx" --datos datos.json --salida "<nuevo>.docx" [--centro colinas|san-jose|pdvsa]
+  python3 informe_desde_modelo.py --modelo "<informe anterior>.docx" --datos datos.json --salida "<nuevo>.docx" [--centro colinas|san-jose|pdvsa|razetti]
 
 La institución del modelo se reconoce por su LOGO (formatos/logos/logos.json). Si se indica --centro (o "centro" en
 datos.json) y el modelo es de otra institución, se detiene: el logo y el membrete deben ser los de la institución
@@ -169,7 +169,7 @@ def main():
     ap.add_argument("--modelo", required=True)
     ap.add_argument("--datos", required=True)
     ap.add_argument("--salida", required=True)
-    ap.add_argument("--centro", choices=["colinas", "san-jose", "pdvsa"])
+    ap.add_argument("--centro", choices=["colinas", "san-jose", "pdvsa", "razetti"])
     a = ap.parse_args()
     datos = json.loads(Path(a.datos).read_text(encoding="utf-8"))
     base_dir = Path(a.datos).parent
