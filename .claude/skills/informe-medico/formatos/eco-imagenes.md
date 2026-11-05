@@ -8,11 +8,14 @@ Fotos verticales del teléfono (3000×4000) a la pantalla del ecógrafo. La pant
 teclado. En Word Danilo recorta solo arriba y abajo. Ahora se recorta con
 `scripts/recortar_pantalla.py`: corrige la perspectiva y deja únicamente la pantalla.
 Equipos vistos: Mindray portátil (C. E. M. Colina, pantalla oscura, recuadro de medidas abajo a la
-derecha "1 Distancia 5.06 cm"), Mindray de carro (Hospital Jesús Farías – PDVSA, "Dist 5.97 cm"), equipo con barra azul
-superior y "P12Exp" (San José, medidas arriba a la derecha "1 D: 25.21 mm").
+derecha "1 Distancia 5.06 cm"), Mindray de carro (Hospital Jesús Farías – PDVSA, "Dist 5.97 cm"), MediSono P12Exp
+(Policlínica San José: marco blanco, interfaz azul, encabezado "POLICLINICA SAN JOSE" junto al logo MediSono,
+medidas arriba a la derecha "1 D: 25.21 mm"; transductores L742 lineal, 2P1 sectorial, C344 convex).
 - Rendimiento en 57 fotos reales: ~80 % de recortes correctos automáticamente. El resto queda con
   una franja de marco/pared y se corrige con `--esquinas` mirando la vista previa con cuadrícula.
   Verificar SIEMPRE cada recorte.
+- Fotos del equipo completo (pantalla pequeña en la foto): el recorte automático falla; usar
+  `--esquinas`. Para los informes conviene fotografiar la pantalla de cerca, llenando la foto.
 - Atención a las unidades: el equipo de San José mide en **mm** → convertir a cm para el informe.
 
 ## Cantidad y orden

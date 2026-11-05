@@ -30,7 +30,7 @@ Guardados en `formatos/logos/` (son públicos; la firma y el sello NO se guardan
 
 **Cómo saber la institución del estudio:** lo dice Danilo; si no, se deduce del encabezado de la
 pantalla del ecógrafo en las fotos ("CENTRO DE ESPECIALIDADES M…" = Colina, "CENTRO CLINICO PDVSA
-ORIENTE" = Hospital Jesús Farías (PDVSA), "POLICLINICA SAN JOSE" = San José) y **se confirma con él antes de generar**.
+ORIENTE" = Hospital Jesús Farías (PDVSA), "POLICLINICA SAN JOSE" = San José, verificado en foto del equipo MediSono P12Exp) y **se confirma con él antes de generar**.
 Hay dos versiones de su imagen de firma y sello; en partes blandas usa la segunda (la da el modelo).
 
 ## Dónde están los modelos

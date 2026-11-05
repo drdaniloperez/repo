@@ -42,7 +42,8 @@
   "texto_en_pantalla_eco": [
    "POLICLINICA SAN JOSE"
   ],
-  "alto_cm": 1.4
+  "alto_cm": 1.4,
+  "equipo": "MediSono P12Exp (carro, marco blanco). Logo MediSono arriba a la izquierda, fecha dd/mm/aaaa hh:mm:ss AM/PM arriba a la derecha. Transductores: L742 lineal 15.0-4.0 MHz, 2P1 sectorial, C344 convex."
  },
  "razetti": {
   "nombre": "Hospital Universitario Dr. Luis Razetti (Barcelona, Anzoátegui) — Servicio de Cirugía Pediátrica",
