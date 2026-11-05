@@ -1,6 +1,6 @@
 # Formato: Informe ecográfico PIEL Y PARTES BLANDAS
 
-Aprendido de 8 informes reales (Clínica Colinas). 1–2 imágenes.
+Aprendido de 8 informes reales (Centro de Especialidades Médicas Colina). 1–2 imágenes.
 
 ## Estructura
 ```

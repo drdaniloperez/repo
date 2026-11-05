@@ -1,6 +1,6 @@
 # Formato: Informe ecográfico PROSTATICO
 
-Aprendido de 11 informes reales (Clínica Colinas). Membrete compacto (márgenes superiores pequeños);
+Aprendido de 11 informes reales (Centro de Especialidades Médicas Colina). Membrete compacto (márgenes superiores pequeños);
 la firma va inmediatamente después de la conclusión y **las 2 imágenes van en la misma página**,
 debajo del bloque de firma.
 

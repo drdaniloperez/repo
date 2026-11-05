@@ -5,4 +5,8 @@
 - Idioma preferido: español
 - Profesión: médico especialista en **Cirugía Pediátrica** y **ecografista integral** (actualmente).
   Firma sus informes como "CIRUJANO PEDIATRA-ECOGRAFISTA".
-- Trabaja en el Hospital Jesús Farías (PDVSA) y hace ecografías en Clínica Colinas y Policlínica San José.
+- Lugares de trabajo:
+  - Hospital Universitario Dr. Luis Razetti, Barcelona, estado Anzoátegui — servicio de Cirugía Pediátrica.
+  - Hospital Jesús Farías (PDVSA) — cirugía pediátrica; ecografías ocasionales.
+  - Centro de Especialidades Médicas Colina — ecografías.
+  - Policlínica San José — ecografías.

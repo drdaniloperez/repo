@@ -1,14 +1,15 @@
 # Centros y membretes
 
-Danilo informa en tres centros; cada uno tiene su membrete. **El documento final se arma con
+Danilo trabaja en cuatro instituciones; cada una tiene su membrete. **El documento final se arma con
 `scripts/informe_desde_modelo.py` usando como modelo un informe anterior suyo del mismo centro y tipo**:
 así quedan idénticos el logo, la tabla, las fuentes, la firma/sello y el bloque de firma.
 
 | Centro | Cómo se reconoce | Diseño |
 |---|---|---|
-| **Clínica Colinas** (archivos "COLINA…/colinas…") | Logo COLINA arriba a la izquierda; título a su derecha | Tabla de 1 fila × 4 (Px, Ci, Edad, Fecha) con borde. Texto con etiqueta en negrita. Firma+sello como imagen sobre el nombre. Equipo Mindray (portátil). |
+| **Centro de Especialidades Médicas Colina** (archivos "COLINA…/colinas…") | Logo COLINA arriba a la izquierda; título a su derecha | Tabla de 1 fila × 4 (Px, Ci, Edad, Fecha) con borde. Texto con etiqueta en negrita. Firma+sello como imagen sobre el nombre. Equipo Mindray (portátil). |
 | **Policlínica San José** | Logo SAN JOSÉ centrado arriba; título centrado debajo | Misma tabla. Todo el texto en negrita. |
 | **Hospital Jesús Farías (PDVSA)** — donde trabaja; pocos ecos allí | Logo PDVSA arriba a la izquierda; título centrado | Misma tabla. Todo el texto en negrita. Equipo Mindray de carro. |
+| **Hospital Universitario Dr. Luis Razetti** (Barcelona, Anzoátegui) — servicio de Cirugía Pediátrica | ⚠ Pendiente: aún no hay logo ni informes de ejemplo | Pedir a Danilo el logo y 2–3 informes de ese hospital antes del primer documento. |
 
 Bloque de firma (texto, centrado y en negrita, debajo de la imagen de firma y sello): nombre,
 "CIRUJANO PEDIATRA-ECOGRAFISTA", registros MPPS/CMA y RIF. Se copia del modelo; no se reescribe.
@@ -27,7 +28,7 @@ Guardados en `formatos/logos/` (son públicos; la firma y el sello NO se guardan
 - `armar_informe_docx.py --centro <x>` arma el membrete con el logo correcto cuando no hay modelo.
 
 **Cómo saber la institución del estudio:** lo dice Danilo; si no, se deduce del encabezado de la
-pantalla del ecógrafo en las fotos ("CENTRO DE ESPECIALIDADES M…" = Colinas, "CENTRO CLINICO PDVSA
+pantalla del ecógrafo en las fotos ("CENTRO DE ESPECIALIDADES M…" = Colina, "CENTRO CLINICO PDVSA
 ORIENTE" = Hospital Jesús Farías (PDVSA), "POLICLINICA SAN JOSE" = San José) y **se confirma con él antes de generar**.
 Hay dos versiones de su imagen de firma y sello; en partes blandas usa la segunda (la da el modelo).
 
