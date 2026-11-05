@@ -1,0 +1,18 @@
+{
+  "logo": "../../informe-medico/formatos/logos/pdvsa-jesus-farias.png",
+  "rotacion_guardia": ["Arreaza", "Pérez", "Santana", "Marín"],
+  "ancla": {"fecha": "2026-11-01", "guardia": "Arreaza"},
+  "consulta_fija": {
+    "Pérez": "Lunes",
+    "Marín": "Miércoles",
+    "Santana": "Jueves",
+    "Arreaza": "Viernes"
+  },
+  "dia_quirofano": "Martes",
+  "colores": {
+    "Pérez": ["#DCE8FB", "#1F4E9C"],
+    "Santana": ["#D9F2E3", "#1B6B3E"],
+    "Marín": ["#EAE2F8", "#5B3A9A"],
+    "Arreaza": ["#FDEBD3", "#9A5A10"]
+  }
+}

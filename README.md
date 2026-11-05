@@ -19,6 +19,7 @@ disponible desde cualquier dispositivo y en las sesiones en la nube.
 | Que recuerde algo | "Recuerda que…" (skill `recordar`) |
 | Crear una skill o agente | "Crea una skill que…" (skill `crear-herramienta`) |
 | Un informe médico / eco / hospitalización / operatorio | Dicta los datos positivos y, si es eco, manda las fotos de la pantalla (skill `informe-medico`) |
+| El horario de guardias de PDVSA | "Hazme el horario de diciembre" (skill `horario-cirugia-pediatrica`) |
 
 ## Herramientas
 
@@ -27,6 +28,7 @@ disponible desde cualquier dispositivo y en las sesiones en la nube.
 | Skill | `recordar` | Guarda datos en `memoria/` y los sube a GitHub |
 | Skill | `crear-herramienta` | Crea skills, agentes y ajustes dentro del cerebro |
 | Skill | `informe-medico` | Redacta informes médicos, ecos, hospitalización, extensión y operatorios con mi formato; pide lo que falte; recorta las fotos de la pantalla del eco, extrae medidas y arma el Word |
+| Skill | `horario-cirugia-pediatrica` | Horario mensual (PNG + PDF con logo PDVSA) de guardias, quirófanos y consultas de Cirugía Pediátrica del Hospital Jesús Farías, con rotación continua |
 | Agente | `investigador` | Investiga y devuelve un resumen con evidencia |
 
 ## Estructura
