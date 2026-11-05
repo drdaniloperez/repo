@@ -71,8 +71,11 @@ Reglas:
 
 ## 5. Entregar
 - Por defecto: el documento en texto, listo para copiar y pegar.
-- Si pide Word/PDF: genera `.docx` (skill `anthropic-skills:docx`) o PDF imitando su formato, en el
-  directorio de trabajo o el scratchpad, nunca en el repo.
+- Word: si hay un informe anterior suyo del mismo centro y tipo (ver `formatos/centros.md`), arma el
+  documento con `scripts/informe_desde_modelo.py` (conserva membrete, tabla, firma y formato exactos).
+  Pregunta el centro (Colinas, San José, PDVSA) si no lo dijo. Sin modelo, usa
+  `scripts/armar_informe_docx.py`. Siempre en el directorio de trabajo o el scratchpad, nunca en el repo.
+  Convierte a PDF/imagen (`soffice --headless --convert-to pdf`) y revisa la página antes de entregar.
 - **Privacidad**: los informes con datos de pacientes nunca se guardan ni se suben a este repositorio.
   En el repo solo van plantillas anonimizadas.
 

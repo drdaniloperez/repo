@@ -1,0 +1,32 @@
+# Imágenes en los informes de eco
+
+Aprendido de 38 informes reales.
+
+## Fotos de origen
+Fotos verticales del teléfono (3000×4000) a la pantalla del ecógrafo. La pantalla suele ocupar
+**todo el ancho de la foto y salirse por los lados**; arriba se ve pared/marco y abajo el marco o
+teclado. En Word Danilo recorta solo arriba y abajo. Ahora se recorta con
+`scripts/recortar_pantalla.py`: corrige la perspectiva y deja únicamente la pantalla.
+Equipos vistos: Mindray portátil (Colinas, pantalla oscura, recuadro de medidas abajo a la
+derecha "1 Distancia 5.06 cm"), Mindray de carro (PDVSA, "Dist 5.97 cm"), equipo con barra azul
+superior y "P12Exp" (San José, medidas arriba a la derecha "1 D: 25.21 mm").
+- Rendimiento en 57 fotos reales: ~80 % de recortes correctos automáticamente. El resto queda con
+  una franja de marco/pared y se corrige con `--esquinas` mirando la vista previa con cuadrícula.
+  Verificar SIEMPRE cada recorte.
+- Atención a las unidades: el equipo de San José mide en **mm** → convertir a cm para el informe.
+
+## Cantidad y orden
+| Estudio | Nº de imágenes | Orden |
+|---|---|---|
+| Abdominal | 5–7 | Hígado → Vesícula → Páncreas → Riñón derecho → Riñón izquierdo → Bazo (→ otras) |
+| Abdominopélvico | 6–10 | Igual + Vejiga → Útero/ovarios o Próstata |
+| Abdominal con énfasis renal / renal (pediátrico) | 3–5 | Riñón derecho → Riñón izquierdo → Vejiga (→ hígado/vesícula/bazo) |
+| Prostático | 2 | Transversal → Longitudinal (con volumen) |
+| Piel y partes blandas | 1–2 | La lesión con medidas (→ Doppler/otro corte) |
+
+## Maquetación
+- Van **después del bloque de firma**, en cuadrícula de **2 columnas**, sin pies de foto.
+- Ancho ≈ **8.3 cm** cada una (fotos) / 8.5–9 cm (capturas); alto según proporción.
+- Abdominal: el texto llena la página 1 y las imágenes pasan a la página 2 (3 filas × 2).
+- Prostático: 2 imágenes lado a lado en la misma página que el texto.
+- Con `informe_desde_modelo.py`: `"columnas": 2, "ancho_imagen_cm": 8.3` (prostático: 8.0 para que quepan en la página 1).

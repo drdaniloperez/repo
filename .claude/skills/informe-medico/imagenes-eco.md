@@ -7,7 +7,8 @@ todo de forma automática en cuanto haya datos del paciente.
 
 Scripts (requieren `pip install opencv-python-headless numpy pillow python-docx`; para .heic también `pillow-heif`):
 - `scripts/recortar_pantalla.py` — detección de la pantalla, corrección de perspectiva, vista previa, ampliación de regiones.
-- `scripts/armar_informe_docx.py` — Word con texto + imágenes en cuadrícula.
+- `scripts/informe_desde_modelo.py` — Word idéntico a un informe anterior del centro (membrete, firma) con los datos nuevos.
+- `scripts/armar_informe_docx.py` — Word genérico con texto + imágenes en cuadrícula (si no hay modelo).
 
 Trabaja en el scratchpad (o el directorio de trabajo), **nunca dentro del repo**: son datos de pacientes.
 
@@ -28,7 +29,7 @@ python3 .claude/skills/informe-medico/scripts/recortar_pantalla.py recortar <fot
 Para cada recorte determina órgano/estructura y corte usando, por este orden: el rótulo o
 anotación en pantalla (p. ej. "LIVER", "RT KIDNEY", "TIROIDES LD"), el pictograma/body marker,
 el preset del equipo, la anatomía visible y, por último, la hora de captura (EXIF).
-Ordena según `formatos/eco-imagenes.md`. Si no está aprendido, usa el orden anatómico habitual del estudio:
+Ordena según `formatos/eco-imagenes.md`. Ojo: el equipo de San José mide en mm (convertir a cm). Si no está aprendido, usa el orden anatómico habitual del estudio:
 - Abdominal: hígado (LD, LI) → porta → vesícula → colédoco → páncreas → bazo → riñón derecho →
   riñón izquierdo → aorta/vejiga.
 - Renal: riñón derecho (long./transv.) → riñón izquierdo → vejiga pre → vejiga post → próstata.
@@ -54,7 +55,12 @@ Las imágenes repetidas o desenfocadas de la misma estructura: conserva la mejor
 1. Con los datos del paciente y lo que dictó, sigue el flujo normal de `SKILL.md` (pasos 2–4): las
    medidas extraídas cuentan como datos dictados. Haz la ronda de preguntas incluyendo las medidas ⚠
    y las que faltan.
-2. Escribe el texto en marcado sencillo (`# título`, `## sección`, `**negrita**`, `- viñeta`, y
+2. **Con modelo del centro** (preferido): escribe `datos.json` (ver cabecera de
+   `scripts/informe_desde_modelo.py`: titulo, px, ci, edad, fecha, introduccion, hallazgos [[etiqueta, texto]],
+   conclusion [...], despues_conclusion, imagenes en orden, columnas, ancho_imagen_cm) y ejecuta
+   `python3 .claude/skills/informe-medico/scripts/informe_desde_modelo.py --modelo <informe anterior del centro>.docx --datos datos.json --salida "<nuevo>.docx"`.
+   Revisa el resultado convertido a PDF. Si no hay modelo, sigue con los pasos 2b–4.
+2b. Escribe el texto en marcado sencillo (`# título`, `## sección`, `**negrita**`, `- viñeta`, y
    `[[IMAGENES]]` donde van las imágenes según su formato).
 3. Crea el manifiesto `[{"ruta": "...", "pie": "Hígado - longitudinal"}, …]` en el orden decidido.
 4. Arma el Word:

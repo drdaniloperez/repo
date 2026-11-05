@@ -52,7 +52,7 @@ def texto_docx(ruta: Path) -> str:
         for nombre in nombres:
             if nombre not in z.namelist():
                 continue
-            raiz = ET.fromstring(z.read(nombre))
+            raiz = ET.fromstring(leer_miembro(z, nombre))
             for p in raiz.iter(f"{ns}p"):
                 linea = "".join(((t.text or "") if t.tag == f"{ns}t" else "\t") for t in p.iter() if t.tag in (f"{ns}t", f"{ns}tab"))
                 partes.append(linea)
@@ -96,6 +96,16 @@ def extraer(ruta: Path) -> str:
     return texto_otro(ruta)
 
 
+def leer_miembro(z: zipfile.ZipFile, nombre: str) -> bytes:
+    """Lee un archivo del .docx tolerando CRC dañado (frecuente en imágenes de documentos copiados/subidos)."""
+    try:
+        return z.read(nombre)
+    except zipfile.BadZipFile:
+        with z.open(nombre) as f:
+            f._expected_crc = None  # type: ignore[attr-defined]
+            return f.read()
+
+
 def imagenes_docx(ruta: Path, destino: Path | None) -> int:
     """Cuenta (y opcionalmente guarda) las imágenes incrustadas de un .docx."""
     if ruta.suffix.lower() not in {".docx", ".docm", ".dotx"}:
@@ -105,11 +115,25 @@ def imagenes_docx(ruta: Path, destino: Path | None) -> int:
         if destino and medios:
             destino.mkdir(parents=True, exist_ok=True)
             for n in medios:
-                (destino / Path(n).name).write_bytes(z.read(n))
+                (destino / Path(n).name).write_bytes(leer_miembro(z, n))
     return len(medios)
 
 
+TITULOS_ECO = [("prost", "eco-prostatico"), ("abdominopelv", "eco-abdominopelvico"), ("partes blandas", "eco-partes-blandas"),
+               ("renal", "eco-renal"), ("abdominal", "eco-abdominal"), ("tiroid", "eco-tiroides"), ("mama", "eco-mamario"),
+               ("obst", "eco-obstetrico"), ("pelv", "eco-pelvico"), ("testic", "eco-testicular"), ("doppler", "eco-doppler")]
+
+
 def clasificar(texto: str, nombre: str) -> str:
+    # 1) el título del documento (primeras líneas) manda
+    cabeza = " ".join(l.strip() for l in texto.splitlines()[:6]).lower()
+    if re.search(r"informe\s+ecogr|ecosonograma|ecograf", cabeza):
+        for clave, tipo in TITULOS_ECO:
+            if clave in cabeza:
+                return tipo
+        return "eco-otro"
+    if "pendientes por operar" in cabeza:
+        return "lista-pendientes-quirurgicos"
     muestra = (nombre + "\n" + texto[:3000]).lower()
     for tipo, patron in TIPOS:
         if re.search(patron, muestra):
