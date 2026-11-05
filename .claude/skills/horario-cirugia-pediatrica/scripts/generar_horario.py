@@ -60,7 +60,6 @@ def html_mes(año, mes):
                 cuerpo += chip("Consulta", c)
             celdas.append(f'<div class="{cls}"><div class="num">{d.day}</div>{cuerpo}</div>')
 
-    martes = ", ".join(str(d.day) for s in semanas for d in s if d.month == mes and d.weekday() == QX)
     resumen = "".join(
         f'<tr><td><span class="dot" style="background:{COLOR[n][1]}"></span>Dr(a). {n}</td>'
         f'<td>{CFG["consulta_fija"][n]}</td><td>{s["g"]}</td><td>{s["fs"]}</td><td>{s["c"]}</td></tr>'
@@ -72,7 +71,7 @@ def html_mes(año, mes):
 <title>Cirugía Pediátrica {MESES[mes]} {año}</title><style>
 *{{box-sizing:border-box;margin:0;padding:0}}
 body{{font-family:Inter,sans-serif;background:#fff;color:#1d2433;width:1600px;padding:40px 48px}}
-header{{display:flex;align-items:center;gap:32px;padding-bottom:22px;border-bottom:4px solid #D7322B}}
+header{{display:flex;align-items:center;gap:32px;padding-bottom:22px;border-bottom:4px solid #D7322B;margin-bottom:22px}}
 header img{{height:72px}}
 .tit{{flex:1}}
 .tit h1{{font-size:30px;font-weight:800;letter-spacing:-.3px}}
@@ -107,13 +106,8 @@ footer{{margin-top:18px;font-size:12.5px;color:#8a93a6;text-align:right}}
 <div class="tit"><h1>Hospital Jesús Farías · Cirugía Pediátrica</h1>
 <h2>Programación de guardias, quirófanos y consultas</h2></div>
 <div class="mes"><div class="m">{MESES[mes]}</div><div class="y">{año}</div></div></header>
-<div class="reglas"><div>Guardias rotativas cada {len(ROTACION)} días</div><div>1 consulta fija por semana</div>
-<div>{CFG["dia_quirofano"]}: quirófano electivo · sin consulta</div><div>Sábado y domingo: solo guardia</div></div>
 <div class="grid">{cabecera}{''.join(celdas)}</div>
-<div class="pie"><table><tr><th>Especialista</th><th>Consulta fija</th><th>Guardias</th><th>Fin de semana</th><th>Consultas</th></tr>{resumen}</table>
-<div class="nota"><b>Orden de guardia:</b> {' → '.join(ROTACION)} → (se repite).<br>
-<b>Quirófano electivo:</b> todos los {CFG["dia_quirofano"].lower()} ({martes}).<br>
-<b>Cambios de guardia:</b> notificar al servicio con antelación.</div></div>
+<div class="pie"><table><tr><th>Especialista</th><th>Consulta fija</th><th>Guardias</th><th>Fin de semana</th><th>Consultas</th></tr>{resumen}</table></div>
 <footer>Servicio de Cirugía Pediátrica · Hospital Jesús Farías (PDVSA)</footer>
 </body></html>"""
 
