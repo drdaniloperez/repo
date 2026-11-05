@@ -22,3 +22,17 @@
 - Lateralidad (si aplica) — nunca asumirla.
 - Diagnóstico postoperatorio si los hallazgos lo cambian (p. ej. apendicitis "complicada / perforada").
 - Complicaciones: confirmar "sin complicaciones" antes de escribirlo.
+
+## Contexto: Danilo es cirujano pediatra
+La mayoría de sus pacientes quirúrgicos son niños. Además de lo anterior, pedir:
+- Edad exacta (años y meses; en lactantes, meses o días) y **peso** (dosis, anestesia).
+- Representante / acompañante si su formato lo incluye.
+- Procedimientos frecuentes en su lista de pendientes: herniorrafia umbilical / supraumbilical,
+  herniorrafia inguinal (lado o bilateral, ¿exploración contralateral?), circuncisión / postectomía
+  (fimosis, anillo fimótico), frenectomía lingual (anquiloglosia), orquidopexia (criptorquidia,
+  testículo en ascensor), hidrocelectomía / ligadura de conducto peritoneovaginal, resección de
+  apéndices/fístula preauricular, colecistectomía, apendicectomía.
+- Cuando se hacen **varios procedimientos en el mismo acto** (muy habitual: "hernia umbilical +
+  anquiloglosia + fimosis"), describir la técnica y los hallazgos de cada uno por separado, en orden.
+- Hallazgos típicos a precisar: diámetro del anillo herniario, contenido del saco, estado del
+  testículo (posición, tamaño, consistencia), tipo de fimosis, sangrado estimado.
