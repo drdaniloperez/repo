@@ -13,6 +13,24 @@ así quedan idénticos el logo, la tabla, las fuentes, la firma/sello y el bloqu
 Bloque de firma (texto, centrado y en negrita, debajo de la imagen de firma y sello): nombre,
 "CIRUJANO PEDIATRA-ECOGRAFISTA", registros MPPS/CMA y RIF. Se copia del modelo; no se reescribe.
 
+## Logos (cada institución con el suyo — nunca mezclar)
+Guardados en `formatos/logos/` (son públicos; la firma y el sello NO se guardan aquí):
+| Archivo | Institución | Tamaño y posición en sus informes |
+|---|---|---|
+| `colinas.png` | COLINA — Centro de Especialidades Médicas | 4.8 × 2.3 cm, arriba a la izquierda, título a la derecha |
+| `pdvsa.png` | Centro Clínico PDVSA Oriente | 6.0 × 1.7 cm, arriba a la izquierda, título centrado debajo |
+| `san-jose.png` | Policlínica San José | 8.9 × 1.4 cm, centrado, título centrado debajo |
+
+`logos.json` guarda además la huella (md5) del logo tal como está dentro de sus .docx:
+- `informe_desde_modelo.py` reconoce la institución del modelo por su logo y **se detiene si no es la
+  institución del estudio** (`--centro` o `"centro"` en datos.json).
+- `armar_informe_docx.py --centro <x>` arma el membrete con el logo correcto cuando no hay modelo.
+
+**Cómo saber la institución del estudio:** lo dice Danilo; si no, se deduce del encabezado de la
+pantalla del ecógrafo en las fotos ("CENTRO DE ESPECIALIDADES M…" = Colinas, "CENTRO CLINICO PDVSA
+ORIENTE" = PDVSA, "POLICLINICA SAN JOSE" = San José) y **se confirma con él antes de generar**.
+Hay dos versiones de su imagen de firma y sello; en partes blandas usa la segunda (la da el modelo).
+
 ## Dónde están los modelos
 El repositorio del cerebro es **público**: aquí NO se guardan los modelos `.docx` (llevan la firma, el
 sello y datos de pacientes). Opciones, en orden de preferencia:

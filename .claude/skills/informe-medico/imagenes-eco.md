@@ -25,7 +25,10 @@ python3 .claude/skills/informe-medico/scripts/recortar_pantalla.py recortar <fot
   cuadrícula con coordenadas, estima las 4 esquinas de la pantalla y repite solo esa foto con
   `--esquinas "x1,y1;x2,y2;x3,y3;x4,y4"` (conserva su número). Vuelve a verificar.
 
-## 2. Identificar y ordenar
+## 2. Identificar institución, estructuras y orden
+Lee el encabezado de la pantalla para saber la **institución** (ver `formatos/centros.md`) y confírmala con
+Danilo: de ella dependen el logo y el membrete del informe.
+
 Para cada recorte determina órgano/estructura y corte usando, por este orden: el rótulo o
 anotación en pantalla (p. ej. "LIVER", "RT KIDNEY", "TIROIDES LD"), el pictograma/body marker,
 el preset del equipo, la anatomía visible y, por último, la hora de captura (EXIF).

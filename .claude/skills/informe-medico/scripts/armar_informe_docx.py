@@ -10,6 +10,10 @@ Uso:
 --manifiesto  JSON: [{"ruta": "01_x.jpg", "pie": "Hígado - corte longitudinal"}, ...]  (o usa --imagenes a.jpg b.jpg …)
 --plantilla   .docx con el membrete/encabezado/pie de página de Danilo (SIN datos de pacientes); se conserva su
               encabezado, pie, márgenes y estilos, y se reemplaza el cuerpo.
+--centro      colinas | san-jose | pdvsa → membrete con el LOGO de esa institución (formatos/logos/) y la tabla
+              Px | Ci | Edad | Fecha (--px --ci --edad --fecha) como en los informes de Danilo; --titulo es el título.
+--firma       imagen de firma/sello (solo local; nunca se guarda en el repo), se coloca antes del bloque de firma
+              (la línea que empieza por "Dr.").
 Requiere: pip install python-docx
 """
 import argparse
@@ -36,11 +40,94 @@ def agregar_runs(par, texto, tam=None):
                 r.font.size = Pt(tam)
 
 
-def escribir_texto(doc, lineas):
+LOGOS = Path(__file__).resolve().parent.parent / "formatos" / "logos"
+
+
+def borde_tabla(tabla, visible=True):
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+    tblPr = tabla._tbl.tblPr
+    b = OxmlElement("w:tblBorders")
+    for lado in ("top", "left", "bottom", "right", "insideH", "insideV"):
+        e = OxmlElement(f"w:{lado}")
+        e.set(qn("w:val"), "single" if visible else "nil")
+        if visible:
+            e.set(qn("w:sz"), "8")
+            e.set(qn("w:color"), "000000")
+        b.append(e)
+    look = tblPr.find(qn("w:tblLook"))  # el orden de los hijos de tblPr importa
+    if look is not None:
+        look.addprevious(b)
+    else:
+        tblPr.append(b)
+
+
+def anchos_columnas(tabla, anchos_cm):
+    from docx.oxml.ns import qn
+    for gc, w in zip(tabla._tbl.tblGrid.findall(qn("w:gridCol")), anchos_cm):
+        gc.set(qn("w:w"), str(int(w * 567)))
+    for fila in tabla.rows:
+        for c, w in zip(fila.cells, anchos_cm):
+            c.width = Cm(w)
+
+
+def separador(doc, pt=2):
+    """Párrafo mínimo entre tablas (dos tablas pegadas se fusionan en Word/LibreOffice)."""
+    from docx.shared import Pt
+    p = doc.add_paragraph()
+    p.paragraph_format.space_after = Pt(0)
+    p.paragraph_format.space_before = Pt(0)
+    p.add_run().font.size = Pt(pt)
+    return p
+
+
+def membrete(doc, centro, titulo, px, ci, edad, fecha):
+    info = json.loads((LOGOS / "logos.json").read_text(encoding="utf-8"))[centro]
+    logo = LOGOS / info["archivo"]
+    tam = dict(width=Cm(info["ancho_cm"]), height=Cm(info["alto_cm"])) if info.get("alto_cm") else dict(width=Cm(info["ancho_cm"]))
+    for sec in doc.sections:  # carta, márgenes de sus informes
+        sec.page_width, sec.page_height = Cm(21.59), Cm(27.94)
+        sec.left_margin = sec.right_margin = Cm(2.54)
+        sec.top_margin, sec.bottom_margin = Cm(1.5), Cm(1.5)
+    doc.styles["Normal"].font.name = "Calibri"  # fuente de sus informes
+    if info["posicion"] == "arriba-izquierda" and centro == "colinas":
+        t = doc.add_table(rows=1, cols=2)
+        borde_tabla(t, False)
+        t.cell(0, 0).paragraphs[0].add_run().add_picture(str(logo), **tam)
+        anchos_columnas(t, (5.5, 11.0))
+        p = t.cell(0, 1).paragraphs[0]
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        agregar_runs(p, f"**{titulo}**")
+        from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
+        t.cell(0, 1).vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+    else:
+        p = doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER if info["posicion"] == "centrado" else WD_ALIGN_PARAGRAPH.LEFT
+        p.add_run().add_picture(str(logo), **tam)
+        p = doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        agregar_runs(p, f"**{titulo}**")
+    separador(doc)
+    t = doc.add_table(rows=1, cols=4)
+    borde_tabla(t, True)
+    t.autofit = False
+    anchos_columnas(t, (6.2, 3.2, 3.1, 4.0))
+    for c, (et, v) in zip(t.rows[0].cells, (("Px:", px), ("Ci:", ci), ("Edad:", edad), ("Fecha:", fecha))):
+        agregar_runs(c.paragraphs[0], f"**{et} {v}**")
+    doc.add_paragraph()
+    return info
+
+
+def escribir_texto(doc, lineas, firma=None):
     for linea in lineas:
         s = linea.rstrip()
         if not s.strip():
             continue
+        if firma and re.match(r"\s*Dr\.?\s", s):
+            p = doc.add_paragraph()
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.add_run().add_picture(str(firma), width=Cm(5.3))
+            firma = None
         if s.startswith("# "):
             p = doc.add_paragraph()
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -84,6 +171,13 @@ def main():
     ap.add_argument("--imagenes-en", choices=["final", "pagina-nueva"], default="final")
     ap.add_argument("--pies", action="store_true", help="Muestra el pie (órgano/corte) bajo cada imagen")
     ap.add_argument("--salida", required=True)
+    ap.add_argument("--centro", choices=["colinas", "san-jose", "pdvsa"])
+    ap.add_argument("--titulo", default="INFORME ECOGRÁFICO")
+    ap.add_argument("--px", default="")
+    ap.add_argument("--ci", default="")
+    ap.add_argument("--edad", default="")
+    ap.add_argument("--fecha", default="")
+    ap.add_argument("--firma")
     a = ap.parse_args()
 
     imagenes = json.loads(Path(a.manifiesto).read_text()) if a.manifiesto else [{"ruta": r} for r in a.imagenes]
@@ -118,12 +212,15 @@ def main():
         antes, despues = lineas[:k], lineas[k + 1:]
     else:
         antes, despues = lineas, []
-    escribir_texto(doc, antes)
+    if a.centro:
+        info = membrete(doc, a.centro, a.titulo, a.px, a.ci, a.edad, a.fecha)
+        print(f"Membrete: {info['nombre']}")
+    escribir_texto(doc, antes, a.firma)
     if imagenes:
         if a.imagenes_en == "pagina-nueva":
             doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
         escribir_imagenes(doc, imagenes, a.columnas, ancho, a.pies)
-    escribir_texto(doc, despues)
+    escribir_texto(doc, despues, a.firma)
     doc.save(a.salida)
     print(f"Guardado {a.salida} ({len(imagenes)} imágenes)")
 

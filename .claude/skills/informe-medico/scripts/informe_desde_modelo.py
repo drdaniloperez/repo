@@ -5,7 +5,11 @@ Conserva del modelo: logo/membrete, título, tabla de identificación, márgenes
 firma/sello (imágenes pequeñas) y bloque de firma. Reemplaza: datos del paciente, hallazgos, conclusión e imágenes.
 
 Uso:
-  python3 informe_desde_modelo.py --modelo "<informe anterior>.docx" --datos datos.json --salida "<nuevo>.docx"
+  python3 informe_desde_modelo.py --modelo "<informe anterior>.docx" --datos datos.json --salida "<nuevo>.docx" [--centro colinas|san-jose|pdvsa]
+
+La institución del modelo se reconoce por su LOGO (formatos/logos/logos.json). Si se indica --centro (o "centro" en
+datos.json) y el modelo es de otra institución, se detiene: el logo y el membrete deben ser los de la institución
+donde se hizo el estudio.
 
 datos.json:
 {
@@ -43,6 +47,24 @@ except ImportError:
 
 EMU_CM = 360000
 UMBRAL_ECO_CM = 7.0  # imágenes más anchas que esto son imágenes del eco; las menores son logo/firma/sello
+
+
+LOGOS_JSON = Path(__file__).resolve().parent.parent / "formatos" / "logos" / "logos.json"
+
+
+def centro_del_modelo(doc):
+    """Reconoce la institución por el md5 de las imágenes del documento (logo)."""
+    import hashlib
+    try:
+        info = json.loads(LOGOS_JSON.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return None, {}
+    hashes = {hashlib.md5(rel.target_part.blob).hexdigest()
+              for rel in doc.part.rels.values() if "image" in rel.reltype}
+    for clave, d in info.items():
+        if hashes & set(d.get("md5_en_docx", [])):
+            return clave, info
+    return None, info
 
 
 def abrir_reparado(ruta):
@@ -147,10 +169,20 @@ def main():
     ap.add_argument("--modelo", required=True)
     ap.add_argument("--datos", required=True)
     ap.add_argument("--salida", required=True)
+    ap.add_argument("--centro", choices=["colinas", "san-jose", "pdvsa"])
     a = ap.parse_args()
     datos = json.loads(Path(a.datos).read_text(encoding="utf-8"))
     base_dir = Path(a.datos).parent
     doc = abrir_reparado(a.modelo)
+    centro, info = centro_del_modelo(doc)
+    pedido = a.centro or datos.get("centro")
+    nombre = lambda c: info.get(c, {}).get("nombre", c)
+    print(f"Institución del modelo (por su logo): {nombre(centro) if centro else 'no reconocida'}")
+    if pedido and centro and pedido != centro:
+        sys.exit(f"El modelo es de {nombre(centro)} pero el estudio es de {nombre(pedido)}: usa un modelo con el logo de "
+                 f"{nombre(pedido)} (o armar_informe_docx.py --centro {pedido}).")
+    if pedido and not centro:
+        print(f"⚠ No reconocí el logo del modelo; verifica que sea el de {nombre(pedido)}.")
     body = doc.element.body
     parrafos = [Paragraph(p, doc) for p in body.iter(qn("w:p"))]
 

@@ -1,0 +1,44 @@
+{
+ "colinas": {
+  "nombre": "COLINA — Centro de Especialidades Médicas (Clínica Colinas)",
+  "archivo": "colinas.png",
+  "md5_en_docx": [
+   "0d493e2c07744557779dd173186fb3df"
+  ],
+  "ancho_cm": 4.8,
+  "posicion": "arriba-izquierda",
+  "titulo": "a la derecha del logo, centrado, negrita",
+  "texto_en_pantalla_eco": [
+   "CENTRO DE ESPECIALIDADES M"
+  ],
+  "alto_cm": 2.3
+ },
+ "pdvsa": {
+  "nombre": "Centro Clínico PDVSA Oriente",
+  "archivo": "pdvsa.png",
+  "md5_en_docx": [
+   "834c1dc6ee53cde2799a4d9715a34990"
+  ],
+  "ancho_cm": 6.0,
+  "posicion": "arriba-izquierda",
+  "titulo": "centrado debajo del logo, negrita",
+  "texto_en_pantalla_eco": [
+   "CENTRO CLINICO PDVSA ORIENTE"
+  ],
+  "alto_cm": 1.7
+ },
+ "san-jose": {
+  "nombre": "Policlínica San José",
+  "archivo": "san-jose.png",
+  "md5_en_docx": [
+   "5199a55ec6d23f3d750a111b8b151ace"
+  ],
+  "ancho_cm": 8.9,
+  "posicion": "centrado",
+  "titulo": "centrado debajo del logo, negrita",
+  "texto_en_pantalla_eco": [
+   "POLICLINICA SAN JOSE"
+  ],
+  "alto_cm": 1.4
+ }
+}
