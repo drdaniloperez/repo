@@ -73,7 +73,7 @@ Reglas:
 - Por defecto: el documento en texto, listo para copiar y pegar.
 - Word: si hay un informe anterior suyo del mismo centro y tipo (ver `formatos/centros.md`), arma el
   documento con `scripts/informe_desde_modelo.py` (conserva membrete, tabla, firma y formato exactos).
-  Si no dijo el centro (Colinas, San José, PDVSA), dedúcelo del encabezado de la pantalla y confírmalo. **Cada
+  Si no dijo el centro (Colinas, San José, Hospital Jesús Farías de PDVSA), dedúcelo del encabezado de la pantalla y confírmalo. **Cada
   institución lleva su propio logo** (`formatos/centros.md`): pasa `--centro` para que el script lo verifique. Sin modelo, usa
   `scripts/armar_informe_docx.py`. Siempre en el directorio de trabajo o el scratchpad, nunca en el repo.
   Convierte a PDF/imagen (`soffice --headless --convert-to pdf`) y revisa la página antes de entregar.

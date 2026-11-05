@@ -14,10 +14,11 @@
   "alto_cm": 2.3
  },
  "pdvsa": {
-  "nombre": "Centro Clínico PDVSA Oriente",
-  "archivo": "pdvsa.png",
+  "nombre": "Hospital Jesús Farías (PDVSA)",
+  "archivo": "pdvsa-jesus-farias.png",
   "md5_en_docx": [
-   "834c1dc6ee53cde2799a4d9715a34990"
+   "834c1dc6ee53cde2799a4d9715a34990",
+   "876eeb179991dd4f00c03568c2c53912"
   ],
   "ancho_cm": 6.0,
   "posicion": "arriba-izquierda",
@@ -25,7 +26,8 @@
   "texto_en_pantalla_eco": [
    "CENTRO CLINICO PDVSA ORIENTE"
   ],
-  "alto_cm": 1.7
+  "alto_cm": 1.74,
+  "nota": "Hospital donde trabaja Danilo; pocos ecos allí (no es habitual). Logo enviado por Danilo en alta resolución."
  },
  "san-jose": {
   "nombre": "Policlínica San José",

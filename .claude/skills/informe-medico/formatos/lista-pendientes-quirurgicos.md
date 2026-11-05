@@ -1,6 +1,6 @@
 # Formato: Lista de pacientes pendientes por operar (Cirugía Pediátrica)
 
-Aprendido de 1 documento (PDVSA Oriente). Lista de trabajo, no informe.
+Aprendido de 1 documento (Hospital Jesús Farías, PDVSA Oriente). Lista de trabajo, no informe.
 
 ```
 Pacientes pendientes por operar Cirugía Pediátrica

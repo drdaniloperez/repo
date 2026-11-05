@@ -8,7 +8,7 @@ así quedan idénticos el logo, la tabla, las fuentes, la firma/sello y el bloqu
 |---|---|---|
 | **Clínica Colinas** (archivos "COLINA…/colinas…") | Logo COLINA arriba a la izquierda; título a su derecha | Tabla de 1 fila × 4 (Px, Ci, Edad, Fecha) con borde. Texto con etiqueta en negrita. Firma+sello como imagen sobre el nombre. Equipo Mindray (portátil). |
 | **Policlínica San José** | Logo SAN JOSÉ centrado arriba; título centrado debajo | Misma tabla. Todo el texto en negrita. |
-| **Centro Clínico PDVSA Oriente** | Logo PDVSA arriba a la izquierda; título centrado | Misma tabla. Todo el texto en negrita. Equipo Mindray de carro. |
+| **Hospital Jesús Farías (PDVSA)** — donde trabaja; pocos ecos allí | Logo PDVSA arriba a la izquierda; título centrado | Misma tabla. Todo el texto en negrita. Equipo Mindray de carro. |
 
 Bloque de firma (texto, centrado y en negrita, debajo de la imagen de firma y sello): nombre,
 "CIRUJANO PEDIATRA-ECOGRAFISTA", registros MPPS/CMA y RIF. Se copia del modelo; no se reescribe.
@@ -18,7 +18,7 @@ Guardados en `formatos/logos/` (son públicos; la firma y el sello NO se guardan
 | Archivo | Institución | Tamaño y posición en sus informes |
 |---|---|---|
 | `colinas.png` | COLINA — Centro de Especialidades Médicas | 4.8 × 2.3 cm, arriba a la izquierda, título a la derecha |
-| `pdvsa.png` | Centro Clínico PDVSA Oriente | 6.0 × 1.7 cm, arriba a la izquierda, título centrado debajo |
+| `pdvsa-jesus-farias.png` | Hospital Jesús Farías (PDVSA) — logo oficial que envió Danilo, alta resolución | 6.0 × 1.7 cm, arriba a la izquierda, título centrado debajo |
 | `san-jose.png` | Policlínica San José | 8.9 × 1.4 cm, centrado, título centrado debajo |
 
 `logos.json` guarda además la huella (md5) del logo tal como está dentro de sus .docx:
@@ -28,7 +28,7 @@ Guardados en `formatos/logos/` (son públicos; la firma y el sello NO se guardan
 
 **Cómo saber la institución del estudio:** lo dice Danilo; si no, se deduce del encabezado de la
 pantalla del ecógrafo en las fotos ("CENTRO DE ESPECIALIDADES M…" = Colinas, "CENTRO CLINICO PDVSA
-ORIENTE" = PDVSA, "POLICLINICA SAN JOSE" = San José) y **se confirma con él antes de generar**.
+ORIENTE" = Hospital Jesús Farías (PDVSA), "POLICLINICA SAN JOSE" = San José) y **se confirma con él antes de generar**.
 Hay dos versiones de su imagen de firma y sello; en partes blandas usa la segunda (la da el modelo).
 
 ## Dónde están los modelos

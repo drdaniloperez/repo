@@ -1,7 +1,7 @@
 # Formato: Informe ecográfico ABDOMINAL (y variantes)
 
 Aprendido de 30 informes reales (2025–2026) de Clínica Colinas, Policlínica San José y Centro Clínico
-PDVSA Oriente. Variantes de título:
+Hospital Jesús Farías (PDVSA). Variantes de título:
 - `INFORME ECOGRÁFICO ABDOMINAL`
 - `INFORME ECOGRÁFICO ABDOMINAL CON ÉNFASIS RENAL` (suele ser pediátrico; añade Vejiga)
 - `INFORME ECOGRÁFICO ABDOMINOPELVICO` (añade Vejiga y Útero y ovarios / Próstata)
