@@ -7,6 +7,7 @@ todo de forma automática en cuanto haya datos del paciente.
 
 Scripts (requieren `pip install opencv-python-headless numpy pillow python-docx`; para .heic también `pillow-heif`):
 - `scripts/recortar_pantalla.py` — detección de la pantalla, corrección de perspectiva, vista previa, ampliación de regiones.
+- `scripts/agregar_imagenes.py` — añade las imágenes (en orden) a un informe que Danilo ya redactó, sin tocar texto, logo ni firma.
 - `scripts/informe_desde_modelo.py` — Word idéntico a un informe anterior del centro (membrete, firma) con los datos nuevos.
 - `scripts/armar_informe_docx.py` — Word genérico con texto + imágenes en cuadrícula (si no hay modelo).
 
