@@ -7,6 +7,8 @@ Uso:
 
 - Las imágenes van en el orden dado, en una cuadrícula sin bordes, justo después del bloque de firma
   (línea "Dr. …" y las siguientes: especialidad, MPPS/CMA, RIF), como en los informes de Danilo.
+- Por defecto todas las imágenes quedan del MISMO tamaño: se llevan a la proporción mediana rellenando con el color
+  de fondo de la pantalla (sin estirar ni recortar: no se deforma la anatomía ni se pierden medidas). --sin-uniformar lo evita.
 - --reemplazar quita antes las imágenes del eco que ya tuviera el informe (anchas y altas); logo y firma se conservan.
 Requiere: pip install python-docx
 """
@@ -24,6 +26,37 @@ from docx.oxml.ns import qn  # noqa: E402
 from docx.shared import Cm  # noqa: E402
 
 
+def uniformar(rutas):
+    """Lleva todas las imágenes a la proporción (ancho/alto) mediana, rellenando con el color del borde."""
+    import statistics
+    import tempfile
+    import numpy as np
+    from PIL import Image
+    ims = [Image.open(r).convert("RGB") for r in rutas]
+    objetivo = statistics.median(im.width / im.height for im in ims)
+    destino = Path(tempfile.mkdtemp(prefix="uniformes_"))
+    salida = []
+    for i, im in enumerate(ims):
+        w, h = im.size
+        if w / h > objetivo:          # más ancha: se añade alto (abajo, donde la pantalla es fondo oscuro)
+            nw, nh = w, round(w / objetivo)
+            franja = im.crop((0, h - max(4, h // 12), w, h))
+            x, y = 0, 0
+        else:                          # más alta: se añade ancho repartido a ambos lados
+            nw, nh = round(h * objetivo), h
+            franja = im.crop((0, 0, max(2, w // 50), h))
+            x, y = (nw - w) // 2, 0
+        arr = np.asarray(franja.convert("RGB")).reshape(-1, 3)
+        orden = np.argsort(arr.sum(1))
+        color = tuple(int(v) for v in arr[orden[len(orden) // 5]])  # tono oscuro del fondo de la pantalla (percentil 20)
+        lienzo = Image.new("RGB", (nw, nh), color)
+        lienzo.paste(im, (x, y))
+        ruta = destino / f"{i:02d}.jpg"
+        lienzo.save(ruta, quality=95)
+        salida.append(str(ruta))
+    return salida
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--informe", required=True)
@@ -31,12 +64,15 @@ def main():
     ap.add_argument("--columnas", type=int, default=2)
     ap.add_argument("--ancho-cm", type=float, default=7.9)  # 2 × 8.3 cm no cabe en carta con márgenes de 2.54 cm: Word recorta la imagen
     ap.add_argument("--reemplazar", action="store_true")
+    ap.add_argument("--sin-uniformar", action="store_true", help="No igualar el tamaño de las imágenes")
     ap.add_argument("imagenes", nargs="+")
     a = ap.parse_args()
     for i in a.imagenes:
         if not Path(i).exists():
             sys.exit(f"No existe la imagen: {i}")
 
+    if not a.sin_uniformar and len(a.imagenes) > 1:
+        a.imagenes = uniformar(a.imagenes)
     doc = abrir_reparado(a.informe)
     body = doc.element.body
     if a.reemplazar:

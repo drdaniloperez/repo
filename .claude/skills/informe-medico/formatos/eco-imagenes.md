@@ -32,6 +32,9 @@ medidas arriba a la derecha "1 D: 25.21 mm"; transductores L742 lineal, 2P1 sect
 - Ancho ≈ 8.3 cm en sus originales, pero en la cuadrícula generada usar **7.9 cm**: 2 × 8.3 cm + márgenes de
   celda no caben en carta con márgenes de 2.54 cm y Word **recorta el borde derecho** (se pierden las medidas).
   Revisar siempre la vista previa: la columna de medidas de la derecha debe leerse completa.
+- **Todas las imágenes del mismo tamaño** (preferencia de Danilo): `agregar_imagenes.py` las lleva a la
+  proporción mediana rellenando con el tono oscuro de la pantalla; nunca estirar (deforma la anatomía) ni
+  recortar más (se pierden medidas).
 - Abdominal: el texto llena la página 1 y las imágenes pasan a la página 2 (3 filas × 2).
 - Prostático: 2 imágenes lado a lado en la misma página que el texto.
 - Con `informe_desde_modelo.py`: `"columnas": 2, "ancho_imagen_cm": 8.3` (prostático: 8.0 para que quepan en la página 1).
