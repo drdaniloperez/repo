@@ -7,6 +7,11 @@
 - 2026-11-05: Danilo hace ecografías en el Centro de Especialidades Médicas Colina, la Policlínica San José
   y el Hospital Jesús Farías de PDVSA (allí pocos ecos). Del Hospital Luis Razetti ya está el logo, pero aún no hay informes de ejemplo
   (membretes en `.claude/skills/informe-medico/formatos/centros.md`).
+- 2026-11-07: entrenamiento con el disco Rodolfo SSD (`D:\Alarms\Alarms`, 1.986 archivos; inventario en
+  `formatos/COBERTURA.md`). Membrete REAL del Razetti tomado de su programación quirúrgica 2023 (escudo 1953-2022,
+  texto azul a la derecha, carta horizontal). Los documentos clínicos (ingreso, egreso, extensión, evaluación, informe)
+  los hace sobre todo en Colina, con su logo personal "DP" (no se sube al repo). No hay informes operatorios ni ecos
+  obstétricos en el disco. Los .docx del disco traen las imágenes con CRC dañado: abrirlos con `abrir_reparado()`.
 - 2026-11-05: Servicio de Cirugía Pediátrica del Hospital Jesús Farías (PDVSA): 4 especialistas (Pérez = Danilo,
   Santana, Marín, Arreaza). Guardias cada 4 días (Arreaza → Pérez → Santana → Marín; 1-nov-2026 = Arreaza),
   consulta fija semanal (lun Pérez, mié Marín, jue Santana, vie Arreaza), martes quirófano electivo sin

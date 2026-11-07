@@ -20,13 +20,17 @@ idéntico en estructura, vocabulario y tono a los que él redacta.
 ## 1. Identificar el documento
 Deduce el tipo por lo dictado; pregunta solo si es ambiguo.
 
-| Tipo | Guía |
-|---|---|
-| Ecosonograma / ecografía / doppler (cualquier región) | `tipos/ecosonograma.md` |
-| Informe médico (consulta, evolución, para seguro, para reposo, referencia) | `tipos/informe-medico.md` |
-| Informe de hospitalización y de extensión de hospitalización | `tipos/hospitalizacion.md` |
-| Informe de procedimiento quirúrgico / operatorio | `tipos/procedimiento-quirurgico.md` |
-| Otro (constancia, récipe, reposo, carta) | El formato aprendido más parecido; si no hay, uno sobrio con los mismos datos de identificación y firma |
+| Tipo | Formato aprendido (manda) | Guía genérica |
+|---|---|---|
+| Eco abdominal, renal/énfasis renal, vesical, abdominopélvico, pélvico, prostático, partes blandas, tiroideo, mamario, testicular (± doppler) | `formatos/eco-<región>.md` + `eco-imagenes.md` | `tipos/ecosonograma.md` |
+| Resumen de ingreso de Cirugía Pediátrica | `formatos/resumen-ingreso.md` | `tipos/hospitalizacion.md` |
+| Informe de egreso / hospitalización | `formatos/hospitalizacion.md` | `tipos/hospitalizacion.md` |
+| Extensión de hospitalización | `formatos/extension-hospitalizacion.md` | `tipos/hospitalizacion.md` |
+| Evaluación de Cirugía Pediátrica (emergencia, interconsulta) | `formatos/evaluacion-cirugia-pediatrica.md` | `tipos/informe-medico.md` |
+| Informe médico (control, tratamiento, reposo) | `formatos/informe-medico.md` | `tipos/informe-medico.md` |
+| Informe de procedimiento quirúrgico / operatorio | — (sin ejemplos en el disco) | `tipos/procedimiento-quirurgico.md` |
+| Lista de pendientes, programación quirúrgica (Razetti), guardias | `formatos/lista-pendientes-quirurgicos.md`, `programacion-quirurgica.md`, `cronograma-guardia.md` | — |
+| Órdenes, cortesía, balance de ecos, insumos, presupuesto, morbilidad, carta | `formatos/documentos-administrativos.md` | El más parecido, sobrio, con su firma |
 
 ## 1b. Si envía fotos de la pantalla del ecosonógrafo
 Sigue `imagenes-eco.md` de forma automática, sin esperar a que lo pida: recortar cada foto a la
@@ -79,6 +83,9 @@ Reglas:
   Si no dijo el centro (Centro de Especialidades Médicas Colina, Policlínica San José, Hospital Jesús Farías de PDVSA, Hospital Luis Razetti), dedúcelo del encabezado de la pantalla y confírmalo. **Cada
   institución lleva su propio logo** (`formatos/centros.md`): pasa `--centro` para que el script lo verifique. Sin modelo, usa
   `scripts/armar_informe_docx.py`. Siempre en el directorio de trabajo o el scratchpad, nunca en el repo.
+  Documentos de texto (ingreso, egreso, extensión, evaluación, informe médico, listas, cartas, programación):
+  `informe_desde_modelo.py --modelo <doc anterior del mismo tipo> --texto nuevo.txt` (conserva logos, firma y bloque de firma;
+  líneas con "|" = tabla, como la programación del Razetti).
   Convierte a PDF/imagen (`soffice --headless --convert-to pdf`) y revisa la página antes de entregar.
 - **Privacidad**: los informes con datos de pacientes nunca se guardan ni se suben a este repositorio.
   En el repo solo van plantillas anonimizadas.

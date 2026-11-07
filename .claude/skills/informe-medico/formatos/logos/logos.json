@@ -3,7 +3,8 @@
   "nombre": "Centro de Especialidades Médicas Colina",
   "archivo": "colinas.png",
   "md5_en_docx": [
-   "0d493e2c07744557779dd173186fb3df"
+   "0d493e2c07744557779dd173186fb3df",
+   "e89414d3b67fc20218a74c8b8044d120"
   ],
   "ancho_cm": 4.8,
   "posicion": "arriba-izquierda",
@@ -34,7 +35,8 @@
   "nombre": "Policlínica San José",
   "archivo": "san-jose.png",
   "md5_en_docx": [
-   "5199a55ec6d23f3d750a111b8b151ace"
+   "5199a55ec6d23f3d750a111b8b151ace",
+   "7282cef2f2e355fb9f68b8e94f8d5c40"
   ],
   "ancho_cm": 8.9,
   "posicion": "centrado",
@@ -47,16 +49,26 @@
  },
  "razetti": {
   "nombre": "Hospital Universitario Dr. Luis Razetti (Barcelona, Anzoátegui) — Servicio de Cirugía Pediátrica",
-  "archivo": "hulr-luis-razetti.png",
+  "archivo": "hulr-luis-razetti-2022.png",
   "md5_en_docx": [
-   "8f9a5458354c4a7f195738a58a8c5ecb"
+   "8f9a5458354c4a7f195738a58a8c5ecb",
+   "52545f6c0d2f41752572d3c4cf215d65"
   ],
-  "ancho_cm": 2.6,
-  "alto_cm": 2.6,
+  "ancho_cm": 3.9,
+  "alto_cm": 4.3,
   "posicion": "arriba-izquierda",
   "titulo_al_lado": true,
-  "titulo": "a la derecha del logo, centrado, negrita (PROVISIONAL: confirmar con un informe real)",
+  "titulo": "Membrete real (programación quirúrgica 2023): escudo HULR 1953-2022 a la izquierda (detrás del texto, 3.9 × 4.3 cm), y a la derecha, alineado a la derecha, en azul 4472C4, 16 pt, sin negrita: 'HOSPITAL UNIVERSITARIO DR. LUIS RAZETTI BARCELONA, ANZOÁTEGUI' / 'SERVICIO DE CIRUGÍA PEDIÁTRICA' / '<MES AÑO>'. Página carta horizontal.",
   "texto_en_pantalla_eco": [],
-  "nota": "Logo enviado por Danilo (se borró el ícono de búsqueda superpuesto). Sin informes de ejemplo aún."
+  "nota": "Logo enviado por Danilo (1963-2007, archivo_anterior) y escudo 1953-2022 recortado tal como aparece en su programación quirúrgica real (el .docx lo incrusta como captura recortada; su huella es la segunda). Único documento real del Razetti en el disco: programación quirúrgica semanal (junio 2023).",
+  "archivo_anterior": "hulr-luis-razetti.png",
+  "lineas_membrete": [
+   "HOSPITAL UNIVERSITARIO DR. LUIS RAZETTI BARCELONA, ANZOÁTEGUI",
+   "SERVICIO DE CIRUGÍA PEDIÁTRICA",
+   "<MES AÑO>"
+  ],
+  "color_membrete": "4472C4",
+  "tam_membrete_pt": 16,
+  "orientacion": "horizontal"
  }
 }

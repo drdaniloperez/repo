@@ -1,15 +1,17 @@
 # Centros y membretes
 
-Danilo trabaja en cuatro instituciones; cada una tiene su membrete. **El documento final se arma con
+Danilo trabaja en cuatro instituciones; cada una tiene su membrete.
+Del disco (1.986 archivos, 2026-11-07): Colina 1.261 documentos, San José 635, Jesús Farías (PDVSA) 3 ecos + listas
+y guardias sin logo, Razetti 1 (programación quirúrgica). **El documento final se arma con
 `scripts/informe_desde_modelo.py` usando como modelo un informe anterior suyo del mismo centro y tipo**:
 así quedan idénticos el logo, la tabla, las fuentes, la firma/sello y el bloque de firma.
 
 | Centro | Cómo se reconoce | Diseño |
 |---|---|---|
 | **Centro de Especialidades Médicas Colina** (archivos "COLINA…/colinas…") | Logo COLINA arriba a la izquierda; título a su derecha | Tabla de 1 fila × 4 (Px, Ci, Edad, Fecha) con borde. Texto con etiqueta en negrita. Firma+sello como imagen sobre el nombre. Equipo Mindray (portátil). |
-| **Policlínica San José** | Logo SAN JOSÉ centrado arriba; título centrado debajo | Misma tabla. Todo el texto en negrita. |
+| **Policlínica San José** | Logo SAN JOSÉ centrado arriba; título centrado debajo | Misma tabla. Todo el texto en negrita. ⚠ (disco, 2026-11-07) la negrita depende de la **plantilla**, no del centro: la plantilla corta ("…3.5MHz donde se evidencia:") y los ecos renales, testiculares, mamarios y prostáticos de San José llevan solo la etiqueta en negrita; la plantilla larga, ≈70 % todo el párrafo. Manda el modelo `.docx`. |
 | **Hospital Jesús Farías (PDVSA)** — donde trabaja; pocos ecos allí | Logo PDVSA arriba a la izquierda; título centrado | Misma tabla. Todo el texto en negrita. Equipo Mindray de carro. |
-| **Hospital Universitario Dr. Luis Razetti** (Barcelona, Anzoátegui) — servicio de Cirugía Pediátrica | Escudo H.U.L.R. (logo ya guardado) | ⚠ Diseño PROVISIONAL (logo 2.6 cm a la izquierda, título al lado): aún no hay informes de ejemplo; pedirlos y ajustar. |
+| **Hospital Universitario Dr. Luis Razetti** (Barcelona, Anzoátegui) — servicio de Cirugía Pediátrica | Escudo H.U.L.R. "1953 - 2022" arriba a la izquierda; a la derecha, en azul, "HOSPITAL UNIVERSITARIO DR. LUIS RAZETTI BARCELONA, ANZOÁTEGUI / SERVICIO DE CIRUGÍA PEDIÁTRICA / <MES AÑO>" | **Membrete REAL** (ajustado 2026-11-07 con su programación quirúrgica de junio 2023, único documento del Razetti en el disco): carta **horizontal**, escudo 3.9 × 4.3 cm detrás del texto, tres líneas alineadas a la derecha, color 4472C4, 16 pt, sin negrita; debajo, tabla por día. No hay ecos ni informes clínicos del Razetti en el disco. |
 
 Bloque de firma (texto, centrado y en negrita, debajo de la imagen de firma y sello): nombre,
 "CIRUJANO PEDIATRA-ECOGRAFISTA", registros MPPS/CMA y RIF. Se copia del modelo; no se reescribe.
@@ -21,7 +23,8 @@ Guardados en `formatos/logos/` (son públicos; la firma y el sello NO se guardan
 | `colinas.png` | COLINA — Centro de Especialidades Médicas | 4.8 × 2.3 cm, arriba a la izquierda, título a la derecha |
 | `pdvsa-jesus-farias.png` | Hospital Jesús Farías (PDVSA) — logo oficial que envió Danilo, alta resolución | 6.0 × 1.7 cm, arriba a la izquierda, título centrado debajo |
 | `san-jose.png` | Policlínica San José | 8.9 × 1.4 cm, centrado, título centrado debajo |
-| `hulr-luis-razetti.png` | Hospital Universitario Dr. Luis Razetti | 2.6 × 2.6 cm, arriba a la izquierda, título a la derecha (provisional) |
+| `hulr-luis-razetti-2022.png` | Hospital Universitario Dr. Luis Razetti — escudo "1953 - 2022", recortado tal como aparece en su programación quirúrgica real | 3.9 × 4.3 cm, arriba a la izquierda (detrás del texto); membrete en azul alineado a la derecha |
+| `hulr-luis-razetti.png` | Hospital Universitario Dr. Luis Razetti — escudo anterior "1963 - 2007" que envió Danilo | Ya no se usa por defecto (queda como `archivo_anterior`) |
 
 `logos.json` guarda además la huella (md5) del logo tal como está dentro de sus .docx:
 - `informe_desde_modelo.py` reconoce la institución del modelo por su logo y **se detiene si no es la
@@ -46,3 +49,18 @@ En sus .docx la imagen de firma/sello suele estar anclada a una posición fija d
 (`wp:positionV relativeFrom="page"`). Si se añaden líneas al texto, la conclusión baja y la firma la tapa.
 Al añadir texto: cambiar el ancla a `relativeFrom="paragraph"` (párrafo vacío previo a "Dr. …", offset ≈ 0.15 cm)
 y revisar la vista previa.
+
+## Documentos clínicos de Cirugía Pediátrica (ampliado 2026-11-07, disco)
+Resumen de ingreso, informe de egreso, extensión, evaluación e informe médico de cirugía pediátrica se hicieron
+sobre todo en **Colina** (y algunos en San José): llevan el logo de la institución, a veces además el **logo personal
+"DP · Dr. Danilo Pérez T. · Cirujano Pediatra"** (círculo negro) y la imagen de firma/sello. El logo personal y la firma
+NO se guardan en el repo (contienen su nombre y la firma); se toman del modelo `.docx` en la sesión local.
+Bloque de firma de estos documentos (texto): "Dr. Danilo Pérez T." / "Ecografista Integral/Cirujano Pediatra." /
+"MPPS: [MPPS] CMA: [CMA]" / "RIF.: [RIF]".
+
+## Huellas añadidas (2026-11-07)
+- Colina: segunda versión del logo (verde, "COLINA Centro de Especialidades Médicas") usada en los documentos clínicos.
+- San José: versión de alta resolución del logo con "RIF" de la policlínica, usada en ecos recientes.
+- Razetti: la captura recortada del escudo 1953-2022 que lleva su programación quirúrgica.
+- `armar_informe_docx.py --centro razetti` arma ya el membrete real (carta horizontal, texto azul a la derecha); si no se
+  dan Px/Ci/Edad no pone la tabla de identificación (listas y programaciones).

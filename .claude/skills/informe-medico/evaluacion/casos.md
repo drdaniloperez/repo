@@ -53,6 +53,8 @@ Entrada: un .docx suyo + fotos.
 Dictado: "Tiroides, mujer de 35 años, nódulo en lóbulo derecho de 1.2 cm, hipoecoico."
 - Debe preguntar: medidas de ambos lóbulos e istmo, volumen, composición, márgenes, forma, focos ecogénicos, vascularidad, adenopatías.
 - Debe sugerir: categoría ACR TI-RADS con puntos y conducta (PAAF/control) según tamaño.
+- ⚠ (2026-11-07) Su formato real (`formatos/eco-tiroides.md`) escribe solo "Tirads N" bajo la conclusión, sin puntos ACR
+  ni PAAF: la skill lo redacta así y **pregunta** si quiere añadir puntuación/conducta.
 
 ### C8 · Eco obstétrico (si aprendido)
 Dictado: "Obstétrico, FUR 10/06/2026, feto único, FCF 145."

@@ -90,7 +90,33 @@ def membrete(doc, centro, titulo, px, ci, edad, fecha):
         sec.left_margin = sec.right_margin = Cm(2.54)
         sec.top_margin, sec.bottom_margin = Cm(1.5), Cm(1.5)
     doc.styles["Normal"].font.name = "Calibri"  # fuente de sus informes
-    if info.get("titulo_al_lado"):
+    if info.get("orientacion") == "horizontal":  # p. ej. programación quirúrgica del Razetti (carta apaisada)
+        from docx.enum.section import WD_ORIENT
+        for sec in doc.sections:
+            sec.orientation = WD_ORIENT.LANDSCAPE
+            sec.page_width, sec.page_height = Cm(27.94), Cm(21.59)
+            sec.left_margin = sec.right_margin = Cm(2.5)
+            sec.top_margin = sec.bottom_margin = Cm(3.0)
+    if info.get("lineas_membrete"):  # membrete real del Razetti: escudo a la izquierda, texto azul alineado a la derecha
+        from docx.shared import RGBColor
+        util = (doc.sections[0].page_width - doc.sections[0].left_margin - doc.sections[0].right_margin) / 360000
+        t = doc.add_table(rows=1, cols=2)
+        borde_tabla(t, False)
+        t.cell(0, 0).paragraphs[0].add_run().add_picture(str(logo), **tam)
+        anchos_columnas(t, (info["ancho_cm"] + 0.3, util - info["ancho_cm"] - 0.3))
+        celda = t.cell(0, 1)
+        for i, linea in enumerate(info["lineas_membrete"]):
+            p = celda.paragraphs[0] if i == 0 else celda.add_paragraph()
+            p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+            p.paragraph_format.space_after = Pt(0)
+            r = p.add_run(linea.replace("<MES AÑO>", fecha or ""))
+            r.font.size = Pt(info.get("tam_membrete_pt", 16))
+            r.font.color.rgb = RGBColor.from_string(info.get("color_membrete", "4472C4"))
+        if titulo:
+            p = doc.add_paragraph()
+            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            agregar_runs(p, f"**{titulo}**")
+    elif info.get("titulo_al_lado"):
         t = doc.add_table(rows=1, cols=2)
         borde_tabla(t, False)
         t.cell(0, 0).paragraphs[0].add_run().add_picture(str(logo), **tam)
@@ -107,7 +133,11 @@ def membrete(doc, centro, titulo, px, ci, edad, fecha):
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         agregar_runs(p, f"**{titulo}**")
-    separador(doc)
+    if not info.get("lineas_membrete"):
+        separador(doc)
+    if not any((px, ci, edad)):  # documentos sin tabla de identificación (programación, listas)
+        doc.add_paragraph()
+        return info
     t = doc.add_table(rows=1, cols=4)
     borde_tabla(t, True)
     t.autofit = False

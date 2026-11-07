@@ -1,6 +1,6 @@
 # Imágenes en los informes de eco
 
-Aprendido de 38 informes reales.
+Aprendido de 38 informes reales; conteos ampliados con el disco completo (2026-11-07).
 
 ## Fotos de origen
 Fotos verticales del teléfono (3000×4000) a la pantalla del ecógrafo. La pantalla suele ocupar
@@ -26,6 +26,21 @@ medidas arriba a la derecha "1 D: 25.21 mm"; transductores L742 lineal, 2P1 sect
 | Abdominal con énfasis renal / renal (pediátrico) | 3–5 | Riñón derecho → Riñón izquierdo → Vejiga (→ hígado/vesícula/bazo) |
 | Prostático | 2 | Transversal → Longitudinal (con volumen) |
 | Piel y partes blandas | 1–2 | La lesión con medidas (→ Doppler/otro corte) |
+
+### Conteo en el disco completo (ampliado 2026-11-07, disco: 1.879 ecos; imágenes > 300 KB, sin logo ni firma)
+| Tipo | Documentos | Con imágenes | Mediana | Rango | Orden sugerido |
+|---|---|---|---|---|---|
+| Abdominal | 629 | 590 | 5 | 1–10 | Igual que arriba |
+| Abdominopélvico | 129 | 121 | 6 | 1–10 | Abdominal → vejiga → útero/ovarios o próstata |
+| Renal / énfasis renal / renal y vesical | 320 | 289 | 5 | 1–9 | RD → RI → vejiga (→ resto abdominal); doppler: color de cada riñón |
+| Vesical | 51 | 31 | 2 | 1–3 | Vejiga prellenado (transversal → longitudinal) → posmiccional |
+| Prostático | 281 | 165 | 2 | 1–3 | Transversal → longitudinal (volumen) |
+| Pélvico | 21 | 21 | 3 | 2–6 | Útero longitudinal → transversal → ovario derecho → ovario izquierdo |
+| Tiroideo (± doppler) | 125 | 123 | 2 | 1–4 | Lóbulo derecho → lóbulo izquierdo (→ istmo, nódulo, doppler) |
+| Mamario | 70 | 69 | 2 | 1–6 | Mama derecha → mama izquierda (→ lesión, axilas) |
+| Testicular (± doppler) | 95 | 92 | 3 | 1–6 | Testículo derecho → izquierdo → comparativo/doppler (→ canal inguinal) |
+| Piel y partes blandas | 158 | 155 | 2 | 1–6 | La lesión con medidas → doppler/otro corte |
+Los ecos sin imágenes (sobre todo prostáticos y vesicales antiguos) se entregaron solo con texto.
 
 ## Maquetación
 - Van **después del bloque de firma**, en cuadrícula de **2 columnas**, sin pies de foto.

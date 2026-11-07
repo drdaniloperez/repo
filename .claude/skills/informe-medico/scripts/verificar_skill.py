@@ -37,6 +37,7 @@ PATRONES_PRIVADOS = {
     "teléfono": r"(?<!\d)0(?:2\d{2}|4(?:12|14|16|24|26))[- ]?\d{3}[- ]?\d{4}(?!\d)",
     "correo": r"[\w.+-]+@[\w-]+\.[\w.]+",
 }
+EXCLUIDOS = {"ERROR", "sin-clasificar", "personal-no-medico"}  # personal-no-medico: documentos propios de Danilo, no se estudian
 PERMITIDOS = {"danilo", "pérez", "perez", "danilo pérez", "danilo perez", "paciente de prueba"}
 
 
@@ -88,7 +89,7 @@ def main():
         print("== Inventario del disco:")
         for tipo, n in conteo.most_common():
             tiene = tipo in formatos or any(tipo.startswith(f) or f.startswith(tipo) for f in formatos)
-            marca = "✓" if tiene else ("·" if tipo in {"ERROR", "sin-clasificar"} else "✗")
+            marca = "✓" if tiene else ("·" if tipo in EXCLUIDOS else "✗")
             print(f"   {marca} {tipo:32s} {n:5d}")
             if marca == "✗" and n >= 3:
                 alertas.append(f"Tipo sin formato: {tipo} ({n} documentos)")

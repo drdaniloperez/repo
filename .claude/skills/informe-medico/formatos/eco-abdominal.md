@@ -1,7 +1,11 @@
 # Formato: Informe ecográfico ABDOMINAL (y variantes)
 
 Aprendido de 30 informes reales (2025–2026) de Centro de Especialidades Médicas Colina, Policlínica San José y
-Hospital Jesús Farías (PDVSA). Variantes de título:
+Hospital Jesús Farías (PDVSA); ampliado (2026-11-07, disco) con 629 documentos `eco-abdominal` del disco
+(01/2024 – 10/2026), instituciones: Colina (360), San José (261), sin logo reconocido (8); **ninguno de PDVSA**
+(de PDVSA en el disco solo hay 3 ecos renales/"abdominal con énfasis renal"). 440 adultos, 158 niños de 1–17 años
+y 30 menores de 1 año (desde 2 días de vida). Abdominopélvico y pélvico tienen ahora su propio formato:
+`eco-abdominopelvico.md` y `eco-pelvico.md`. Variantes de título:
 - `INFORME ECOGRÁFICO ABDOMINAL`
 - `INFORME ECOGRÁFICO ABDOMINAL CON ÉNFASIS RENAL` (suele ser pediátrico; añade Vejiga)
 - `INFORME ECOGRÁFICO ABDOMINOPELVICO` (añade Vejiga y Útero y ovarios / Próstata)
@@ -41,6 +45,10 @@ Conclusión:	1) …
 - Decimales con **punto** (12.9 cm). Medidas "long: X cm transv: Y cm".
 - Las medidas de la pantalla del ecógrafo (2 decimales) se pasan con **1 decimal, truncando**
   (10.48 → 10.4; 4.78 → 4.7; 11.73 → 11.7). ⚠ confirmar con Danilo si trunca o redondea.
+  (ampliado 2026-11-07, disco) En el disco **no hay evidencia** para decidirlo: los textos no traen la medida de
+  pantalla y las imágenes de los .docx del disco están dañadas (CRC). Sí se ve que en 115 de 779 informes
+  abdominales/pélvicos copia a veces la cifra de pantalla con **2 decimales** sin acortar ("5.16 cm", "0.45 cm",
+  "0.33 cm"): 10 628 medidas con 1 decimal frente a 174 con 2. Coma decimal solo en 1 documento.
 
 ## Frases normales (adulto) — literales
 - **Hígado:** forma, tamaño habitual con patrón granular fino, de medidas LD: [X] cm y LI: [Y] cm, limites bien definidos, parénquima heterogeneo, ecogenicidad conservada, sin presencia de lesiones focales o expansivas, imágenes de vasos visibles y vías biliares intrahepaticas sin alteraciones.
@@ -113,6 +121,98 @@ RI long y transv · Bazo long y transv · [Vejiga volumen] · [Útero A × B, ov
 - Intestino: gases/heces, edema interasas (leve/moderado) → colitis en la conclusión.
 - Abdominopélvico: vejiga (volumen, paredes), útero y ovarios (medidas) o próstata (medidas, volumen, IPP).
 - Recomendación final (control, valoración por especialista) si el hallazgo la amerita.
+- (ampliado 2026-11-07, disco) Qué plantilla (A o B) — por defecto la del modelo elegido.
+- Niño con dolor en FID: diámetro del apéndice y grosor de pared (mm), compresibilidad, líquido/grasa periapendicular,
+  McBurney/Blumberg ecográfico → `Apendicitis aguda.` + evaluación por cirugía pediátrica.
+- Ganglios mesentéricos: tamaño del mayor (→ adenitis mesentérica). Gastroenteritis vs colitis vs enterocolitis.
+- Hepatomegalia/esplenomegalia: grado. Quiste renal/hepático: medidas y localización. Hernia: tamaño del defecto y contenido.
+- Lactantes: edad en días/meses, catéteres o sondas visibles.
+
+## Títulos en el disco (ampliado 2026-11-07, disco)
+- `INFORME ECOGRÁFICO ABDOMINAL` (605) · con punto final `INFORME ECOGRÁFICO ABDOMINAL.` (15) · sin tilde `INFORME ECOGRAFICO ABDOMINAL` (4).
+- Raros (1 cada uno): `INFORME ECOGRÁFICO FAST ABDOMINAL.` · `INFORME ECOGRÁFICO ABDOMINAL CON DOPPLER HEPATICO` ·
+  `INFORME ECOGRÁFICO ABDOMINAL/ PANCREATICO` · `INFORME ECOGRÁFICO DE PARED ABDOMINAL` (transductor LINEAL de 7.5MHz; ver abajo).
+- Imágenes por .docx: 5–10 (moda 7; incluye 2–3 de logo y firma/sello) → ≈ 4–6 del eco.
+
+## Dos plantillas de texto (ampliado 2026-11-07, disco)
+Danilo alterna **dos plantillas** en los dos centros y en todo el período (no es una por institución):
+- **Plantilla A** (437 docs; Colina 292, San José 139): introducción "…transductor convex de 3.5MHz en múltiples
+  proyecciones, donde se evidencian los siguientes hallazgos:" + las frases de arriba ("forma, tamaño habitual con patrón granular fino…").
+- **Plantilla B** (190 docs; San José 122, Colina 68): introducción `Se realiza estudio ecográfico en tiempo real con transductor de 3.5MHz donde se evidencia:` y estas frases (literales, las más repetidas):
+  - **Hígado:** tamaño y forma acorde a edad, de medidas LD: [X] cm y LI: [Y] cm, limites bien definidos, parénquima homogéneo, sin presencia de lesiones focales o expansivas, ecogenicidad conservada, imágenes de vasos y vías biliares intrahepaticas sin alteraciones.
+  - **Vesícula Biliar:** de forma piriforme, plenificada, de paredes delgadas, de medidas long: [X] cm transv: [Y] cm, sin imagenes patologícas en su interior, coledoco no dilatado.
+  - **Páncreas:** parénquima homogéneo, sin presencia de lesiones focales o inflamación, de medidas cabeza: [A] cm cuerpo: [B] cm cola: [C] cm, conducto pancreático no visible, sin líquido peripancreático a su alrededor.
+  - **Riñón Derecho / Izquierdo:** adecuadamente visible con movilidad respiratoria normal, de medidas long: [X] cm  transv: [Y] cm, de tamaño [dentro del rango normal / acorde a edad], parénquima homogéneo, ecogenicidad conservada, sin microlitiasis, sin presencia de Pielocalectasia conservando la relación médula corteza.
+  - **Bazo:** parénquima homogéneo, de acuerdo a la edad del paciente, de medidas long: [X] cm  transv: [Y] cm, de tamaño normal, sin evidencia de lesiones focales o expansivas.
+  - **Intestino:** peristaltismo positivo, con presencia de gases, sin evidencia de líquido libre en cavidad, no se observan ganglios linfáticos aumentados de tamaño ni otras masas ocupantes de espacio patológicas, aorta y cava inferior sin alteraciones.
+  - Patológico en B: hígado "tamaño aumentado y forma acorde a edad … limites mal definidos … ecogenicidad aumentada"; riñón "con presencia de litiasis de medida: [X] cm localizada en medula, con presencia de Pielocalectasia leve"; intestino "se evidencia edema interasa [leve/moderado] en marco colonico".
+- Frases pediátricas más repetidas de la plantilla A (ya listadas arriba): páncreas "de tamaño y forma acorde a edad, conducto pancreático no dilatado, sin líquido peripancretico." (203 veces, la frase de páncreas más usada del disco) y bazo "… de tamaño acorde a edad, sin evidencia de lesiones focales o expansivas ni liquido periesplenico." (159).
+- Variante de riñón (≈ 17): "de ubicación habitual, con movilidad respiratoria normal, de medidas long: …".
+
+## Diferencias por institución (ampliado 2026-11-07, disco)
+- El texto es el mismo en Colina y San José; lo que cambia es el membrete (lo da el modelo) y la proporción de plantillas
+  (San José usa más la B: 122/261; Colina sobre todo la A: 292/360).
+- **Negrita** (medida en el XML de los .docx): la plantilla B lleva siempre solo la etiqueta en negrita; la plantilla A lleva
+  todo el párrafo en negrita en ≈ 70 % de los casos **en ambos centros** (Colina 229/328, San José 128/156).
+  ⚠ en el disco también aparece Colina con todo en negrita y San José con solo la etiqueta en negrita: `centros.md` dice
+  "San José: todo el texto en negrita"; en la práctica lo decide el modelo que se copie.
+- PDVSA: no hay abdominales en el disco (solo renales); usar `centros.md`.
+
+## Más variantes patológicas → conclusión (ampliado 2026-11-07, disco)
+Frecuencia aproximada en las conclusiones de los 629 abdominales: colitis/edema interasa ≈ 390 · litiasis renal ≈ 350 ·
+hígado graso ≈ 280 · barro biliar ≈ 200 · pielocalectasia/dilatación de cálices ≈ 190 · microlitiasis ≈ 160 · litos vesiculares ≈ 85 ·
+adenitis mesentérica ≈ 45 · gastroenteritis/enterocolitis ≈ 32 · quiste renal ≈ 30 · hepatomegalia ≈ 27 · apendicitis ≈ 24 ·
+vejiga engrosada ≈ 23 · esplenomegalia ≈ 16 · colecistectomía ≈ 11 · hernia umbilical ≈ 8 · pancreatitis 4 · pólipos 4 ·
+contusión renal 4 · hemangioma 2 · estudio normal ≈ 16 (la mayoría de los normales cierran solo con "Resto de estructuras…").
+
+| Hallazgo | En el párrafo | En la conclusión |
+|---|---|---|
+| Hígado graso (otras formas) | "ecogenicidad Aumentada" | `Hígado graso grado 1.` (arábigo, el más usado) · `Hígado Graso grado I.` · `Esteatosis hepatica grado [N].` · ⚠ tipeo frecuente `Hígado graso graso [N]` (≈ 19) |
+| Colitis (formas del disco) | "Se evidencia edema Interasa sugestivo de colitis leve." · "con presencia de abundante gas y edema interasa moderado a predominio de marco colonico" | `Edema interasa sugestivo de colitis.` (66) · `Colitis moderada.` (≈ 76) · `Colitis leve.` · `Edema interasa moderado generalizado a predominio de marco colonico.` |
+| Gastroenteritis / enterocolitis (niños) | "edema interasa … (abundante gas y heces semiliquidas intraluminales)" | `Edema interasas sugestivo de Gastroenteritis.` · `Edema interesas sugestivo de enterocolitis [N]A no complicada.` |
+| Adenitis mesentérica (sobre todo San José, niños) | "se observan ganglios linfáticos aumentados de tamaño ([X] cm)" / "se observan ganglios Mesentericos aumentados de tamaño escasos dispersos < [X] cm" | `Adenitis mesenterica [X] cm y edema interesas sugestivo de colitis.` · `Adenitis mesenterica < a [X] cm …` · `Múltiples ganglios mesentéricos de < de [X] cm.` |
+| Apendicitis (niños) | "Intestino: peristaltismo positivo con disminución  del mismo en FID con presencia de gases, Apendice cecal con edema de pared y medidas aumentadas [A]x [B] cm, doloroso  a la movilización de transductor, [escaso líquido periapendicular,] no se observan ganglios …" · "imagen tubular no compresible en FID … pared: [X]mm … grasa periapendicular hiperecogenica" · "Mcburney ecografico (+)" / "Blumberg ecografico (+)" | `Apendicitis aguda.` (16) + `Se sugiere evaluación por cirugía pediatrica.` · `Conglomerado de asas en FID sugestivo a plastron apendicular.` |
+| Hepatomegalia / esplenomegalia | "tamaño aumentado y forma acorde a edad … limites mal definidos" / bazo "tamaño aumentado para edad" | `Hepatomegalia leve.` · `Hepatomegalia grado [1/I/II/3].` · `Esplenomegalia grado I.` · `Hepato-Esplenomegalia grado I` |
+| Quiste renal | "se evidencia quiste renal simple de medidas [A]x [B] cm" / "con quiste renal en polo superior de [A]x [B]x [C] cm" | `Quiste renal derecho de [A]x[B] cm.` · `Quiste simple Renal izquierdo de [A]x [B] cm.` |
+| Litiasis vesicular | "con litos en su interior de [X] cm" | `Litiasis vesicular de [X] cm.` · `Litiasis vesicular de [X] cm con paredes engrosadas.` · `Vesícula biliar con paredes engrosadas, barro biliar y lito en su interior de [X] cm.` |
+| Pólipo vesicular | "se evidencia imagen hiperecogenica adherida a pared sugestiva de pólipos de [A]x[B] cm" | `Vesícula biliar edematizada con imagen hiperecogenica en su interior sugestiva de pólipo.` |
+| Pancreatitis | "Páncreas aumentado de tamaño … conducto pancreático visible y focos hiperecogenicos" | `Páncreas aumentado de tamaño, conducto pancreático dilatado sugestivo de pancreatitis aguda.` |
+| Hemangioma / nódulo hepático | "imagen hiperecogenica en lóbulo [izquierdo] … de bordes irregulares" | `Lesión hepática sugestiva de hemangioma de [X] cm.` |
+| Hernia umbilical | "Región umbilical: se evidencia Defecto aponeurotico umbilical con contenido en su interior (epiplon)" / "Nota: se evalúa pared abdominal con sonda lineal encontrando defecto aponeurotico umbilical de [X] cm." | `Defecto aponeurotico umbilical sugestivo de Hernia umbilical [X] cm.` · `Hernia umbilical [X] cm.` |
+| Litiasis + dilatación | "se evidencia litiasis renal [X] cm con dilatación pielocalocial leve" (sic) | `Litiasis renal bilateral [X] cm, con dilatación de calices renales bilaterales.` · `Litiasis renal Der [X] cm , Litiasis renal Ri [Y] cm. Con leve dilatación Pielocalicial bilateral.` |
+| ITU alta (niños) | "con edema perirenal" | `Edema peri-renal bilateral y dilatacion de cálices renales Bilaterales sugestivo de ITU alta.` |
+| Contusión renal (trauma) | "con edema de cápsula que impresiona contusión renal" | `Contusión renal bilateral.` |
+| Hidronefrosis | "pielocalectasia moderada sugestiva de Hidronefrosis grado II con perdida parcial de la relación médula corteza" | `Hidronefrosis grado II bilateral.` |
+| Nefrectomía | "no posee por antecedente quirúrgico previo" | `No posee riñón izquierdo por antecedente quirúrgico previo.` |
+| Aorta calcificada | "aorta y cava inferior semicalcificadas" (≈ 37) | casi nunca va a la conclusión |
+
+Recomendaciones del disco (sin número, al final): `Se sugiere evaluación por cirugía pediatrica.` (≈ 21) ·
+`Se sugiere interconsulta con gastropediatra.` · `Se sugiere valoración Pediátrica.` · `Se sugiere TAC complementaria.` /
+`Se sugiere TAC abdominopelvica.` / `Nota se sugiere TAC abdominal con doble contraste complementaria.` ·
+`Se sugiere eco control en [N] meses.` · `Se sugiere control de amilasa / Lipasa en un 1 mes.` · `Se sugiere valoración por urología / nefrología`.
+Cierres más frecuentes: `Resto de estructuras dentro de límites normales.` (≈ 100 con sus variantes de tilde y punto) ·
+`Resto estructuras dentro de limites normales` · `Estudio ecografico sin Hallazgo patológicos.`
+
+## Variantes de estudio (ampliado 2026-11-07, disco)
+- **FAST abdominal** (1, niño con trauma): informe abdominal completo + `Nota: se explora mediante técnica de ecofast obteniendo 4 cuadrantes sin liquido libre.`
+  y `Equipo de ecografía sin capacidad para fast- extendido.`; conclusión con el hallazgo (p. ej. contusión renal) + "Resto de estructuras…".
+- **Abdominal con doppler hepático** (1, lactante): en Hígado añade "Se realiza medicion de arterias y venas hepáticas con flujo doppler …
+  índice de resistencia vascular aumentado, onda doppler espectral rítmica con patrones de flujo de indice de resistencia promedio [IR] …";
+  conclusión `Hepatoesplenomegalia grado I.` + `Vías Biliares intra y extrahepatica con dilatacion leve.` + `Se sugiere colangio resonancia o TAC abdominal con doble contraste para descartar …`.
+- **Pared abdominal** (1): transductor LINEAL de 7.5MHz; un solo párrafo `Pared Abdominal: piel con grosor y ecogenicidad conservada, tejido celular subcutáneo sin alteraciones …, línea alba sin alteracion capa muscular con patron fibrilar (músculos rectos transversos y oblicuos) … Cicatriz umbilical no dolorosa a la exploración sin evidencia de defectos aponeurotico.` → `Estudio ecografico dentro de límites normales.` (ver también `eco-partes-blandas.md`).
+- **Abdominal / pancreático** (1): abdominal normal con páncreas detallado "de medidas [A]x [B] x[C] cm cabeza cuerpo y cola respectivamente".
+- **Emergencia / apendicitis**: a veces solo `Intestino:` + `Vejiga:` (sin los demás órganos) y conclusión `Apendicitis aguda.`.
+- **Neonato / lactante** (30 < 1 año; edad "2 dias.", "8 meses", "1 mes 15 dias"): plantilla B con "tamaño … acorde a edad";
+  se nombran catéteres ("evidenciando catéter de onfaloclisis" → `Catéter de onfaloclisis en vasos umbilicales.`).
+- Vejiga en el abdominal (≈ 55): "Vejiga: plenificada, de paredes delgadas, de contenido anecoico, sin imágenes patologícas en su interior." (niños) y a veces "Vejiga y próstata:" en adultos.
+
+## Más errores a vigilar (ampliado 2026-11-07, disco)
+- Año mal tipeado en la fecha: "/226" por "/2026" (11 informes) → revisar siempre la fecha.
+- Conclusiones con tipeos sistemáticos: "bilteral", "bilatera", "biateral", "Litasis", "Microlilitiasis", "litiasis de al bilateral"
+  (autocorrección), "interesa/interesas" por "interasa", "graso graso", "pielocalocial", "Modeada", "Hepatolomegalia". Corregir al redactar.
+- Líneas de conclusión pegadas a la etiqueta ("2) Litiasis renal bilateral RD: …" aparece como si fuera etiqueta) y numeración que salta.
+- Medidas con unidad repetida ("10 cm cm") o punto suelto (".transv:", "2.4. cm").
+- En 5 documentos .doc antiguos el texto viene con caracteres de control antes de "Ci/Edad/Fecha".
 
 ## Ejemplo anonimizado
 ```

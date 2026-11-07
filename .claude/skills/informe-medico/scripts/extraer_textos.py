@@ -74,7 +74,24 @@ def texto_otro(ruta: Path) -> str:
     if shutil.which("textutil"):  # macOS
         return subprocess.run(["textutil", "-convert", "txt", "-stdout", str(ruta)], capture_output=True, text=True, timeout=120).stdout
     if ruta.suffix.lower() == ".doc" and shutil.which("antiword"):
-        return subprocess.run(["antiword", str(ruta)], capture_output=True, text=True, timeout=120).stdout
+        txt = subprocess.run(["antiword", str(ruta)], capture_output=True, text=True, timeout=120).stdout
+        if txt.strip():  # antiword falla en silencio con .doc guardados por Word moderno
+            return txt
+    if sys.platform == "win32" and shutil.which("powershell"):  # Windows con Microsoft Word
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            salida = Path(tmp) / "texto.txt"
+            ps = ("$w = New-Object -ComObject Word.Application; $w.Visible = $false; "
+                  f"$d = $w.Documents.Open('{str(ruta).replace(chr(39), chr(39) * 2)}', $false, $true); [IO.File]::WriteAllText('{salida}', $d.Content.Text, [Text.Encoding]::UTF8); $d.Close($false); $w.Quit()")
+            subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, timeout=180)
+            if salida.exists():
+                datos = salida.read_bytes()
+                if datos[:2] == bytes([0xFF, 0xFE]):
+                    return datos.decode("utf-16", errors="replace")
+                try:
+                    return datos.decode("utf-8-sig").replace(chr(13) + chr(10), chr(10)).replace(chr(13), chr(10))
+                except UnicodeDecodeError:
+                    return datos.decode("cp1252", errors="replace")
     soffice = shutil.which("soffice") or shutil.which("libreoffice")
     if soffice:
         import tempfile
@@ -119,14 +136,51 @@ def imagenes_docx(ruta: Path, destino: Path | None) -> int:
     return len(medios)
 
 
-TITULOS_ECO = [("prost", "eco-prostatico"), ("abdominopelv", "eco-abdominopelvico"), ("partes blandas", "eco-partes-blandas"),
-               ("renal", "eco-renal"), ("abdominal", "eco-abdominal"), ("tiroid", "eco-tiroides"), ("mama", "eco-mamario"),
+TITULOS_ECO = [("prost", "eco-prostatico"), ("abdominopelv", "eco-abdominopelvico"), ("abdomino-pelv", "eco-abdominopelvico"),
+               ("abdomino pelv", "eco-abdominopelvico"), ("partes blandas", "eco-partes-blandas"),
+               ("renal", "eco-renal"), ("reno-vesical", "eco-renal"), ("vesical", "eco-vesical"),
+               ("abdominal", "eco-abdominal"), ("tiroid", "eco-tiroides"), ("mama", "eco-mamario"),
                ("obst", "eco-obstetrico"), ("pelv", "eco-pelvico"), ("testic", "eco-testicular"), ("doppler", "eco-doppler")]
+
+# Documentos clínicos y administrativos: se reconocen por su título (primera línea) o el nombre del archivo.
+TITULOS_CLINICOS = [
+    (r"resumen\s+de\s+ingreso", "resumen-ingreso"),
+    (r"extensi[oó]n", "extension-hospitalizacion"),
+    (r"egreso", "hospitalizacion"),
+    (r"evaluaci[oó]n\s+de\s+cirug", "evaluacion-cirugia-pediatrica"),
+    (r"[oó]rdenes\s+m[eé]dicas", "ordenes-medicas"),
+    (r"pendientes\s+por\s+operar", "lista-pendientes-quirurgicos"),
+    (r"ecos\s+realizados", "balance-ecos"),
+    (r"solicitud\s+de\s+cortes[ií]a", "solicitud-cortesia"),
+    (r"carta\s+de\s+recomendaci[oó]n", "carta-recomendacion"),
+    (r"listado\s+de\s+medicamentos", "listado-insumos"),
+    (r"informe\s+m[eé]dico", "informe-medico"),
+]
+# Documentos personales de Danilo (no son plantillas de la skill): se inventarían pero no se estudian.
+PERSONALES = (r"\brif\b|licencia|recibo de pago|carta.? de trabajo|curr[ií]culum|c[eé]dula|t[ií]tulo de cobertura|"
+              r"bancaamiga|prest(amo|_dinero)|autorizaci[oó]n|^documento\d|^\d{9,}\.|tesis|revista|cuidados del reci")
 
 
 def clasificar(texto: str, nombre: str) -> str:
+    if re.search(PERSONALES, nombre.lower()):
+        return "personal-no-medico"
     # 1) el título del documento (primeras líneas) manda
     cabeza = " ".join(l.strip() for l in texto.splitlines()[:6]).lower()
+    primera = next((l.strip().lower() for l in texto.splitlines() if l.strip()), "")
+    primeras = [l.strip().lower() for l in texto.splitlines() if l.strip()][:3]
+    if any(re.match(r"extensi[oó]n|solicitud\s+de\s+extensi", l) for l in primeras):  # "INFORME MEDICO…" + "EXTENSIÓN"
+        return "extension-hospitalizacion"
+    for patron, tipo in TITULOS_CLINICOS:
+        if re.search(patron, primera):
+            return tipo
+    if re.search(r"tiempo\s+quir[uú]rgico|procedimiento\s+fecha", texto[:3000].lower()):
+        return "programacion-quirurgica"
+    if re.search(r"guardia|cronograma", nombre.lower()):
+        return "cronograma-guardia"
+    if re.search(r"morbilidad", nombre.lower()):
+        return "morbilidad"
+    if re.search(r"presupuesto", nombre.lower()):
+        return "solicitud-presupuesto"
     if re.search(r"informe\s+ecogr|ecosonograma|ecograf", cabeza):
         for clave, tipo in TITULOS_ECO:
             if clave in cabeza:
