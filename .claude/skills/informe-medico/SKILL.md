@@ -71,6 +71,8 @@ Reglas:
 - Al final, fuera del documento: lista corta de los `[___]` pendientes y de lo que asumiste como normal.
 
 ## 5. Entregar
+- **Formato final: PDF** (preferencia de Danilo): convierte el .docx con `soffice --headless --convert-to pdf`,
+  revisa las páginas como imagen y entrega el PDF; el Word solo si quiere editarlo.
 - Por defecto: el documento en texto, listo para copiar y pegar.
 - Word: si hay un informe anterior suyo del mismo centro y tipo (ver `formatos/centros.md`), arma el
   documento con `scripts/informe_desde_modelo.py` (conserva membrete, tabla, firma y formato exactos).

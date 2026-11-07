@@ -22,7 +22,11 @@ Nunca guardar aquí datos de pacientes (el repo es público).
 3. Entregar el informe con imágenes y una versión con las medidas de pantalla; preguntar lo dudoso en una
    sola lista numerada con opciones. Si responde "sí" a una pregunta con dos opciones, aplicar la primera y
    no inventar calificativos (p. ej. escribir el grosor medido en vez de "delgada/engrosada").
-4. **Mostrar siempre la vista previa** (páginas como imagen) además de mandar el Word.
+4. **Mostrar siempre la vista previa** (páginas como imagen).
+5. **Entregar en PDF** (pedido por Danilo el 2026-11-07), y el Word solo si quiere editarlo:
+   `soffice --headless --convert-to pdf "<informe>.docx"`. La fuente Carlito sustituye a Calibri con las mismas
+   medidas, así que el PDF queda igual que el Word (comprobar con `pdffonts`). Nombre:
+   "<Paciente> - Eco <tipo> - <fecha>.pdf". Un abdominal con 8 imágenes pesa ≈ 1 MB, apto para WhatsApp.
 
 ## Revisiones que siempre hay que hacer
 - Medidas del texto vs. pantalla; diagnóstico coherente con la medida (p. ej. LD 15 cm sí es hepatomegalia).
