@@ -29,7 +29,9 @@ medidas arriba a la derecha "1 D: 25.21 mm"; transductores L742 lineal, 2P1 sect
 
 ## Maquetación
 - Van **después del bloque de firma**, en cuadrícula de **2 columnas**, sin pies de foto.
-- Ancho ≈ **8.3 cm** cada una (fotos) / 8.5–9 cm (capturas); alto según proporción.
+- Ancho ≈ 8.3 cm en sus originales, pero en la cuadrícula generada usar **7.9 cm**: 2 × 8.3 cm + márgenes de
+  celda no caben en carta con márgenes de 2.54 cm y Word **recorta el borde derecho** (se pierden las medidas).
+  Revisar siempre la vista previa: la columna de medidas de la derecha debe leerse completa.
 - Abdominal: el texto llena la página 1 y las imágenes pasan a la página 2 (3 filas × 2).
 - Prostático: 2 imágenes lado a lado en la misma página que el texto.
 - Con `informe_desde_modelo.py`: `"columnas": 2, "ancho_imagen_cm": 8.3` (prostático: 8.0 para que quepan en la página 1).

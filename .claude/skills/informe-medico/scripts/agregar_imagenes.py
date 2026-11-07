@@ -3,7 +3,7 @@
 
 Uso:
   python3 agregar_imagenes.py --informe informe.docx --salida informe_con_imagenes.docx \
-      [--columnas 2] [--ancho-cm 8.3] [--reemplazar] img1.jpg img2.jpg ...
+      [--columnas 2] [--ancho-cm 7.9] [--reemplazar] img1.jpg img2.jpg ...
 
 - Las imágenes van en el orden dado, en una cuadrícula sin bordes, justo después del bloque de firma
   (línea "Dr. …" y las siguientes: especialidad, MPPS/CMA, RIF), como en los informes de Danilo.
@@ -29,7 +29,7 @@ def main():
     ap.add_argument("--informe", required=True)
     ap.add_argument("--salida", required=True)
     ap.add_argument("--columnas", type=int, default=2)
-    ap.add_argument("--ancho-cm", type=float, default=8.3)
+    ap.add_argument("--ancho-cm", type=float, default=7.9)  # 2 × 8.3 cm no cabe en carta con márgenes de 2.54 cm: Word recorta la imagen
     ap.add_argument("--reemplazar", action="store_true")
     ap.add_argument("imagenes", nargs="+")
     a = ap.parse_args()
