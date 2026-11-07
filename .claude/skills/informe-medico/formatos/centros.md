@@ -40,3 +40,9 @@ sello y datos de pacientes). Opciones, en orden de preferencia:
 2. Que Danilo adjunte un informe anterior del centro en la sesión.
 3. Si Danilo hace privado el repositorio, guardar un modelo limpio por centro y tipo en
    `formatos/modelos/` (sin datos de pacientes: se generan con el propio script y datos ficticios).
+
+## Firma y sello al editar un informe ya hecho
+En sus .docx la imagen de firma/sello suele estar anclada a una posición fija de la **página**
+(`wp:positionV relativeFrom="page"`). Si se añaden líneas al texto, la conclusión baja y la firma la tapa.
+Al añadir texto: cambiar el ancla a `relativeFrom="paragraph"` (párrafo vacío previo a "Dr. …", offset ≈ 0.15 cm)
+y revisar la vista previa.
