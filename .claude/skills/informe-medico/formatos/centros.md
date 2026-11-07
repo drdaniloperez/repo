@@ -64,3 +64,13 @@ Bloque de firma de estos documentos (texto): "Dr. Danilo Pérez T." / "Ecografis
 - Razetti: la captura recortada del escudo 1953-2022 que lleva su programación quirúrgica.
 - `armar_informe_docx.py --centro razetti` arma ya el membrete real (carta horizontal, texto azul a la derecha); si no se
   dan Px/Ci/Edad no pone la tabla de identificación (listas y programaciones).
+
+## Medidas reales del logo en el disco (2026-11-07, todos los .docx con logo reconocido)
+| Institución | Documentos | Tamaño y colocación más frecuentes |
+|---|---|---|
+| Colina | 1.261 | 4.8 × 2.2–2.3 cm flotante (ecos, ≈ 745); 4.8 × 2.8 y 4.3 × 2.8 cm flotante (versión verde de los documentos clínicos y ecos recientes, ≈ 330) |
+| San José | 635 | 8.9 × 1.4 cm en línea, centrado (282); 7.8 × 1.4 cm flotante (151); 5.7 × 1.9 cm flotante (98, logo de alta resolución con RIF); 8.9 × 1.4 cm flotante (63) |
+| Jesús Farías (PDVSA) | 3 ecos | 6.0 × 1.7 cm flotante, arriba a la izquierda (los 3) — confirma lo documentado |
+| Razetti | 1 | 3.9 × 4.3 cm flotante detrás del texto (programación quirúrgica) |
+Con `informe_desde_modelo.py` el tamaño lo da el modelo; con `armar_informe_docx.py` se usa el de `logos.json`
+(la variante más frecuente). Las listas y guardias de PDVSA no llevan logo.
