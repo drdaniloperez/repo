@@ -9,6 +9,7 @@ Objetivo: que Danilo dicte solo lo positivo y relevante, y recibir un documento 
 idéntico en estructura, vocabulario y tono a los que él redacta.
 
 ## 0. Antes de empezar
+0. Lee `memoria/informes-eco.md`: preferencias de Danilo aprobadas y lecciones de informes anteriores.
 1. Mira si existe `formatos/<tipo>.md` aprendido de sus ejemplos reales (ver `formatos/README.md`).
    **Si existe, manda sobre las guías genéricas de `tipos/`**: orden de secciones, encabezados, frases
    de plantilla, mayúsculas, unidades, forma de la conclusión y del cierre/firma.

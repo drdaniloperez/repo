@@ -8,6 +8,7 @@ Vive en GitHub para que cualquier sesión (nube, escritorio, móvil, terminal) t
 @memoria/perfil.md
 @memoria/preferencias.md
 @memoria/aprendizajes.md
+@memoria/informes-eco.md
 
 ## Reglas de funcionamiento
 

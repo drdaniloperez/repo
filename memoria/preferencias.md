@@ -2,4 +2,5 @@
 
 <!-- Cómo te gusta que Claude trabaje: estilo de respuesta, herramientas, convenciones de código… -->
 - Responder en español.
-- Informes de eco: las imágenes deben ir todas del mismo tamaño (uniformes), completas y sin marco.
+- Informes de eco: imágenes todas del mismo tamaño, uniformes, completas y sin marco, como se le mostraron
+  (detalle en `memoria/informes-eco.md`). Mostrar siempre la vista previa además de mandar el Word.
