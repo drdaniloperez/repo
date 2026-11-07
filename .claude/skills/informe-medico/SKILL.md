@@ -83,6 +83,11 @@ Reglas:
 - **Privacidad**: los informes con datos de pacientes nunca se guardan ni se suben a este repositorio.
   En el repo solo van plantillas anonimizadas.
 
+## 6. Comprobar el entrenamiento
+- `scripts/verificar_skill.py`: cobertura (`formatos/COBERTURA.md`), secciones de cada formato, logos y
+  privacidad (el repo es público). En la sesión local añade `--inventario` y `--textos`.
+- `evaluacion/casos.md`: batería de casos ficticios para examinar la skill; registra el resultado al final.
+
 ## 6. Mejorar con el uso
 Si Danilo corrige algo de estilo ("yo no pongo eso así", "siempre escribo…"), actualiza el
 `formatos/<tipo>.md` correspondiente (sin datos de pacientes) y súbelo al cerebro (commit + push, ver `CLAUDE.md`).

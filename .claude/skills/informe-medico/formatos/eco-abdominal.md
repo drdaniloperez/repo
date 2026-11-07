@@ -104,3 +104,33 @@ RI long y transv · Bazo long y transv · [Vejiga volumen] · [Útero A × B, ov
 - Numeración de la conclusión que salta (1, 2, 4).
 - Edad o cédula mal escrita (p. ej. edad "5. años" en un adulto, cédula con puntos fuera de lugar), tipeos ("estructurss", "vesiculoretral").
 - Lateralidad o medidas que no cuadran con la conclusión.
+
+## Preguntar si falta
+- Datos del paciente: nombre, CI (o "menor"), edad (en niños, años y meses), fecha; institución (logo).
+- Todas las medidas de "Medidas que siempre reporta"; si hay fotos, leerlas de la pantalla y contrastar.
+- Hígado graso: grado. Litiasis: tamaño de cada lito y lado. Pielocalectasia: grado y si hay uréter dilatado.
+- Vesícula: paredes (delgadas/engrosadas), contenido (barro, litos y tamaño), antecedente de colecistectomía.
+- Intestino: gases/heces, edema interasas (leve/moderado) → colitis en la conclusión.
+- Abdominopélvico: vejiga (volumen, paredes), útero y ovarios (medidas) o próstata (medidas, volumen, IPP).
+- Recomendación final (control, valoración por especialista) si el hallazgo la amerita.
+
+## Ejemplo anonimizado
+```
+INFORME ECOGRÁFICO ABDOMINAL
+| Px: [NOMBRE] | Ci: [CI] | Edad: [EDAD] | Fecha: [FECHA] |
+
+Se realiza estudio ecográfico en tiempo real con transductor convex de 3.5MHz en múltiples proyecciones, donde se evidencian los siguientes hallazgos:
+
+Hígado: forma, tamaño habitual con patrón granular fino, de medidas LD: 12.5 cm y LI: 6.3 cm, limites bien definidos, parénquima heterogeneo, ecogenicidad aumentada, imágenes de vasos visibles y vías biliares intrahepaticas sin alteraciones.
+Vesícula Biliar: tamaño y forma habitual plenificada de medidas long: 4.7 cm trans: 1.9 cm, de paredes engrosadas, conducto biliar de calibre adecuado, con presencia de barro biliar en su interior.
+Páncreas: de forma y configuración habitual sin liquido peripancreatico, ecogenicidad aumentada, con medidas de cabeza cuerpo y cola 2.1cm x 1.6cm x 1.6cm
+Riñón Derecho: adecuadamente visible con movilidad respiratoria normal, de medidas long: 10 cm, transv: 5.8 cm, de tamaño dentro del rango normal, parénquima heterogéneo, ecogenicidad conservada, con presencia de litiasis de 0.6cm, sin presencia de Pielocalectasia, conservando la relación médula corteza.
+Riñón Izquierdo: adecuadamente visible con movilidad respiratoria normal, de medidas long: 10.1 cm, transv: 6.3 cm, de tamaño dentro del rango normal, parénquima heterogéneo, ecogenicidad conservada, con presencia de microlitiasis, sin presencia de Pielocalectasia, conservando la relación médula corteza.
+Bazo: parénquima homogéneo, de medidas long: 10.6 cm. transv: 4 cm, de tamaño normal, sin evidencia de lesiones focales o expansivas ni liquido periesplenico.
+Intestino: peristaltismo conservado, con presencia de gases y heces, sin evidencia de líquido libre en cavidad, no se observan ganglios linfáticos aumentados de tamaño ni otras masas ocupantes de espacio patológicas, aorta y cava inferior sin alteraciones.
+
+Conclusión:	1) Hígado Graso Grado I
+		2) Vesicular Biliar con paredes engrosadas y presencia de barro biliar en su interior
+		3) Litiasis Renal derecha de 0.6 cm.
+		4) Microlitiasis Renal izquierda.
+```

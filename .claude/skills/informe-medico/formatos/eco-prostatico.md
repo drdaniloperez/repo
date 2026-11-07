@@ -25,6 +25,11 @@ Conclusión: Hiperplasia prostática grado [I/II/III].        ← sin numeració
 - `Nota: Px con antecedente quirúrgico previo de …` cuando aplica.
 - Conclusión normal: `1) Estudio ecografico dentro de límites normales.`
 
+## Conclusión
+- Una sola conclusión, sin numeración: `Conclusión: Hiperplasia prostática grado [I/II/III].`
+- Normal: `Conclusión: 1) Estudio ecografico dentro de límites normales.`
+- La conclusión debe ser coherente con la descripción (aumentada ↔ hiperplasia; deforma piso ↔ IPP).
+
 ## Grado según volumen (inferido de sus informes — ⚠ confirmar con Danilo)
 | Volumen | Conclusión usada |
 |---|---|
@@ -38,3 +43,15 @@ Escala propuesta: < 25 normal · 25–40 grado I · 40–60 grado II · > 60 gra
 ## Preguntar si falta
 Las 3 medidas, volumen, IPP (protrusión intravesical), bordes, calcificaciones, si deforma el piso
 vesical, residuo posmiccional si lo menciona, antecedente de prostatectomía/RTU.
+
+## Ejemplo anonimizado
+```
+INFORME ECOGRÁFICO PROSTATICO
+| Px: [NOMBRE] | Ci: [CI] | Edad: [EDAD] | Fecha: [FECHA] |
+
+Se realiza estudio ecográfico en tiempo real con transductor convex de 3.5MHz en múltiples proyecciones, donde se evidencian los siguientes hallazgos:
+
+Próstata: de tamaño y forma aumentado, de medidas long: 4.5 cm trans: 4.3 cm oblicua: 4.8 cm de bordes irregulares, parénquima heterogéneo, con microcalcificaciones en su interior. Ecogenicidad conservada, que deforma piso de vejiga. IPP: 0.7 cm
+Vol prostático: 46.4 cm³
+Conclusión: Hiperplasia prostática grado II.
+```

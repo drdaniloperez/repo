@@ -1,49 +1,64 @@
-# Modo aprendizaje: estudiar los informes de ejemplo de Danilo
+# Modo aprendizaje: estudiar el repertorio completo de informes de Danilo
 
-Fuente: disco externo **Rodolfo SSD**, subcarpeta **Alarms** (más de 1000 archivos: informes médicos,
-ecos, hospitalización, extensión de hospitalización, procedimientos quirúrgicos, etc.).
-Rutas típicas: macOS `/Volumes/Rodolfo SSD/Alarms`, Windows `<letra>:\Alarms`.
-Si no aparece, búscala (`ls /Volumes`, `ls "/Volumes/Rodolfo SSD"`) y confirma el nombre con Danilo
-(el nombre "Alarms" pudo llegar mal por dictado).
+Objetivo: que la skill sepa redactar **todos** los tipos de documento que Danilo hace, idénticos a los
+suyos, y que una sesión en la nube pueda comprobarlo después con `scripts/verificar_skill.py` y
+`evaluacion/casos.md`.
 
-## Requisito: acceso al disco
-- **Sesión local** (Claude Code en la computadora con el disco conectado): acceso directo.
-- **Sesión en la nube**: solo si Danilo comparte esa carpeta por Remote Control
-  (`list_computer_folders` → `request_computer_folder`). Si no está disponible, dile que ejecute este
-  modo desde Claude Code en su computadora, o que suba una muestra de archivos a la sesión.
+Fuente: disco externo **Rodolfo SSD** (subcarpeta que indique Danilo; se mencionó "Alarms", nombre que
+pudo llegar mal por dictado). macOS `/Volumes/Rodolfo SSD/...`, Windows `<letra>:\...`.
+Si no aparece: `ls /Volumes`, `ls "/Volumes/Rodolfo SSD"` y pregunta.
+
+## Requisitos (sesión local)
+- Claude Code en la computadora con el disco conectado, **abierto dentro del clon del cerebro**, en la rama
+  principal `claude/zealous-cray-ira4xc` (`git pull` antes de empezar).
+- `pip install -r .claude/skills/informe-medico/scripts/requirements.txt` (y LibreOffice para .doc y PDF).
+- Leer antes `memoria/informes-eco.md`, `formatos/centros.md` y los formatos ya aprendidos: **se amplían,
+  no se rehacen** (vienen de 39 informes reales revisados con Danilo).
+
+## Reglas de privacidad (el repo es PÚBLICO)
+- Nunca subir: informes reales, textos extraídos, nombres, cédulas, teléfonos, direcciones, fechas de
+  nacimiento, n.º de historia, nombres de otros médicos/colegas, la firma ni el sello de Danilo,
+  ni un `.docx` modelo que los contenga.
+- Sí se suben: formatos anonimizados (`[NOMBRE]`, `[CI]`, `[EDAD]`, `[FECHA]`, `[MÉDICO]`), logos de
+  instituciones (ya están en `formatos/logos/`), estadísticas agregadas.
+- Los textos extraídos quedan fuera del repo (`~/informes-extraidos/`).
+- Antes de cada commit: `python3 .claude/skills/informe-medico/scripts/verificar_skill.py` debe salir sin
+  alertas de privacidad.
 
 ## Pasos
-1. **Extraer e inventariar** (no leer 1000 archivos a mano):
-   `python3 .claude/skills/informe-medico/scripts/extraer_textos.py "<carpeta>"`
-   → `~/informes-extraidos/textos/` + `inventario.csv` con un tipo sugerido por archivo.
-   Revisa el conteo por tipo y los `sin-clasificar`/`ERROR` (abre algunos y reasigna).
-2. **Muestrear por tipo**: de cada tipo lee 10–20 ejemplos variados (fechas distintas, normales y
-   patológicos). Usa subagentes en paralelo, uno por tipo, si hay muchos tipos.
-3. **Destilar el formato** de cada tipo en `formatos/<tipo>.md` (usa `formatos/_plantilla.md`):
-   - Estructura exacta: encabezado, título, bloque de identificación, secciones en orden, cierre y firma.
-   - Frases fijas literales que se repiten (descripciones normales de cada órgano, frases de cierre).
-   - Variantes patológicas frecuentes con su redacción típica.
-   - Convenciones: mayúsculas, viñetas/numeración, unidades, decimales (coma o punto), abreviaturas.
-   - Medidas que siempre reporta y en qué orden; valores de referencia que él cita.
-   - Cómo redacta la conclusión/impresión diagnóstica y las recomendaciones.
-   - 1–2 ejemplos completos **anonimizados**.
-   **Imágenes de los ecos** (el extractor con `--con-imagenes` guarda las imágenes de cada .docx en
-   `~/informes-extraidos/imagenes/`): estudia en 15–20 informes de eco de distintos tipos y escribe
-   `formatos/eco-imagenes.md` con:
-   - Cómo están recortadas: pantalla completa o solo la imagen, proporción (4:3, 16:9…) y resolución
-     → valor de `--aspecto` y `--margen` para `recortar_pantalla.py`.
-   - Cuántas imágenes por informe, en qué orden por tipo de estudio, si llevan pie/rótulo.
-   - Maquetación: columnas, ancho en cm, si van al final, en página aparte o intercaladas
-     (mira `word/document.xml` de 2–3 ejemplos: tablas, `wp:extent`, saltos de página).
-   - Membrete/encabezado/pie: si todos usan el mismo, guarda un `.docx` de membrete **vacío, sin
-     datos de pacientes**, en `formatos/membrete.docx` para `armar_informe_docx.py --plantilla`.
-   Comprueba el recorte: pasa 3–5 fotos de prueba de Danilo por `recortar_pantalla.py` y compáralas
-   con sus imágenes ya recortadas.
-4. **Anonimizar SIEMPRE** antes de escribir en el repo: nombres, cédulas, fechas de nacimiento,
-   teléfonos, direcciones, n.º de historia, nombres de otros médicos o pacientes → `[NOMBRE]`,
-   `[CI]`, `[EDAD]`, `[FECHA]`, etc. Revisa con `grep` que no quede ningún dato real. Los textos
-   extraídos (`~/informes-extraidos`) no se suben nunca.
-5. **Validar con Danilo**: muéstrale el resumen de cada formato y un informe de prueba generado con
-   datos ficticios; ajusta lo que diga.
-6. **Persistir**: commit `skill: informe-medico — formatos aprendidos (<tipos>)` y push a la rama
-   principal del cerebro (ver `CLAUDE.md`).
+1. **Extraer e inventariar** (no leer los archivos uno por uno):
+   `python3 .claude/skills/informe-medico/scripts/extraer_textos.py "<carpeta>" --con-imagenes`
+   → `~/informes-extraidos/textos/`, `imagenes/`, `inventario.csv` (tipo sugerido por el título, n.º de imágenes).
+   Revisa el conteo por tipo; abre los `sin-clasificar`/`ERROR` y reasígnalos. Si aparece un tipo nuevo,
+   añade su patrón a `TITULOS_ECO`/`TIPOS` en el extractor.
+2. **Identificar institución** de cada documento por su logo (huellas en `formatos/logos/logos.json`):
+   Colina, Policlínica San José, Hospital Jesús Farías (PDVSA), Hospital Universitario Dr. Luis Razetti.
+   Si aparece otra institución o un logo nuevo, guárdalo en `formatos/logos/` y en `logos.json`
+   (con su tamaño y posición) y actualiza `centros.md`. El membrete del **Razetti está provisional**:
+   ajústalo con sus informes reales.
+3. **Muestrear por tipo**: 10–20 ejemplos variados por tipo (fechas, normales/patológicos, adultos/niños,
+   instituciones). Con muchos tipos, un subagente por tipo en paralelo; cada uno devuelve el formato
+   destilado y anonimizado.
+4. **Destilar cada tipo** en `formatos/<tipo>.md` siguiendo `formatos/_plantilla.md`. Secciones obligatorias
+   (las comprueba el verificador):
+   `## Estructura`, `## Frases`, `## Conclusión`, `## Preguntar si falta`, `## Ejemplo anonimizado`.
+   Incluye: frases literales normales y patológicas, medidas que siempre reporta y su orden, unidades y
+   decimales, cómo cierra, recomendaciones típicas y **la lista de datos que la skill debe pedir** cuando
+   Danilo no los dicte (medidas, técnica, anestesia, días, hallazgos relacionados, diagnósticos que suele
+   añadir según los hallazgos).
+   Tipos esperados (según lo que haya): ecos de cada región (abdominal, renal, prostático, partes blandas,
+   tiroides/cuello, mamas, pélvico, obstétrico, testicular, inguinal, doppler…), informe médico, informe de
+   hospitalización, **extensión de hospitalización**, **informe operatorio / procedimiento quirúrgico**
+   (cirugía pediátrica), epicrisis, referencias, constancias, reposos, récipes, lista de pendientes.
+5. **Imágenes**: amplía `formatos/eco-imagenes.md` (cantidad y orden por tipo de eco) respetando lo ya
+   aprobado en `memoria/informes-eco.md` (todas del mismo tamaño, 2 columnas, 7.9 cm, solo pantalla).
+6. **Cobertura**: actualiza `formatos/COBERTURA.md` con una fila por tipo: nº de documentos en el disco,
+   nº estudiados, archivo de formato, instituciones donde aparece y estado (aprendido / pocos ejemplos).
+   Los tipos con < 3 ejemplos se marcan "pocos ejemplos".
+7. **Probar**: genera con datos FICTICIOS al menos un documento de cada tipo con
+   `informe_desde_modelo.py` (modelo real del disco, salida fuera del repo) y compáralo con un original:
+   estructura, frases, membrete, firma, PDF. Corrige el formato hasta que quede igual.
+8. **Validar con Danilo**: muéstrale el resumen de cada formato y los documentos de prueba.
+9. **Verificar y persistir**: `verificar_skill.py` sin alertas → commit
+   `skill: informe-medico — formatos aprendidos (<tipos>)` y push a `claude/zealous-cray-ira4xc`.
+   Al final, deja en `formatos/COBERTURA.md` la fecha del entrenamiento y la ruta de origen (sin datos).
