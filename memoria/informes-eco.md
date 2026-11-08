@@ -33,6 +33,11 @@ su derecha, equipo Mindray portátil que mide en **cm** ("1 Distancia 5.06 cm", 
 la laptop (≈ la mitad trae marco o pared → esquinas manuales). Pedirle un eco anterior suyo de Colina en .docx como modelo
 si no lo tengo en la sesión.
 
+## Ejemplos aprobados (usar como referencia)
+- **Eco abdominal con apendicitis aguda** (aprobado 2026-11-07): mismo texto en San José y en Colina, cambiando solo
+  el logo/membrete de la institución. Plantilla: `formatos/plantillas/eco-abdominal-apendicitis.json`; detalle y
+  ejemplo en `formatos/eco-abdominal.md` → "Ejemplo APROBADO". 8 imágenes (6 órganos + 2 del apéndice).
+
 ## Flujo que funcionó
 0. Si no tengo en la sesión el modelo .docx del centro (Colina, San José…), pedírselo **al empezar**, junto con las fotos
    (los modelos no se guardan en el repo público; ver `memoria/aprendizajes.md`).

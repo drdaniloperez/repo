@@ -40,6 +40,7 @@ medidas arriba a la derecha "1 D: 25.21 mm"; transductores L742 lineal, 2P1 sect
 | Mamario | 70 | 69 | 2 | 1–6 | Mama derecha → mama izquierda (→ lesión, axilas) |
 | Testicular (± doppler) | 95 | 92 | 3 | 1–6 | Testículo derecho → izquierdo → comparativo/doppler (→ canal inguinal) |
 | Piel y partes blandas | 158 | 155 | 2 | 1–6 | La lesión con medidas → doppler/otro corte |
+| **Abdominal con apendicitis (ejemplo aprobado 2026-11-07)** | — | — | 8 | — | Hígado → vesícula → páncreas → RD → RI → bazo → apéndice cecal → apéndice con medidas (mm) |
 Los ecos sin imágenes (sobre todo prostáticos y vesicales antiguos) se entregaron solo con texto.
 
 ## Maquetación

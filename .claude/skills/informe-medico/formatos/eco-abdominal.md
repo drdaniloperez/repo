@@ -224,6 +224,50 @@ Cierres más frecuentes: `Resto de estructuras dentro de límites normales.` (�
 - Medidas con unidad repetida ("10 cm cm") o punto suelto (".transv:", "2.4. cm").
 - En 5 documentos .doc antiguos el texto viene con caracteres de control antes de "Ci/Edad/Fecha".
 
+## Ejemplo APROBADO por Danilo: apendicitis aguda (2026-11-07) — usar SIEMPRE este como referencia
+Danilo eligió este informe (niño, Policlínica San José) como **el modelo a seguir para todo eco abdominal con
+apendicitis aguda**, en **San José y en Colina**: el texto es el mismo; lo único que cambia es el **logo/membrete**
+de la institución donde se hizo el estudio (se toma de un modelo `.docx` de esa institución con `--centro`).
+Plantilla lista para rellenar: `plantillas/eco-abdominal-apendicitis.json` (`informe_desde_modelo.py --datos`).
+- Plantilla corta: "Se realiza estudio ecográfico en tiempo real con transductor de 3.5MHz donde se evidencia:".
+- **Solo la etiqueta en negrita** ("Hígado:", "Vesícula Biliar:"…); el texto del párrafo, normal.
+- Orden: Hígado → Vesícula Biliar → Páncreas (cabeza/cuerpo/cola) → Riñón Derecho → Riñón Izquierdo → Bazo →
+  **Intestino (aquí va el apéndice)** → Vejiga.
+- Conclusión numerada en negrita: `1) Apendicitis aguda.` + los hallazgos añadidos (p. ej. `2) Microlitiasis renal bilateral.`),
+  y debajo, sin negrita: `Se sugiere evaluación por cirugía pediatrica.`
+- **8 imágenes**, 2 columnas, todas del mismo tamaño: hígado → vesícula → páncreas → riñón derecho → riñón izquierdo →
+  bazo → **apéndice cecal (rótulo "APENDICE CECAL") → apéndice con sus medidas** (grosor de pared/diámetro en mm).
+- Pantalla del MediSono de San José en **mm**: pasar a cm las medidas de órganos (81.94 mm → 8.1 cm); el grosor de la pared
+  apendicular se deja en **mm**.
+
+```
+INFORME ECOGRÁFICO ABDOMINAL
+| Px: [NOMBRE] | Ci: menor | Edad: [EDAD] | Fecha: [FECHA] |
+
+Se realiza estudio ecográfico en tiempo real con transductor de 3.5MHz donde se evidencia:
+
+Hígado: tamaño y forma acorde a edad, de medidas LD: 8.1 cm y LI: 4.2 cm, limites bien definidos, parénquima homogéneo, sin presencia de lesiones focales o expansivas, ecogenicidad conservada, imágenes de vasos y vías biliares intrahepaticas sin alteraciones.
+Vesícula Biliar: de forma piriforme, plenificada, de paredes delgadas, de medidas long: 3.5 cm transv: 1.2 cm, sin imagenes patologícas en su interior.
+Páncreas: parénquima homogéneo, sin presencia de lesiones focales o inflamación, de medidas cabeza: 2.1 cm cuerpo: 2.2 cm cola: 1.9 cm, conducto pancreático no visible, sin líquido peripancreático a su alrededor.
+Riñón Derecho: adecuadamente visible con movilidad respiratoria normal, de medidas long: 7.7 cm transv: 3.5 cm, de tamaño dentro del rango normal, parénquima homogéneo, ecogenicidad conservada, con microlitiasis, sin presencia de Pielocalectasia conservando la relación médula corteza.
+Riñón Izquierdo: adecuadamente visible con movilidad respiratoria normal, de medidas long: 7.2 cm transv: 4.0 cm, de tamaño dentro del rango normal, parénquima homogéneo, ecogenicidad conservada, con microlitiasis, sin presencia de Pielocalectasia conservando la relación médula corteza.
+Bazo: parénquima homogéneo, de acuerdo a la edad del paciente, de medidas long: 7.7 cm  transv: 3.1 cm, de tamaño normal, sin evidencia de lesiones focales o expansivas.
+Intestino: peristaltismo positivo con disminución  del mismo en FID con presencia de gases, Apendice cecal con edema de pared 4 mm de medidas aumentadas, doloroso  a la movilización de transductor, escaso líquido periapendicular, grasa periapendicular hiperecogenica, no se observan ganglios linfáticos aumentados de tamaño ni otras masas ocupantes de espacio patológicas, aorta y cava inferior sin alteraciones.
+Vejiga: plenificada, de paredes delgadas, de contenido anecoico, sin imágenes patologícas en su interior.
+
+Conclusión:	1) Apendicitis aguda.
+		2) Microlitiasis renal bilateral.
+	Se sugiere evaluación por cirugía pediatrica.
+
+<firma y bloque de firma del modelo de la institución>
+<8 imágenes del eco en 2 columnas>
+```
+Preguntar si falta (apendicitis): grosor de pared (mm) y, si lo midió, diámetro transverso; si hay líquido
+periapendicular (escaso/moderado) y grasa hiperecogénica; ganglios (si los hay, cambiar a "se observan ganglios
+linfáticos aumentados de tamaño"); apendicolito; signos de complicación (colección, plastrón → `Conglomerado de asas en
+FID sugestivo a plastron apendicular.`); hallazgos asociados (microlitiasis, adenitis, colitis) para añadirlos numerados.
+Nunca cambiar a "apendicitis complicada/perforada" sin que Danilo lo dicte.
+
 ## Ejemplo anonimizado
 ```
 INFORME ECOGRÁFICO ABDOMINAL

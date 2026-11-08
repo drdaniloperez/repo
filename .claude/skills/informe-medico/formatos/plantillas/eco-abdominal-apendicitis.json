@@ -1,0 +1,24 @@
+{
+ "_uso": "Ejemplo aprobado por Danilo (2026-11-07) para eco abdominal con APENDICITIS AGUDA. Mismo texto en Colina y San José: solo cambia el modelo .docx (logo y membrete) según la institución. Rellenar los [..] con lo dictado o la pantalla; los párrafos normales se dejan tal cual si no dice otra cosa. Uso: informe_desde_modelo.py --modelo <eco abdominal anterior de ESA institución, plantilla corta> --datos <este json completado> --centro colinas|san-jose",
+ "titulo": "INFORME ECOGRÁFICO ABDOMINAL",
+ "px": "[NOMBRE]",
+ "ci": "[CI o menor]",
+ "edad": "[EDAD]",
+ "fecha": "[FECHA]",
+ "introduccion": "Se realiza estudio ecográfico en tiempo real con transductor de 3.5MHz donde se evidencia:",
+ "hallazgos": [
+  ["Hígado:", " tamaño y forma acorde a edad, de medidas LD: [LD] cm y LI: [LI] cm, limites bien definidos, parénquima homogéneo, sin presencia de lesiones focales o expansivas, ecogenicidad conservada, imágenes de vasos y vías biliares intrahepaticas sin alteraciones."],
+  ["Vesícula Biliar:", " de forma piriforme, plenificada, de paredes delgadas, de medidas long: [L] cm transv: [T] cm, sin imagenes patologícas en su interior."],
+  ["Páncreas:", " parénquima homogéneo, sin presencia de lesiones focales o inflamación, de medidas cabeza: [CABEZA] cm cuerpo: [CUERPO] cm cola: [COLA] cm, conducto pancreático no visible, sin líquido peripancreático a su alrededor."],
+  ["Riñón Derecho:", " adecuadamente visible con movilidad respiratoria normal, de medidas long: [L] cm transv: [T] cm, de tamaño dentro del rango normal, parénquima homogéneo, ecogenicidad conservada, [sin presencia de microlitiasis | con microlitiasis], sin presencia de Pielocalectasia conservando la relación médula corteza."],
+  ["Riñón Izquierdo:", " adecuadamente visible con movilidad respiratoria normal, de medidas long: [L] cm transv: [T] cm, de tamaño dentro del rango normal, parénquima homogéneo, ecogenicidad conservada, [sin presencia de microlitiasis | con microlitiasis], sin presencia de Pielocalectasia conservando la relación médula corteza."],
+  ["Bazo:", " parénquima homogéneo, de acuerdo a la edad del paciente, de medidas long: [L] cm  transv: [T] cm, de tamaño normal, sin evidencia de lesiones focales o expansivas."],
+  ["Intestino:", " peristaltismo positivo con disminución  del mismo en FID con presencia de gases, Apendice cecal con edema de pared [GROSOR] mm de medidas aumentadas, doloroso  a la movilización de transductor, escaso líquido periapendicular, grasa periapendicular hiperecogenica, no se observan ganglios linfáticos aumentados de tamaño ni otras masas ocupantes de espacio patológicas, aorta y cava inferior sin alteraciones."],
+  ["Vejiga:", " plenificada, de paredes delgadas, de contenido anecoico, sin imágenes patologícas en su interior."]
+ ],
+ "conclusion": ["Apendicitis aguda.", "[Microlitiasis renal bilateral. — solo si hay microlitiasis]"],
+ "despues_conclusion": ["Se sugiere evaluación por cirugía pediatrica."],
+ "imagenes": ["01_higado", "02_vesicula", "03_pancreas", "04_rinon_derecho", "05_rinon_izquierdo", "06_bazo", "07_apendice_cecal", "08_apendice_cecal_medidas"],
+ "ancho_imagen_cm": 7.9,
+ "columnas": 2
+}
