@@ -18,6 +18,13 @@ Nunca guardar aquí datos de pacientes (el repo es público).
   antes/después 0, centrado, para que no ocupe espacio. Si no hay imagen de firma/sello ni MPPS/CMA/RIF, solo esas dos líneas.
 - La imagen de firma y sello va justo después de la conclusión (la tomará de un eco suyo que enviará).
 
+## Fotos del MediSono P12Exp (Policlínica San José), aprendido 2026-11-08
+- Foto vertical 2252×4000; la pantalla ocupa todo el ancho y se sale por la izquierda. El recorte automático dejó el marco
+  blanco/base del monitor en la mitad. Lo que funcionó: recorte recto por foto (x de 0 al borde derecho de la pantalla,
+  y desde ~10 px sobre la barra azul "POLICLINICA SAN JOSE" hasta justo bajo la fila de miniaturas), y luego igualar.
+- Medidas arriba a la derecha en **mm** ("1 D: 81.88 mm") → cm truncando (8.1). El bazo suele medirse en dos tramos
+  (3 + 4) → sumar para el eje largo. Rótulos en pantalla: H, VB, P, RD, RI, B, "APENDICE CECAL".
+
 ## Flujo que funcionó
 1. Danilo manda el informe (.docx) y las fotos del teléfono → recortar todas, **revisar cada recorte a la
    vista** y corregir con esquinas manuales los que traigan marco o pared (≈ la mitad en fotos de cerca de
@@ -47,10 +54,8 @@ Nunca guardar aquí datos de pacientes (el repo es público).
 - La firma/sello está anclada a la página: si el texto crece, tapa la conclusión → anclarla al párrafo
   previo a "Dr. …".
 - Al editar un .docx suyo, cambiar solo los fragmentos de texto con números para no perder el formato.
-- (2026-11-08) Con `informe_desde_modelo.py` y un modelo de San José: (a) las celdas de la tabla de imágenes miden
-  4680 dxa (8.26 cm) y con 7.9 cm se cortaba la columna de medidas → usar **7.6 cm**; (b) el script no iguala tamaños →
-  rellenar antes todas las imágenes a la misma proporción; (c) dejó las imágenes viejas del modelo en un párrafo
-  después de la tabla → borrar los párrafos con dibujos que hay tras la tabla; (d) la firma/sello flotante dejaba un hueco →
-  pasarla a imagen en línea, centrada, justo encima del bloque de firma compacto.
+- (2026-11-08) `informe_desde_modelo.py` ya corrige solo (probado con un abdominal de San José): imágenes ≤ 7.6 cm
+  (las celdas miden 8.26 cm y a 7.9 se cortaba la columna de medidas), todas igualadas de tamaño, borra las imágenes
+  viejas del modelo (antes quedaban las de < 7 cm de ancho), firma/sello en línea y centrada, bloque de firma compacto.
 - Danilo puede mandar como "modelo" su propio informe ya redactado del paciente: sus hallazgos de texto (p. ej. detalles del
   apéndice, vejiga) mandan; sus medidas suelen ser de plantilla vieja → usar las de pantalla y señalar las diferencias.

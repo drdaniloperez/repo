@@ -158,6 +158,15 @@ Danilo alterna **dos plantillas** en los dos centros y en todo el período (no e
   "San José: todo el texto en negrita"; en la práctica lo decide el modelo que se copie.
 - PDVSA: no hay abdominales en el disco (solo renales); usar `centros.md`.
 
+## Apendicitis + microlitiasis en niño (informe real de San José, 2026-11-08) — literal
+- **Intestino:** peristaltismo positivo con disminución  del mismo en FID con presencia de gases, Apendice cecal con edema de pared [X] mm de medidas aumentadas, doloroso  a la movilización de transductor, escaso líquido periapendicular, grasa periapendicular hiperecogenica, no se observan ganglios linfáticos aumentados de tamaño ni otras masas ocupantes de espacio patológicas, aorta y cava inferior sin alteraciones.
+- **Riñones:** "… ecogenicidad conservada, con microlitiasis, sin presencia de Pielocalectasia conservando la relación médula corteza." (sin medida).
+- **Vejiga:** plenificada, de paredes delgadas, de contenido anecoico, sin imágenes patologícas en su interior.
+- Conclusión: `1) Apendicitis aguda.` / `2) Microlitiasis renal bilateral.` y, sin número, `Se sugiere evaluación por cirugía pediatrica.`
+  (no puso "Resto de estructuras…"). Plantilla B; páncreas, riñones y bazo con "de tamaño dentro del rango normal" / "de tamaño normal".
+- ⚠ Su borrador traía medidas de plantilla (hígado 11 cm, riñones 9.2–9.4 cm) y "vesícula distendida, de paredes engrosadas"
+  con 3.5 × 1.2 cm en pantalla: usar la pantalla y preguntar por la vesícula.
+
 ## Más variantes patológicas → conclusión (ampliado 2026-11-07, disco)
 Frecuencia aproximada en las conclusiones de los 629 abdominales: colitis/edema interasa ≈ 390 · litiasis renal ≈ 350 ·
 hígado graso ≈ 280 · barro biliar ≈ 200 · pielocalectasia/dilatación de cálices ≈ 190 · microlitiasis ≈ 160 · litos vesiculares ≈ 85 ·

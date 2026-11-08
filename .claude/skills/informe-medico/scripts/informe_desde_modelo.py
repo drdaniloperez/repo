@@ -22,7 +22,7 @@ datos.json:
   "conclusion_sin_numero": false,                                   (true → "Conclusión: Hiperplasia prostática grado II.")
   "despues_conclusion": ["Resto de estructuras dentro de limites normales."],   (opcional, texto normal)
   "imagenes": ["recortes/01_x.jpg", "recortes/02_y.jpg"],          (en orden)
-  "ancho_imagen_cm": 8.3, "columnas": 2
+  "ancho_imagen_cm": 7.6, "columnas": 2, "uniformar": true     (máx. 7.6 cm; las imágenes se igualan de tamaño)
 }
 Documentos de texto (resumen de ingreso, egreso, extensión, evaluación, informe médico, listas, cartas):
   python3 informe_desde_modelo.py --modelo "<documento anterior>.docx" --texto nuevo.txt --salida "<nuevo>.docx" [--centro …]
@@ -54,7 +54,8 @@ except ImportError:
     sys.exit("Falta python-docx: pip install python-docx")
 
 EMU_CM = 360000
-UMBRAL_ECO_CM = 7.0  # imágenes más anchas que esto son imágenes del eco; las menores son logo/firma/sello
+UMBRAL_ECO_CM = 4.5  # imágenes del eco: > 4.5 cm de ancho y > 4 cm de alto (logo: bajo; firma/sello: < 2 cm de alto).
+# Antes era 7.0 y quedaban imágenes viejas del modelo de 6.1 cm (San José, 2026-11-08).
 
 
 LOGOS_JSON = Path(__file__).resolve().parent.parent / "formatos" / "logos" / "logos.json"
@@ -105,6 +106,34 @@ def alto_cm(drawing):
 def es_eco(drawing):
     """Imagen del eco: ancha y alta. Los logos son anchos pero bajos; firma/sello son pequeños."""
     return ancho_cm(drawing) > UMBRAL_ECO_CM and alto_cm(drawing) > 4.0
+
+
+def a_en_linea(anc):
+    """Convierte un wp:anchor (imagen flotante) en wp:inline conservando tamaño, id y gráfico."""
+    inl = anc.makeelement(qn("wp:inline"), {k: "0" for k in ("distT", "distB", "distL", "distR")})
+    for tag in ("wp:extent", "wp:effectExtent", "wp:docPr", "wp:cNvGraphicFramePr", "a:graphic"):
+        e = anc.find(qn(tag))
+        if e is not None:
+            inl.append(e)
+    return inl
+
+
+def espaciado(p_el, antes=None, despues=None, sencillo=False):
+    ppr = p_el.find(qn("w:pPr"))
+    if ppr is None:
+        ppr = p_el.makeelement(qn("w:pPr"), {})
+        p_el.insert(0, ppr)
+    sp = ppr.find(qn("w:spacing"))
+    if sp is None:
+        sp = ppr.makeelement(qn("w:spacing"), {})
+        ppr.append(sp)
+    if antes is not None:
+        sp.set(qn("w:before"), str(antes))
+    if despues is not None:
+        sp.set(qn("w:after"), str(despues))
+    if sencillo:
+        sp.set(qn("w:line"), "240")
+        sp.set(qn("w:lineRule"), "auto")
 
 
 def texto_runs(p_el):
@@ -297,33 +326,21 @@ def main():
     for r in pequenos:
         d = r.find(qn("w:drawing"))
         anc = d.find(qn("wp:anchor"))
-        if anc is not None:  # la firma/sello queda pegada justo encima del nombre, no en una posición fija de la página
-            pv = anc.find(qn("wp:positionV"))
-            if pv is not None:
-                pv.set("relativeFrom", "paragraph")
-                off = pv.find(qn("wp:posOffset"))
-                if off is None:
-                    for h in list(pv):
-                        pv.remove(h)
-                    off = pv.makeelement(qn("wp:posOffset"), {})
-                    pv.append(off)
-                off.text = str(int(0.2 * EMU_CM))
+        if anc is not None:  # firma/sello EN LÍNEA (centrada, justo encima del nombre): sin huecos ni solapes (2026-11-08)
+            d.replace(anc, a_en_linea(anc))
         alto_firma = max(alto_firma, alto_cm(d))
         porta.append(r)
-    if alto_firma:  # reservar el alto de la firma
-        ppr = porta.find(qn("w:pPr"))
-        if ppr is None:
-            ppr = porta.makeelement(qn("w:pPr"), {})
-            porta.insert(0, ppr)
-        sp = ppr.find(qn("w:spacing"))
-        if sp is None:
-            sp = ppr.makeelement(qn("w:spacing"), {})
-            ppr.append(sp)
-        sp.set(qn("w:before"), "120")
-        sp.set(qn("w:after"), str(int((alto_firma + 0.3) * 567)))
+    if alto_firma:
+        Paragraph(porta, None).alignment = WD_ALIGN_PARAGRAPH.CENTER
+        espaciado(porta, antes=120, despues=0)
     nuevos.append(porta)
     for el in nuevos:
         firma._p.addprevious(el)
+
+    # 3b) bloque de firma compacto (pedido por Danilo 2026-11-08): interlineado sencillo y sin espacio entre líneas
+    for el in list(body)[idx_seguro(body, firma._p):][:6]:
+        if el.tag == qn("w:p") and (el is firma._p or RX_FIRMA.match(texto_runs(el))):
+            espaciado(el, antes=0, despues=0, sencillo=True)
 
     # 4) quitar imágenes del eco del modelo (en cualquier parte) y párrafos que queden vacíos
     for d in list(body.iter(qn("w:drawing"))):
@@ -341,7 +358,14 @@ def main():
     imagenes = [base_dir / i if not Path(i).is_absolute() and not Path(i).exists() else Path(i) for i in datos.get("imagenes", [])]
     if imagenes:
         cols = int(datos.get("columnas", 2))
-        ancho = float(datos.get("ancho_imagen_cm", 8.3))
+        # celdas de ≈ 8.26 cm (4680 dxa) con márgenes de 0.19 cm: más de 7.6 cm corta el recuadro de medidas
+        ancho = min(float(datos.get("ancho_imagen_cm", 7.6)), 7.6)
+        if datos.get("uniformar", True):  # todas del mismo tamaño, rellenando con el fondo oscuro (sin estirar ni recortar)
+            from agregar_imagenes import uniformar
+            faltan = [r for r in imagenes if not r.exists()]
+            if faltan:
+                sys.exit(f"No existe la imagen: {faltan[0]}")
+            imagenes = [Path(r) for r in uniformar([str(r) for r in imagenes])]
         bloque = [el for el in list(body)[idx_seguro(body, firma._p):] if el.tag == qn("w:p")]
         ultimo = firma._p
         for el in bloque[:6]:
