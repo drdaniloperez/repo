@@ -96,7 +96,7 @@ avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal
 
 ## Revisiones que siempre hay que hacer
 - **Fecha**: si Danilo dice que todos los informes del día son de una fecha (p. ej. la del estudio), usarla en todos;
-  coincide con la fecha de la pantalla (20261106 = 06/11/2026).
+  coincide con la fecha de la pantalla (formato AAAAMMDD en el código del estudio).
 - **Nombre**: el que dicta Danilo manda sobre la grafía de la pantalla; si solo da el apellido, tomar el nombre de la pantalla.
 - Lo que no está en las fotos ni dictado (lito sin medir, ganglio sin foto, medidas de próstata): preguntar en una sola ronda
   y, si quiere avanzar, entregar borrador con [___] y completar cuando responda.

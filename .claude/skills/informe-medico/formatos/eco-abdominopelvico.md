@@ -185,7 +185,7 @@ Lecciones de este informe:
 - **Litiasis**: una medida por riñón; si en pantalla hay varios litos y Danilo dicta una sola cifra, usar la dictada.
 - **Vejiga**: si el equipo muestra "Vol" (cm³), usar ese volumen ("vol. aprox 75.8 cc"); < 100 cc → "medianamente plenificada".
 - **Útero**: 2 medidas (long × AP) de la foto U; ovarios A × B de OD y OI.
-- **Nombre**: usar el que dicta Danilo (la pantalla puede tener otra grafía, p. ej. CORDOBA vs Cordova).
+- **Nombre**: usar el que dicta Danilo (la pantalla puede escribir el apellido con otra grafía, p. ej. B por V).
 - **Maquetación**: con útero y ovarios el texto es largo → espacio después de cada hallazgo 2 pt y sin párrafo vacío antes
   de la conclusión, para que firma, sello y RIF queden en la página 1; imágenes en páginas 2–3.
 - Sin recomendaciones si no las dicta.
