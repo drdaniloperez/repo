@@ -38,6 +38,10 @@ si no lo tengo en la sesión.
   el logo/membrete de la institución. Plantilla: `formatos/plantillas/eco-abdominal-apendicitis.json`; detalle y
   ejemplo en `formatos/eco-abdominal.md` → "Ejemplo APROBADO". 8 imágenes (6 órganos + 2 del apéndice).
 
+- **Eco abdominopélvico de mujer** (aprobado 2026-11-08): hígado graso, vesícula con barro biliar, litiasis renal
+  bilateral y enteritis moderada con abundante gas. Ejemplo y lecciones en `formatos/eco-abdominopelvico.md` →
+  "Ejemplo APROBADO". 10 imágenes (H, VB, P, RD, RI, B, COLITIS, V/U, OD, OI).
+
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
 | Rótulo | Órgano | Medidas que toma en esa foto |
 |---|---|---|
