@@ -16,3 +16,9 @@
   Santana, Marín, Arreaza). Guardias cada 4 días (Arreaza → Pérez → Santana → Marín; 1-nov-2026 = Arreaza),
   consulta fija semanal (lun Pérez, mié Marín, jue Santana, vie Arreaza), martes quirófano electivo sin
   consulta, fines de semana solo guardia. El horario mensual se hace con la skill `horario-cirugia-pediatrica`.
+- 2026-11-08: **Modelos .docx de informes de eco (con firma, sello y registros):** no se guardan en este repo porque es
+  público, y las sesiones en la nube empiezan de cero. Al pedir un eco, si en la sesión no hay modelo del centro
+  (Colina o San José), pedirle a Danilo un eco anterior suyo en Word de ese centro **al inicio**, antes de armar el informe.
+  Ya los envió una vez (Colina y San José, eco abdominal 2026) y funcionaron con `informe_desde_modelo.py`.
+  Si algún día hace **privado** el repositorio, guardar un modelo por centro en
+  `.claude/skills/informe-medico/formatos/modelos/` para no pedirlos más (pendiente de que él decida).

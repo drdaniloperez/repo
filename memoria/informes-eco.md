@@ -34,6 +34,8 @@ la laptop (≈ la mitad trae marco o pared → esquinas manuales). Pedirle un ec
 si no lo tengo en la sesión.
 
 ## Flujo que funcionó
+0. Si no tengo en la sesión el modelo .docx del centro (Colina, San José…), pedírselo **al empezar**, junto con las fotos
+   (los modelos no se guardan en el repo público; ver `memoria/aprendizajes.md`).
 1. Danilo manda el informe (.docx) y las fotos del teléfono → recortar todas, **revisar cada recorte a la
    vista** y corregir con esquinas manuales los que traigan marco o pared (≈ la mitad en fotos de cerca de
    la laptop Mindray).
