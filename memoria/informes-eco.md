@@ -47,3 +47,10 @@ Nunca guardar aquí datos de pacientes (el repo es público).
 - La firma/sello está anclada a la página: si el texto crece, tapa la conclusión → anclarla al párrafo
   previo a "Dr. …".
 - Al editar un .docx suyo, cambiar solo los fragmentos de texto con números para no perder el formato.
+- (2026-11-08) Con `informe_desde_modelo.py` y un modelo de San José: (a) las celdas de la tabla de imágenes miden
+  4680 dxa (8.26 cm) y con 7.9 cm se cortaba la columna de medidas → usar **7.6 cm**; (b) el script no iguala tamaños →
+  rellenar antes todas las imágenes a la misma proporción; (c) dejó las imágenes viejas del modelo en un párrafo
+  después de la tabla → borrar los párrafos con dibujos que hay tras la tabla; (d) la firma/sello flotante dejaba un hueco →
+  pasarla a imagen en línea, centrada, justo encima del bloque de firma compacto.
+- Danilo puede mandar como "modelo" su propio informe ya redactado del paciente: sus hallazgos de texto (p. ej. detalles del
+  apéndice, vejiga) mandan; sus medidas suelen ser de plantilla vieja → usar las de pantalla y señalar las diferencias.
