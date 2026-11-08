@@ -13,6 +13,11 @@ Nunca guardar aquí datos de pacientes (el repo es público).
 - Orden abdominal: hígado → vesícula → páncreas → riñón derecho → riñón izquierdo → bazo → intestino
   (colitis) → vejiga (→ útero/ovarios o próstata).
 
+## Bloque de firma (pedido por Danilo el 2026-11-08)
+- "Dr. Danilo Pérez T." / "CIRUJANO PEDIATRA-ECOGRAFISTA" **pegadito**: interlineado sencillo, espacio
+  antes/después 0, centrado, para que no ocupe espacio. Si no hay imagen de firma/sello ni MPPS/CMA/RIF, solo esas dos líneas.
+- La imagen de firma y sello va justo después de la conclusión (la tomará de un eco suyo que enviará).
+
 ## Flujo que funcionó
 1. Danilo manda el informe (.docx) y las fotos del teléfono → recortar todas, **revisar cada recorte a la
    vista** y corregir con esquinas manuales los que traigan marco o pared (≈ la mitad en fotos de cerca de
