@@ -226,6 +226,7 @@ def main():
     body = doc.element.body
     if a.texto:
         documento_de_texto(doc, Path(a.texto).read_text(encoding="utf-8").splitlines())
+        quitar_vacios_finales(body)
         doc.core_properties.author = "Dr. Danilo Pérez T."
         doc.save(a.salida)
         print(f"Guardado {a.salida}")
@@ -383,6 +384,7 @@ def main():
             par.add_run().add_picture(str(ruta), width=Cm(ancho))
         ultimo.addnext(t._tbl)
 
+    quitar_vacios_finales(body)
     doc.core_properties.author = "Dr. Danilo Pérez T."
     doc.save(a.salida)
     print(f"Guardado {a.salida}")
@@ -587,6 +589,31 @@ def tabla_desde_modelo(tabla, filas):
                 pp.append(run_con_texto(base if base is not None else pp.makeelement(qn("w:r"), {}), parte.strip()))
         t.append(tr)
     return t
+
+
+def quitar_vacios_finales(body):
+    """Borra los párrafos vacíos del final (crean una página en blanco); deja uno mínimo tras una tabla final."""
+    from docx.shared import Pt
+    hijos = [el for el in body if el.tag != qn("w:sectPr")]
+    while len(hijos) > 1 and hijos[-1].tag == qn("w:p") and not texto_runs(hijos[-1]).strip() \
+            and hijos[-1].find(".//" + qn("w:drawing")) is None and hijos[-1].find(".//" + qn("w:br")) is None:
+        if hijos[-2].tag == qn("w:tbl"):  # Word exige un párrafo después de una tabla final: se deja diminuto
+            p = Paragraph(hijos[-1], None)
+            p.paragraph_format.space_before = p.paragraph_format.space_after = Pt(0)
+            for r in p.runs:
+                r.font.size = Pt(1)
+            ppr = hijos[-1].find(qn("w:pPr"))
+            rpr = ppr.find(qn("w:rPr")) if ppr is not None else None
+            if ppr is not None and rpr is None:
+                rpr = ppr.makeelement(qn("w:rPr"), {})
+                ppr.append(rpr)
+            if rpr is not None:
+                for v in rpr.findall(qn("w:sz")):
+                    rpr.remove(v)
+                sz = rpr.makeelement(qn("w:sz"), {qn("w:val"): "2"})
+                rpr.append(sz)
+            break
+        body.remove(hijos.pop())
 
 
 def idx_seguro(body, el):
