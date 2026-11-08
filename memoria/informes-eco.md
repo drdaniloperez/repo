@@ -46,6 +46,22 @@ si no lo tengo en la sesión.
   divertículos, contenido (detritos, litos, coágulos, masas), piso vesical, meatos y uréteres distales, medidas en 3 ejes y
   volumen. Texto y valores de referencia en `formatos/eco-vesical.md` → "Descripción ampliada". Usarla siempre en vesicales.
 
+- **Eco tiroideo** (aprobados 2026-11-08): rótulos LTD / LTI / I (istmo); en la foto de lóbulos los números 1-3 y 4-6
+  van al lóbulo cuyo rótulo está debajo (mirar el rótulo, no el lado de la pantalla), 7 = istmo. En tiroides las medidas van
+  con 2 decimales (no truncar) e istmo en cm. Quistes simples: "Se evidencian quistes simples de paredes delgadas, de
+  contenido anecoico… de bordes definidos, que no deforman anatomía del órgano" + doppler "con flujo doppler positivo con
+  flujo laminar sin alteraciones" → `Tirads 2`. Hashimoto: patrón pseudo nodular difuso, bordes irregulares poco definidos,
+  parénquima heterogéneo hipoecogénico moteado con septos ecogénicos "en manchas de jirafa", doppler con aumento difuso de
+  la vascularidad; ganglios en "Nota:" (dispersos bilaterales < 1 cm, ovalados, hilio graso conservado) → `Tirads 3`.
+  Si pide la imagen de la tiroides "más grande": 14 cm de ancho sola arriba en la página de imágenes, el resto debajo.
+- **Eco de mama** (aprobado 2026-11-08): fotos panorámicas "MAMA DER"/"MAMA IZQ" (4 cuadrantes) + foto de cada lesión con
+  rótulo y hora ("QUISTE MAMARIO HORA 12"). Varios quistes: "se evidencian 2 quistes simples… Quiste 1: a x b cm Quiste 2: …".
+  Ganglio axilar reactivo: ovalado, hilio graso conservado, no doloroso. `Birads 2.` + (si lo pide) "Se sugiere realización
+  de mamografía complementaria." Orden de imágenes: panorámica der → lesión der → panorámica izq → lesión izq.
+- **Varios estudios del mismo paciente** (renal + vesical + prostático): un informe y un PDF por estudio, cada uno con sus
+  fotos. Prostático: medidas y volumen tomados del cálculo del equipo ("Vol 70.94 cm³" → 70.9), IPP de otra foto; grado III
+  si > 60 cm³. Renal con edema: "con edema perirenal leve" en cada riñón ("perineal" dictado = perirrenal).
+
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
 | Rótulo | Órgano | Medidas que toma en esa foto |
 |---|---|---|
@@ -79,6 +95,13 @@ avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal
    "<Paciente> - Eco <tipo> - <fecha>.pdf". Un abdominal con 8 imágenes pesa ≈ 1 MB, apto para WhatsApp.
 
 ## Revisiones que siempre hay que hacer
+- **Fecha**: si Danilo dice que todos los informes del día son de una fecha (p. ej. la del estudio), usarla en todos;
+  coincide con la fecha de la pantalla (20261106 = 06/11/2026).
+- **Nombre**: el que dicta Danilo manda sobre la grafía de la pantalla; si solo da el apellido, tomar el nombre de la pantalla.
+- Lo que no está en las fotos ni dictado (lito sin medir, ganglio sin foto, medidas de próstata): preguntar en una sola ronda
+  y, si quiere avanzar, entregar borrador con [___] y completar cuando responda.
+- Al final de la jornada puede pedir "borrar todo y dejar solo los finales": dejar PDF+Word finales en una carpeta
+  `informes-<fecha>` y reenviar todos los PDF finales juntos.
 - **No añadir "Se sugiere valoración por…" si Danilo no la dicta** (2026-11-08: pidió quitar una de urología
   pediátrica que puse por defecto). Por defecto el cierre es solo "Resto de estructuras dentro de límites normales."
 - Medidas del texto vs. pantalla; diagnóstico coherente con la medida (p. ej. LD 15 cm sí es hepatomegalia).
