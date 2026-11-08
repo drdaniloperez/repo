@@ -43,6 +43,9 @@ Ordena según `formatos/eco-imagenes.md`. Ojo: el equipo de San José mide en mm
 - Mamas: derecha por cuadrantes horarios → axila derecha → izquierda → axila izquierda.
 Las imágenes repetidas o desenfocadas de la misma estructura: conserva la mejor y pregunta si descartar las demás.
 
+Rótulos que usa Danilo en pantalla: H = hígado, VB = vesícula, P = páncreas, RD / RI = riñones, B = bazo,
+COLITIS = intestino con colitis, V = vejiga (tabla completa en `memoria/informes-eco.md`).
+
 ## 3. Extraer las medidas
 - Lee el recuadro de medidas de cada imagen (p. ej. `D1 14.2 cm`, `Dist`, `L/W/H`, `Vol`, `Area`,
   `FHR`, `BPD/HC/AC/FL` con su EG, `PSV/EDV/RI`). Si el texto es pequeño, amplíalo:

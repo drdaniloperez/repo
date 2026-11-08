@@ -38,6 +38,21 @@ si no lo tengo en la sesión.
   el logo/membrete de la institución. Plantilla: `formatos/plantillas/eco-abdominal-apendicitis.json`; detalle y
   ejemplo en `formatos/eco-abdominal.md` → "Ejemplo APROBADO". 8 imágenes (6 órganos + 2 del apéndice).
 
+## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
+| Rótulo | Órgano | Medidas que toma en esa foto |
+|---|---|---|
+| **H** | Hígado | 1 = LD, 2 = LI |
+| **VB** | Vesícula biliar | long × transv |
+| **P** | Páncreas | cabeza, cuerpo, cola (1, 2, 3) |
+| **RD** | Riñón derecho | long × transv (+ litos: medidas extra, p. ej. "3 Distancia 0.55 cm") |
+| **RI** | Riñón izquierdo | long × transv (+ litos) |
+| **B** | Bazo | long × transv (a veces en dos tramos → sumar) |
+| **COLITIS** | Intestino | siempre pone una imagen rotulada "COLITIS" cuando hay colitis → va en Intestino y en la conclusión |
+| **V** | Vejiga | 3 diámetros → volumen = × 0.52 (± grosor de pared) |
+| APENDICE CECAL | Apéndice | grosor/diámetro (San José) |
+Tomar SIEMPRE las medidas de los órganos de estas fotos. Si falta la foto de un órgano del informe (p. ej. no hay "B"),
+avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal salvo que lo dicte.
+
 ## Flujo que funcionó
 0. Si no tengo en la sesión el modelo .docx del centro (Colina, San José…), pedírselo **al empezar**, junto con las fotos
    (los modelos no se guardan en el repo público; ver `memoria/aprendizajes.md`).
