@@ -154,3 +154,38 @@ Conclusión: 1) Hígado graso grado I.
 5) Quiste ovárico simple izquierdo de 2.1 x 1.8 cm.
 Se sugiere valoración por ginecología oportuna.
 ```
+
+## Ejemplo APROBADO por Danilo (2026-11-08, Colina, mujer adulta) — usar como referencia
+Plantilla clásica (introducción "convex de 3.5MHz en múltiples proyecciones…"), 10 imágenes en este orden:
+H → VB → P → RD → RI → B → COLITIS → V/U → OD → OI (rótulos de pelvis: U útero, OD/OI ovarios).
+```
+INFORME ECOGRÁFICO ABDOMINOPELVICO
+| Px: [NOMBRE] | Ci: [CI] | Edad: [EDAD] | Fecha: [FECHA] |
+
+Se realiza estudio ecográfico en tiempo real con transductor convex de 3.5MHz en múltiples proyecciones, donde se evidencian los siguientes hallazgos:
+Hígado: forma, tamaño habitual con patrón granular fino, de medidas LD: 13.5 cm y LI: 6.2 cm, limites bien definidos, parénquima heterogeneo, ecogenicidad aumentada, sin presencia de lesiones focales o expansivas, imágenes de vasos visibles y vías biliares intrahepaticas sin alteraciones.
+Vesícula Biliar: tamaño y forma habitual plenificada de medidas long: 3.8 cm trans: 1.5 cm, de paredes engrosadas, conducto biliar de calibre adecuado, con presencia de barro biliar en su interior.
+Páncreas: de forma y configuración habitual sin liquido peripancreatico, con medidas de cabeza cuerpo y cola 1.9cm x 1.9cm x 2.3cm
+Riñón Derecho: adecuadamente visible con movilidad respiratoria normal, de medidas long: 9.1 cm, transv: 5.3 cm, de tamaño dentro del rango normal, parénquima heterogéneo, ecogenicidad conservada, con presencia de litiasis de 0.5 cm, sin presencia de Pielocalectasia, conservando la relación médula corteza.
+Riñón Izquierdo: adecuadamente visible con movilidad respiratoria normal, de medidas long: 10.9 cm, transv: 5.9 cm, de tamaño dentro del rango normal, parénquima heterogéneo, ecogenicidad conservada, con presencia de litiasis de 0.6 cm, sin presencia de Pielocalectasia, conservando la relación médula corteza.
+Bazo: parénquima homogéneo, de medidas long: 12.6 cm. transv: 5.4 cm, de tamaño normal, sin evidencia de lesiones focales o expansivas ni liquido periesplenico.
+Intestino: peristaltismo conservado, con presencia de abundantes gases, sin evidencia de líquido libre en cavidad, no se observan ganglios linfáticos aumentados de tamaño ni otras masas ocupantes de espacio patológicas, aorta y cava inferior sin alteraciones, con presencia de edema interasa moderado sugestivo de enteritis.
+Vejiga: medianamente plenificada, de paredes delgadas de contenido anecoico, sin imágenes patológicas en su interior vol. aprox 75.8 cc
+Útero y ovarios: se evidencia útero en posición anteversión, de bordes regulares, miometrio heterogéneo, de medidas 5.6cm x 2.5cm, ovario derecho de forma ovalada, bordes bien definidos, de medidas 2.7 cm x 1.9 cm, parénquima heterogéneo. ovario izquierdo de forma ovalada, bordes bien definidos, de medidas 3.1cm x 3.3cm, parénquima heterogéneo.
+Conclusión:	1) Hígado Graso Grado I.
+		2) Vesícula Biliar de paredes engrosadas con barro biliar en su interior.
+		3) Litiasis renal bilateral RD: 0.5 cm, RI: 0.6 cm.
+		4) Enteritis moderada con abundante gas.
+	Resto de estructuras dentro de límites normales.
+```
+Lecciones de este informe:
+- **Enteritis**: en Intestino "con presencia de abundantes gases … con presencia de edema interasa moderado sugestivo de
+  enteritis." → conclusión "Enteritis moderada con abundante gas." (la foto puede venir rotulada "COLITIS": manda lo que dicta).
+- **Vesícula**: barro biliar sin litos → "de paredes engrosadas … con presencia de barro biliar en su interior."
+- **Litiasis**: una medida por riñón; si en pantalla hay varios litos y Danilo dicta una sola cifra, usar la dictada.
+- **Vejiga**: si el equipo muestra "Vol" (cm³), usar ese volumen ("vol. aprox 75.8 cc"); < 100 cc → "medianamente plenificada".
+- **Útero**: 2 medidas (long × AP) de la foto U; ovarios A × B de OD y OI.
+- **Nombre**: usar el que dicta Danilo (la pantalla puede tener otra grafía, p. ej. CORDOBA vs Cordova).
+- **Maquetación**: con útero y ovarios el texto es largo → espacio después de cada hallazgo 2 pt y sin párrafo vacío antes
+  de la conclusión, para que firma, sello y RIF queden en la página 1; imágenes en páginas 2–3.
+- Sin recomendaciones si no las dicta.
