@@ -101,3 +101,16 @@ Se sugiere valoración por urología.
 Dr. … (bloque de firma del modelo)
 ```
 Imágenes del eco: normalmente 2 (vejiga pre miccional y post miccional, con las medidas en pantalla); 1–3 según el caso.
+
+## Descripción ampliada (pedida por Danilo el 2026-11-08: "se ve muy vacío")
+Cuando el vesical va solo, describir los elementos que suele incluir un informe vesical estándar (fuentes docentes:
+Nefrología al Día "Ecografía transabdominal de la vejiga y próstata"; WikEM "Bladder ultrasound"):
+forma, plenificación/capacidad, contornos, paredes (grosor; normal ≤ 3 mm distendida, ≤ 5 mm no distendida;
+> 3 mm a máxima repleción = engrosada/"vejiga de lucha"), trabeculaciones/divertículos, contenido (anecoico, detritos,
+litos con sombra, coágulos, masas), piso vesical (impronta prostática en hombres con HPB), meatos ureterales y uréteres
+distales/ureterocele, jets ureterales al doppler (solo si se hicieron), medidas en 3 ejes, volumen pre y residuo post
+miccional (normal < 50 cc; 50–100 significativo; > 200 cc derivar).
+Ejemplo aprobado (hombre con HPB):
+"Vejiga: de forma ovalada, plenificada, de buena capacidad, de contornos regulares, con paredes engrosadas de forma difusa, lisas, sin evidencia de trabeculaciones ni divertículos, de contenido anecoico con escasos detritos móviles en fondo vesical, sin evidencia de litos, coágulos ni masas o lesiones sólidas intraluminales. Piso vesical con impronta prostática. Meatos ureterales de localización habitual, sin dilatación de uréteres distales ni ureterocele."
+"Medidas: [L] x [T] x [AP] cm." · "Vol. Pre Miccional: [N] cc aprox"
+No inventar el grosor de pared ni el residuo si no están medidos.
