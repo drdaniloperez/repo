@@ -165,7 +165,8 @@ Danilo alterna **dos plantillas** en los dos centros y en todo el período (no e
 - Conclusión: `1) Apendicitis aguda.` / `2) Microlitiasis renal bilateral.` y, sin número, `Se sugiere evaluación por cirugía pediatrica.`
   (no puso "Resto de estructuras…"). Plantilla B; páncreas, riñones y bazo con "de tamaño dentro del rango normal" / "de tamaño normal".
 - ⚠ Su borrador traía medidas de plantilla (hígado 11 cm, riñones 9.2–9.4 cm) y "vesícula distendida, de paredes engrosadas"
-  con 3.5 × 1.2 cm en pantalla: usar la pantalla y preguntar por la vesícula.
+  con 3.5 × 1.2 cm en pantalla: usar la pantalla. Danilo corrigió a "plenificada, de paredes delgadas": **paredes engrosadas
+  solo con barro biliar o litos** (ver tabla de variantes: barro biliar / litiasis vesicular).
 
 ## Más variantes patológicas → conclusión (ampliado 2026-11-07, disco)
 Frecuencia aproximada en las conclusiones de los 629 abdominales: colitis/edema interasa ≈ 390 · litiasis renal ≈ 350 ·

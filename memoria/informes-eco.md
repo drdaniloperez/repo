@@ -42,6 +42,9 @@ Nunca guardar aquí datos de pacientes (el repo es público).
 
 ## Revisiones que siempre hay que hacer
 - Medidas del texto vs. pantalla; diagnóstico coherente con la medida (p. ej. LD 15 cm sí es hepatomegalia).
+- **Vesícula según el diagnóstico** (Danilo, 2026-11-08): por defecto "plenificada, de paredes delgadas". Solo se escribe
+  "de paredes engrosadas" (± distendida) cuando hay **barro biliar o litos** en su interior, y entonces van también en el
+  párrafo y en la conclusión. Si el borrador dice "engrosadas" sin barro ni litos → preguntar o poner la frase normal.
 - Órganos fotografiados que no tienen párrafo (p. ej. vejiga) y rótulos en pantalla que no están en la
   conclusión (p. ej. "COLITIS" → "Colitis moderada").
 - Unidades en la conclusión ("RD: 0.4 cm, RI: 0.5 cm"), numeración seguida.
