@@ -71,6 +71,8 @@ avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal
    "<Paciente> - Eco <tipo> - <fecha>.pdf". Un abdominal con 8 imágenes pesa ≈ 1 MB, apto para WhatsApp.
 
 ## Revisiones que siempre hay que hacer
+- **No añadir "Se sugiere valoración por…" si Danilo no la dicta** (2026-11-08: pidió quitar una de urología
+  pediátrica que puse por defecto). Por defecto el cierre es solo "Resto de estructuras dentro de límites normales."
 - Medidas del texto vs. pantalla; diagnóstico coherente con la medida (p. ej. LD 15 cm sí es hepatomegalia).
 - **Vesícula según el diagnóstico** (Danilo, 2026-11-08): por defecto "plenificada, de paredes delgadas". Solo se escribe
   "de paredes engrosadas" (± distendida) cuando hay **barro biliar o litos** en su interior, y entonces van también en el
