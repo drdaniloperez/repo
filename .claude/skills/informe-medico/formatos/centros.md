@@ -74,3 +74,12 @@ Bloque de firma de estos documentos (texto): "Dr. Danilo Pérez T." / "Ecografis
 | Razetti | 1 | 3.9 × 4.3 cm flotante detrás del texto (programación quirúrgica) |
 Con `informe_desde_modelo.py` el tamaño lo da el modelo; con `armar_informe_docx.py` se usa el de `logos.json`
 (la variante más frecuente). Las listas y guardias de PDVSA no llevan logo.
+
+## Modelos 2026 que Danilo envió (2026-11-08) — diseño, sin datos
+- **Colina, eco abdominal 2026:** logo COLINA verde flotante arriba a la izquierda (5.3 × 2.6 cm), título debajo; misma tabla
+  Px | Ci | Edad | Fecha; plantilla B; firma+sello flotante (5.2 × 2.4 cm) sobre el bloque "Dr. … / CIRUJANO PEDIATRA-ECOGRAFISTA /
+  MPPS… CMA… / RIF…"; 8 imágenes de 7.9 cm en 2 columnas tras la firma. `informe_desde_modelo.py` lo reconoce (huella Colina)
+  y arma bien el informe (probado con datos ficticios).
+- **San José, eco abdominal 2026:** ver la fila de San José arriba.
+- Los .docx modelo NO se guardan en este repo (público: firma, sello, registros y datos de pacientes). Pedírselos a Danilo
+  en cada sesión nueva, o guardarlos en un lugar privado si él lo decide.
