@@ -25,6 +25,14 @@ Nunca guardar aquí datos de pacientes (el repo es público).
 - Medidas arriba a la derecha en **mm** ("1 D: 81.88 mm") → cm truncando (8.1). El bazo suele medirse en dos tramos
   (3 + 4) → sumar para el eje largo. Rótulos en pantalla: H, VB, P, RD, RI, B, "APENDICE CECAL".
 
+## Mismo flujo en todos los centros (Danilo, 2026-11-08)
+El flujo del eco de San José (recorte verificado de cada foto, tabla pantalla → informe, su redacción literal, modelo .docx
+del centro con firma y sello, firma compacta, imágenes iguales, vista previa y PDF) es **el mismo para el Centro de
+Especialidades Médicas Colina** (y los demás centros). Diferencias de Colina: logo COLINA a la izquierda con el título a
+su derecha, equipo Mindray portátil que mide en **cm** ("1 Distancia 5.06 cm", abajo a la derecha) y fotos tomadas de cerca de
+la laptop (≈ la mitad trae marco o pared → esquinas manuales). Pedirle un eco anterior suyo de Colina en .docx como modelo
+si no lo tengo en la sesión.
+
 ## Flujo que funcionó
 1. Danilo manda el informe (.docx) y las fotos del teléfono → recortar todas, **revisar cada recorte a la
    vista** y corregir con esquinas manuales los que traigan marco o pared (≈ la mitad en fotos de cerca de
