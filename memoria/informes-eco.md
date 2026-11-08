@@ -42,6 +42,10 @@ si no lo tengo en la sesión.
   bilateral y enteritis moderada con abundante gas. Ejemplo y lecciones en `formatos/eco-abdominopelvico.md` →
   "Ejemplo APROBADO". 10 imágenes (H, VB, P, RD, RI, B, COLITIS, V/U, OD, OI).
 
+- **Eco vesical con descripción ampliada** (aprobado 2026-11-08): forma, capacidad, contornos, paredes, trabeculaciones/
+  divertículos, contenido (detritos, litos, coágulos, masas), piso vesical, meatos y uréteres distales, medidas en 3 ejes y
+  volumen. Texto y valores de referencia en `formatos/eco-vesical.md` → "Descripción ampliada". Usarla siempre en vesicales.
+
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
 | Rótulo | Órgano | Medidas que toma en esa foto |
 |---|---|---|
