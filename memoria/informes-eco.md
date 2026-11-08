@@ -84,6 +84,10 @@ avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal
 - Volumen vesical = L × T × AP × 0.52; decimales de pantalla a 1 decimal truncando (10.26 → 10.2).
 
 ## Problemas técnicos ya resueltos (no repetir)
+- (2026-11-08) Abdominopélvico con útero y ovarios: el texto es largo y la firma se pasaba a la página 2. Bajar el
+  espacio después de cada párrafo de hallazgos a 2 pt y quitar el párrafo vacío antes de la conclusión: firma y RIF
+  quedan en la página 1. Comprobar con `pdftotext -f 1 -l 1` que "RIF" está en la página 1.
+- Rótulos de pelvis en pantalla: U = útero, OD / OI = ovario derecho / izquierdo (orden de imágenes: … COLITIS → V/U → OD → OI).
 - Imágenes de 8.3 cm en 2 columnas no caben en carta → Word recorta el borde derecho y se pierden las
   medidas. Usar 7.9 cm.
 - La firma/sello está anclada a la página: si el texto crece, tapa la conclusión → anclarla al párrafo
