@@ -361,6 +361,7 @@ def main():
         # celdas de ≈ 8.26 cm (4680 dxa) con márgenes de 0.19 cm: más de 7.6 cm corta el recuadro de medidas
         ancho = min(float(datos.get("ancho_imagen_cm", 7.6)), 7.6)
         if datos.get("uniformar", True):  # todas del mismo tamaño, rellenando con el fondo oscuro (sin estirar ni recortar)
+            sys.path.insert(0, str(Path(__file__).resolve().parent))  # también con python -I (modo aislado)
             from agregar_imagenes import uniformar
             faltan = [r for r in imagenes if not r.exists()]
             if faltan:
