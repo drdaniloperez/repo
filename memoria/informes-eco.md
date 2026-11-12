@@ -62,6 +62,15 @@ si no lo tengo en la sesión.
   fotos. Prostático: medidas y volumen tomados del cálculo del equipo ("Vol 70.94 cm³" → 70.9), IPP de otra foto; grado III
   si > 60 cm³. Renal con edema: "con edema perirenal leve" en cada riñón ("perineal" dictado = perirrenal).
 
+- **Partes blandas: hernia inguinal pediátrica sin imágenes** (2026-11-12, PDVSA): introducción "… examinando región
+  inguinal bilateral:", un párrafo por lado ("Region inguinal derecha:" con Valsalva, protrusión de epiplón por anillo
+  permeable que no alcanza bolsa escrotal y regresa a cavidad; lado sano con anillo no permeable; testículos en bolsa) →
+  `1) Hernia inguinal derecha no complicada.` `2) Región inguinal izquierda sin hallazgos patológicos.` Sin imágenes cabe en
+  una página; dejar un párrafo de separación antes de la firma para que la imagen del sello no toque la conclusión.
+- **Hernia umbilical hallada en un eco abdominal** (2026-11-12): no como conclusión aparte sino en una `Nota:` tras la
+  conclusión: "se explora pared abdominal encontrando hernia umbilical no complicada, con defecto aponeurótico de [X] cm.
+  Se sugiere valoración por cirugía pediátrica."
+
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
 | Rótulo | Órgano | Medidas que toma en esa foto |
 |---|---|---|
