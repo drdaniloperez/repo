@@ -71,6 +71,14 @@ si no lo tengo en la sesión.
   conclusión: "se explora pared abdominal encontrando hernia umbilical no complicada, con defecto aponeurótico de [X] cm.
   Se sugiere valoración por cirugía pediátrica."
 
+- **Tiroides pequeña / tiroiditis crónica atrófica en obeso** (aprobado 2026-11-13): lóbulos "de tamaño disminuido, de
+  bordes regulares poco definidos, parénquima heterogéneo, discretamente hipoecogénico, de ecogenicidad similar a la
+  musculatura pretiroidea… sin quistes ni nódulos"; `Nota:` "glándula sin efecto compresivo, tráquea central, sin extensión
+  retroesternal. Estudio con limitación técnica por abundante tejido adiposo cervical en paciente con obesidad mórbida."
+  (no "hábito corporal"). Conclusión: "Glándula tiroidea de tamaño disminuido con parénquima heterogéneo, hallazgos
+  ecográficos sugestivos de tiroiditis crónica, a correlacionar con perfil tiroideo (TSH, T4 libre, anticuerpos anti-TPO)."
+  + "Sin signos de bocio ni compresión de la vía aérea." (útil si hay apnea del sueño) → `Tirads 1`. Sin longitud no hay volumen.
+
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
 | Rótulo | Órgano | Medidas que toma en esa foto |
 |---|---|---|
