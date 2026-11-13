@@ -104,6 +104,7 @@ avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal
    "<Paciente> - Eco <tipo> - <fecha>.pdf". Un abdominal con 8 imágenes pesa ≈ 1 MB, apto para WhatsApp.
 
 ## Revisiones que siempre hay que hacer
+- **Riñones: parénquima HETEROGÉNEO por defecto** (Danilo, 2026-11-13) en ambos riñones, salvo que dicte otra cosa.
 - **Fecha**: si Danilo dice que todos los informes del día son de una fecha (p. ej. la del estudio), usarla en todos;
   coincide con la fecha de la pantalla (formato AAAAMMDD en el código del estudio).
 - **Nombre**: el que dicta Danilo manda sobre la grafía de la pantalla; si solo da el apellido, tomar el nombre de la pantalla.
