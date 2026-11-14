@@ -88,13 +88,13 @@ si no lo tengo en la sesión.
   Páncreas no visible: "de difícil valoración por interposición de imagen quística en epigastrio y abundante gas intestinal."
   Histerectomía: "Útero y ovarios: no posee por antecedente quirúrgico previo (histerectomía radical)."
 
-## Registro de informes (base de datos), creado 2026-11-14
-- Excel **sencillo** (pedido por Danilo): N°, Paciente, Tipo de estudio ecográfico, Fecha realizado, Centro
-  (solo "Clínicas Colina" o "Policlínica San José") + hoja Resumen con conteos por centro y tipo de estudio.
-- Lo genera/actualiza `scripts/registro_informes.py` (crear / agregar). Tiene nombres de pacientes: **nunca en el repo**.
-- **Registro en el cerebro: `registro/informes-ecograficos.csv`** (n, fecha, centro, estudio; SIN nombres porque el repo es
-  público). **Después de cada informe final, agregar su fila, commit y push.** Los reportes salen de este CSV.
-- Al terminar la jornada, ofrecer agregar los informes nuevos: pedirle el registro actual, `agregar`, recalcular y devolverlo.
+## Base de datos de informes realizados (creada 2026-11-14)
+- En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
+  `policlinica-san-jose.csv` (n, fecha, estudio; SIN nombres porque el repo es público). Danilo dice en cada informe
+  si es Clínicas Colina o San José. **Después de cada informe final, añadir la fila en el CSV de su clínica, commit y push.**
+  Los reportes salen de estos CSV.
+- Excel con nombres "Base de datos de informes realizados.xlsx" (una hoja por clínica + Resumen): lo guarda Danilo;
+  se genera/actualiza con `scripts/registro_informes.py` (crear / agregar). **Nunca en el repo.**
 
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
 | Rótulo | Órgano | Medidas que toma en esa foto |
