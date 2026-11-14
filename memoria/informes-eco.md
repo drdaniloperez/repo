@@ -88,6 +88,14 @@ si no lo tengo en la sesión.
   Páncreas no visible: "de difícil valoración por interposición de imagen quística en epigastrio y abundante gas intestinal."
   Histerectomía: "Útero y ovarios: no posee por antecedente quirúrgico previo (histerectomía radical)."
 
+## Registro de informes (base de datos), creado 2026-11-14
+- Excel "Registro de informes ecograficos.xlsx": hoja Informes (una fila por informe: fecha, centro, paciente, cédula,
+  edad, grupo etario automático, tipo de estudio, diagnósticos, Tirads/Birads, recomendación, n.º de imágenes,
+  observaciones), hoja Estadísticas (fórmulas por centro, tipo, grupo etario y hallazgos) e Instrucciones.
+- Lo genera/actualiza `scripts/registro_informes.py` (crear / agregar). Tiene datos de pacientes: **nunca en el repo**.
+- Al terminar cada informe (o la jornada), ofrecer agregarlo al registro: pedirle a Danilo que suba su registro actual,
+  agregar las filas nuevas con `agregar`, recalcular y devolvérselo.
+
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
 | Rótulo | Órgano | Medidas que toma en esa foto |
 |---|---|---|
