@@ -87,6 +87,8 @@ si no lo tengo en la sesión.
   probable origen pancreático, a descartar origen hepático." + TAC con doble contraste e interconsulta por cirugía.
   Páncreas no visible: "de difícil valoración por interposición de imagen quística en epigastrio y abundante gas intestinal."
   Histerectomía: "Útero y ovarios: no posee por antecedente quirúrgico previo (histerectomía radical)."
+  Condición que limita el estudio (p. ej. Alzheimer severo): `Nota:` tras la recomendación: "paciente con diagnóstico de
+  [X], lo cual dificultó la exploración y la realización del estudio ecográfico." ("Nota:" en negrita, texto normal).
 
 ## Base de datos de informes realizados (creada 2026-11-14)
 - En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
