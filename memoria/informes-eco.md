@@ -92,6 +92,8 @@ si no lo tengo en la sesión.
 - Excel **sencillo** (pedido por Danilo): N°, Paciente, Tipo de estudio ecográfico, Fecha realizado, Centro
   (solo "Clínicas Colina" o "Policlínica San José") + hoja Resumen con conteos por centro y tipo de estudio.
 - Lo genera/actualiza `scripts/registro_informes.py` (crear / agregar). Tiene nombres de pacientes: **nunca en el repo**.
+- **Registro en el cerebro: `registro/informes-ecograficos.csv`** (n, fecha, centro, estudio; SIN nombres porque el repo es
+  público). **Después de cada informe final, agregar su fila, commit y push.** Los reportes salen de este CSV.
 - Al terminar la jornada, ofrecer agregar los informes nuevos: pedirle el registro actual, `agregar`, recalcular y devolverlo.
 
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo

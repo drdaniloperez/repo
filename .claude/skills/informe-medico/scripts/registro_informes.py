@@ -39,7 +39,7 @@ def celda(ws, f, c, v, **kw):
 
 def escribir_fila(ws, fila, n, r):
     celda(ws, fila, 1, n, h="center")
-    celda(ws, fila, 2, r["paciente"])
+    celda(ws, fila, 2, r.get("paciente", ""))
     celda(ws, fila, 3, r["estudio"])
     celda(ws, fila, 4, dt.datetime.strptime(r["fecha"], "%d/%m/%Y").date(), h="center").number_format = "dd/mm/yyyy"
     celda(ws, fila, 5, r["centro"], h="center")
@@ -80,7 +80,7 @@ def crear(datos, salida):
         fila += 1
 
     celda(rs, fila, 1, "Total de informes", font={"bold": True})
-    celda(rs, fila, 2, f"=COUNTA(Informes!$B$2:$B${MAXR})", h="center", font={"bold": True})
+    celda(rs, fila, 2, f"=COUNT(Informes!$D$2:$D${MAXR})", h="center", font={"bold": True})
     fila += 2
     bloque("Centro", CENTROS, "E")
     bloque("Tipo de estudio", ESTUDIOS, "C")
@@ -92,7 +92,7 @@ def crear(datos, salida):
 def agregar(registro, datos):
     wb = load_workbook(registro)
     ws = wb["Informes"]
-    ultima = max((r for r in range(2, MAXR + 1) if ws.cell(r, 2).value), default=1)
+    ultima = max((r for r in range(2, MAXR + 1) if ws.cell(r, 4).value), default=1)
     n = ws.cell(ultima, 1).value or 0
     for i, r in enumerate(datos, 1):
         escribir_fila(ws, ultima + i, int(n) + i, r)
