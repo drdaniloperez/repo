@@ -112,6 +112,8 @@ avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal
    "<Paciente> - Eco <tipo> - <fecha>.pdf". Un abdominal con 8 imágenes pesa ≈ 1 MB, apto para WhatsApp.
 
 ## Revisiones que siempre hay que hacer
+- **Hallazgos uterinos/ováricos** (mioma, quiste, etc.): cerrar con "Se sugiere valoración por ginecología oportuna." (aprobado 2026-11-14).
+  Mioma: la medida va en el párrafo de Útero y ovarios, **no** en la conclusión ("Útero con imagen sugestiva de mioma que eleva fondo vesical.").
 - **Primero vista previa, PDF después** (Danilo, 2026-11-14): enviar solo las páginas como imagen para que corrija;
   el PDF final únicamente cuando diga "sí"/apruebe.
 - **Abdominopélvico**: siempre incluir Vejiga y Útero y ovarios (anexos pélvicos), aunque no los dicte.
