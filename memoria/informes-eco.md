@@ -79,6 +79,15 @@ si no lo tengo en la sesión.
   ecográficos sugestivos de tiroiditis crónica, a correlacionar con perfil tiroideo (TSH, T4 libre, anticuerpos anti-TPO)."
   + "Sin signos de bocio ni compresión de la vía aérea." (útil si hay apnea del sueño) → `Tirads 1`. Sin longitud no hay volumen.
 
+- **Coherencia del párrafo Intestino** (Danilo, 2026-11-14): si hay una masa o imagen quística abdominal, NO escribir
+  "ni otras masas ocupantes de espacio patológicas"; poner "con presencia de imagen tipo quística en [región] de probable
+  origen [X] ya descrita". Revisar siempre que las frases normales de plantilla no contradigan los hallazgos.
+- **Quiste de epigastrio** (2026-11-14): párrafo propio "Epigastrio:" (forma, paredes finas, anecoico, refuerzo posterior,
+  indoloro, medidas, relación con hígado) y conclusión "Imagen quística de paredes finas en epigastrio de a x b x c cm, de
+  probable origen pancreático, a descartar origen hepático." + TAC con doble contraste e interconsulta por cirugía.
+  Páncreas no visible: "de difícil valoración por interposición de imagen quística en epigastrio y abundante gas intestinal."
+  Histerectomía: "Útero y ovarios: no posee por antecedente quirúrgico previo (histerectomía radical)."
+
 ## Rótulos en la pantalla (dictado por Danilo el 2026-11-08) — identificar cada foto por su rótulo
 | Rótulo | Órgano | Medidas que toma en esa foto |
 |---|---|---|
