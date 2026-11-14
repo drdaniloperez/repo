@@ -112,6 +112,11 @@ avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal
    "<Paciente> - Eco <tipo> - <fecha>.pdf". Un abdominal con 8 imágenes pesa ≈ 1 MB, apto para WhatsApp.
 
 ## Revisiones que siempre hay que hacer
+- **Primero vista previa, PDF después** (Danilo, 2026-11-14): enviar solo las páginas como imagen para que corrija;
+  el PDF final únicamente cuando diga "sí"/apruebe.
+- **Abdominopélvico**: siempre incluir Vejiga y Útero y ovarios (anexos pélvicos), aunque no los dicte.
+- Colina tiene **dos equipos**: la laptop Mindray (C5-2s) y un **Mindray Consona N9** (SC5-1N, pantalla gris oscura,
+  medidas en recuadro abajo a la derecha, en cm). En el mismo estudio pueden venir fotos de ambos.
 - **Riñones: parénquima HETEROGÉNEO por defecto** (Danilo, 2026-11-13) en ambos riñones, salvo que dicte otra cosa.
 - **Fecha**: si Danilo dice que todos los informes del día son de una fecha (p. ej. la del estudio), usarla en todos;
   coincide con la fecha de la pantalla (formato AAAAMMDD en el código del estudio).
