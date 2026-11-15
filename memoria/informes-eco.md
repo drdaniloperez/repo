@@ -131,6 +131,12 @@ eco abdominal + resumen de ingreso, aunque solo mencione uno. Ambos con la fecha
 4. Después de operarlo puede pedir el **informe de extensión** (`formatos/extension-hospitalizacion.md`): armarlo sobre el resumen
    de ingreso aprobado (mismo membrete, logo DP y firma) con `--texto`; **sin "Fecha de egreso"**; examen = signos vitales +
    abdomen somero + "Nota de cura:"; firma en línea (inline) antes de "_____" para que no tape el nombre.
+   Aprobado 2026-11-15: IDX "POI de apendicectomía abierta por apendicitis aguda."; nota de cura "previa asepsia y antisepsia
+   con solución de yodopovidona … herida sin signos de flogosis y puntos de sutura indemnes, se seca y se cubre con apósitos
+   estériles."; "En vista de paciente con tolerancia de vía oral apenas a líquidos y postoperatorio de menos de 24 horas se
+   solicita:" + indicaciones (progresar a dieta blanda y al tolerar, dieta completa / Recibir ATB y analgésico / Cura de herida
+   quirúrgica el día de mañana) y **"Extensión de hospitalización por 24 horas." AL FINAL**. Todo en **una sola hoja**
+   (espacio después 1 pt, interlineado sencillo, margen inferior 1.5 cm, sin párrafos vacíos antes de la firma).
 
 ## Base de datos de informes realizados (creada 2026-11-14)
 - En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
