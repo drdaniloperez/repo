@@ -96,6 +96,37 @@ si no lo tengo en la sesión.
 - Tras generarlo: las líneas de "Amerita" heredan interlineado 0.5 (w:line=120) y se encimán → poner interlineado sencillo;
   la firma/sello anclada tapa "_____"/"Dr. Danilo Pérez T." → espacio antes ≈ alto de la imagen y offset ≈ -0.2 × alto.
 - Signos vitales "estables para la edad" si no los dicta (11 años: Fc 88, Fr 20, Temp 37 c°, SO2 99 %) → afebril e hidratado.
+- Firma del resumen: "Cirujano Pediatra/Ecografista Integral." (en ese orden). Logo "DP" negro a la misma altura que el de
+  COLINA: alto 2.4 cm, posOffset vertical ≈ 2.35 cm desde la página (tocar SOLO ese anclaje, no el de la firma).
+- Al reemplazar texto con python-docx: `r.text = …` solo si el texto está en ese run; si se asigna en todos, se borran los
+  logos y la firma (los dibujos viven dentro de runs).
+
+## PROCEDIMIENTO: niño con apendicitis aguda (Danilo, 2026-11-15) — usarlo SIEMPRE que diga "niño con apendicitis"
+Se entregan **dos documentos** por paciente (Clínicas Colina, salvo que diga otro centro), ambos con la fecha que indique:
+1. **Resumen de ingreso** idéntico al modelo de Colina, cambiando solo los datos del niño:
+   - Nombre, edad, "escolar Masculino/Femenino de N años", "el día de hoy dd/mm/aaaa", fecha y hora de ingreso (preguntar la hora;
+     la del eco en pantalla orienta), signos vitales normales para la edad (7 años: Fc 95, Fr 22, Temp 37 c°, SO2 99 %; 11 años: 88/20).
+   - Concordancia de género en niñas: hidratada, eupneica, normotérmica, colaboradora, "normoconfigurado femenino".
+   - IDX `1) Abdomen agudo quirúrgico infeccioso:` / `1.1: apendicitis aguda.`; Plan "*. Apendicectomía apico basal o baso apical";
+     Amerita (laboratorios pre operatorios, rx de tórax P-A, evaluación pediátrica pre operatoria, ecosonograma abdominal);
+     "Horas quirúrgicas: 1 hora", "Ayudante: 1 ayudante.", "Hospitalización 24 horas."
+   - Lo más rápido: copiar el .docx del resumen anterior aprobado de la sesión y reemplazar los datos.
+2. **Eco abdominal** con la plantilla de apendicitis (`formatos/plantillas/eco-abdominal-apendicitis.json`), con este Intestino:
+   "peristaltismo positivo con disminución del mismo en FID con presencia de gases, se evidencia apéndice cecal como imagen tubular
+   no compresible, de medidas long: [L] cm diámetro transverso: [D] cm, con paredes engrosadas, grasa periapendicular hiperecogénica,
+   congestión vascular local e íleo local, con escaso líquido inflamatorio periapendicular, doloroso a la movilización de
+   transductor, no se observan ganglios linfáticos aumentados de tamaño ni otras masas ocupantes de espacio patológicas, aorta y
+   cava inferior sin alteraciones." Conclusión `1) Apendicitis aguda.` + "Se sugiere evaluación por cirugía pediatrica."
+   - Ci: si no tiene cédula → "menor". Riñones con parénquima heterogéneo.
+   - Medidas: las de las fotos (apéndice "apendice cecal": largo × diámetro en mm → cm; "rd" = riñón derecho). En emergencia suele
+     mandar solo 2 fotos: **los órganos sin foto llevan medidas estándar para la edad** (lo pidió así):
+     | Edad | Hígado LD/LI | Vesícula | Páncreas cab/cuer/cola | Riñón (long×transv) | Bazo |
+     |---|---|---|---|---|---|
+     | 7 años | 10.0 / 5.0 | 2.5 × 1.2 | 1.5 / 0.9 / 1.4 | ≈ 6.2 × 3.2 | 7.5 × 3.0 |
+     | 11 años | 11.5 / 5.8 | 3.0 × 1.6 | 1.8 / 1.0 / 1.6 | ≈ 8.0 × 3.9 | 9.0 × 3.5 |
+   - Equipo de emergencia de Colina: tablet en maletín ("GOCFCH065", mide en **mm**, "Largo: 35.31mm"); fotos 2252×4000:
+     recorte recto desde la barra azul superior hasta justo encima de la fila de botones.
+3. Vista previa de ambos → PDF de ambos cuando apruebe → fila en `clinicas-colina.csv` (estudio "Abdominal") + Excel con nombres.
 
 ## Base de datos de informes realizados (creada 2026-11-14)
 - En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
