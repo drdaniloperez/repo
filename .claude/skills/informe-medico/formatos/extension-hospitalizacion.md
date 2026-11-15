@@ -110,3 +110,16 @@ Ecografista Integral/Cirujano Pediatra.
 MPPS: [MPPS] CMA: [CMA]
 RIF.: [RIF]
 ```
+
+## Ejemplo APROBADO por Danilo (2026-11-15): extensión tras apendicectomía abierta — usar SIEMPRE como referencia
+Texto listo (anonimizado): `plantillas/extension-apendicitis.txt` (rellenar los [..]; signos vitales normales para la edad:
+7 años Fc 95 Fr 22, 11 años Fc 88 Fr 20). Cómo armarlo:
+1. Modelo = el resumen de ingreso de Colina aprobado del mismo paciente (logo COLINA + DP alineados, firma
+   "Cirujano Pediatra/Ecografista Integral."): `informe_desde_modelo.py --modelo <resumen>.docx --texto extension.txt --centro colinas`.
+   Si ya hay una extensión aprobada en la sesión, copiarla y reemplazar solo los datos (nombre, edad, sexo, género de
+   llevado/ingresado, signos vitales), con `r.text=…` solo en los runs que contienen el texto.
+2. Ajustes: "EXTENSIÓN" centrado; firma convertida a imagen en línea en un párrafo centrado antes de "_____";
+   **sin "Fecha de egreso"**; "Fecha: dd/mm/aaaa" (fecha del informe) en la línea de "Fecha de ingreso".
+3. **Una sola hoja**: espacio después 1 pt e interlineado sencillo en todos los párrafos, margen inferior 1.5 cm,
+   sin párrafos vacíos antes de la firma. Comprobar `pdfinfo` → Pages: 1 y que estén las 5 imágenes (`pdfimages -list`).
+4. Orden del cierre: indicaciones primero y **"Extensión de hospitalización por 24 horas." de último**.

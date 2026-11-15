@@ -1,0 +1,19 @@
+INFORME MEDICO CIRUGÍA PEDIÁTRICA
+EXTENSIÓN
+Nombre / apellido de paciente: [NOMBRE].	Edad: [EDAD] años
+Médico tratante: Dr. Danilo Pérez.	Solicitud de extension
+Fecha de ingreso: [dd/mm/aa].		Fecha: [dd/mm/aaaa]
+	Motivo de consulta: Dolor abdominal / nauseas / Anorexia.
+Se trata de escolar [masculino|femenino] de [EDAD] años natural y procedente de la localidad quien inicia enfermedad actual el día [FECHA INICIO] cuando presenta dolor abdominal de moderada intensidad de localización en fosa iliaca derecha, como concomitante nauseas y anorexia, por persistir la sintomatología acude a este centro donde se evalúa e ingresa.
+Quién es [llevado|llevada] a mesa operatoria el día [FECHA CIRUGÍA] con diagnóstico de apendicitis aguda, donde se obtiene apéndice cecal de localización laterocecal interna en fase congestiva en toda su extensión, es [llevado|llevada] a sala de recuperación donde permanece [ingresado|ingresada] recibiendo antibioticoterapia y analgesia.
+Examen físico:
+Fc: [FC] lpm  Fr: [FR]rpm.  Temp: 37 c°    SO2: 99%
+Abdomen: blando, deprimible, no doloroso a la palpación profunda, solo doloroso a la palpación periincisional, se evidencia apósito limpio y seco en fosa iliaca derecha que cubre herida quirúrgica.
+Nota de cura: previa asepsia y antisepsia con solución de yodopovidona se realiza cura de herida quirúrgica, evidenciando herida sin signos de flogosis y puntos de sutura indemnes, se seca y se cubre con apósitos estériles.
+IDX.:
+POI de apendicectomía abierta por apendicitis aguda.
+En vista de paciente con tolerancia de vía oral apenas a líquidos y postoperatorio de menos de 24 horas se solicita:
+Progresar a dieta blanda y al tolerar, dieta completa.
+Recibir ATB y analgésico.
+Cura de herida quirúrgica el día de mañana.
+Extensión de hospitalización por 24 horas.
