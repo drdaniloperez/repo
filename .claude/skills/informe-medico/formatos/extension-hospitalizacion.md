@@ -12,7 +12,7 @@ INFORME MEDICO CIRUGÍA PEDIÁTRICA                 ← centrado, negrita + subr
 EXTENSIÓN                                         ← centrado, negrita
 Nombre / apellido de paciente: [NOMBRE]                                   Edad: [EDAD]
 Médico tratante: Dr. Danilo Pérez.                                          Solicitud de extension
-Fecha de ingreso: [dd/mm/aa].                                                     Fecha de egreso: [dd/mm/aaaa]
+Fecha de ingreso: [dd/mm/aa].          ← SIN fecha de egreso (Danilo, 2026-11-15)
 	Motivo de consulta: <síntomas con " / ">.	        ← subrayado
 	
 Se trata de escolar <sexo> de [EDAD] natural y procedente de la localidad quien inicia enfermedad actual [FECHA] cuando presenta … acude a este centro donde se evalúa e ingresa.
@@ -55,7 +55,7 @@ inicio de VO, resultados pendientes). Sin reposo ni tratamiento de egreso.
 
 ## Convenciones
 - Todo en negrita, justificado; mismos subrayados que el informe de egreso.
-- Fecha de egreso = fecha prevista tras la extensión (en el ejemplo, ingreso + 1 día).
+- **NO poner "Fecha de egreso" en la extensión** (Danilo, 2026-11-15); el ejemplo viejo la traía.
 - Abreviaturas: POI, px, VO, FID, RsHs.
 - ⚠ El ejemplo conserva frases del egreso que contradicen la extensión ("evolucionando de manera satisfactoria por lo cual
   se decide su egreso", "Examen físico de egreso:"). Al redactar, cambiar el final del párrafo quirúrgico por
@@ -78,7 +78,7 @@ INFORME MEDICO CIRUGÍA PEDIÁTRICA
 EXTENSIÓN
 Nombre / apellido de paciente: [NOMBRE]                                   Edad: 8 años
 Médico tratante: Dr. Danilo Pérez.                                          Solicitud de extension
-Fecha de ingreso: [FECHA].                                                     Fecha de egreso: [FECHA]
+Fecha de ingreso: [FECHA].
 	Motivo de consulta: Dolor abdominal / nauseas / Anorexia.	
 
 Se trata de escolar masculino de 8 años natural y procedente de la localidad quien inicia enfermedad actual [FECHA] cuando presenta dolor abdominal de moderada a severa intensidad de localización en fosa iliaca derecha, que posteriormente se focaliza en forma difusa, como concomitante nauseas, por persistir la sintomatología acude a este centro donde se evalúa e ingresa.

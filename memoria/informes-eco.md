@@ -128,6 +128,9 @@ eco abdominal + resumen de ingreso, aunque solo mencione uno. Ambos con la fecha
    - Equipo de emergencia de Colina: tablet en maletín ("GOCFCH065", mide en **mm**, "Largo: 35.31mm"); fotos 2252×4000:
      recorte recto desde la barra azul superior hasta justo encima de la fila de botones.
 3. Vista previa de ambos → PDF de ambos cuando apruebe → fila en `clinicas-colina.csv` (estudio "Abdominal") + Excel con nombres.
+4. Después de operarlo puede pedir el **informe de extensión** (`formatos/extension-hospitalizacion.md`): armarlo sobre el resumen
+   de ingreso aprobado (mismo membrete, logo DP y firma) con `--texto`; **sin "Fecha de egreso"**; examen = signos vitales +
+   abdomen somero + "Nota de cura:"; firma en línea (inline) antes de "_____" para que no tape el nombre.
 
 ## Base de datos de informes realizados (creada 2026-11-14)
 - En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
