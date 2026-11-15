@@ -90,6 +90,13 @@ si no lo tengo en la sesión.
   Condición que limita el estudio (p. ej. Alzheimer severo): `Nota:` tras la recomendación: "paciente con diagnóstico de
   [X], lo cual dificultó la exploración y la realización del estudio ecográfico." ("Nota:" en negrita, texto normal).
 
+## Resumen de ingreso (Colina), aprendido 2026-11-15
+- Modelo: un resumen de ingreso suyo de Colina en .docx (logo COLINA + logo personal "DP", firma y sello): pedirlo si no está.
+  Se arma con `informe_desde_modelo.py --modelo <docx> --texto <txt>` (formato en `formatos/resumen-ingreso.md`).
+- Tras generarlo: las líneas de "Amerita" heredan interlineado 0.5 (w:line=120) y se encimán → poner interlineado sencillo;
+  la firma/sello anclada tapa "_____"/"Dr. Danilo Pérez T." → espacio antes ≈ alto de la imagen y offset ≈ -0.2 × alto.
+- Signos vitales "estables para la edad" si no los dicta (11 años: Fc 88, Fr 20, Temp 37 c°, SO2 99 %) → afebril e hidratado.
+
 ## Base de datos de informes realizados (creada 2026-11-14)
 - En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
   `policlinica-san-jose.csv` (n, fecha, estudio; SIN nombres porque el repo es público). Danilo dice en cada informe
