@@ -101,8 +101,9 @@ si no lo tengo en la sesión.
 - Al reemplazar texto con python-docx: `r.text = …` solo si el texto está en ese run; si se asigna en todos, se borran los
   logos y la firma (los dibujos viven dentro de runs).
 
-## PROCEDIMIENTO: niño con apendicitis aguda (Danilo, 2026-11-15) — usarlo SIEMPRE que diga "niño con apendicitis"
-Se entregan **dos documentos** por paciente (Clínicas Colina, salvo que diga otro centro), ambos con la fecha que indique:
+## PROCEDIMIENTO: apendicitis aguda en Clínicas Colina (Danilo, 2026-11-15) — SIEMPRE, sin que lo pida
+**Regla:** a TODO paciente que ingrese con apendicitis aguda en Clínicas Colina se le hacen SIEMPRE los dos documentos:
+eco abdominal + resumen de ingreso, aunque solo mencione uno. Ambos con la fecha que indique:
 1. **Resumen de ingreso** idéntico al modelo de Colina, cambiando solo los datos del niño:
    - Nombre, edad, "escolar Masculino/Femenino de N años", "el día de hoy dd/mm/aaaa", fecha y hora de ingreso (preguntar la hora;
      la del eco en pantalla orienta), signos vitales normales para la edad (7 años: Fc 95, Fr 22, Temp 37 c°, SO2 99 %; 11 años: 88/20).
