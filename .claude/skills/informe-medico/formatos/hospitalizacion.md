@@ -205,3 +205,16 @@ Ecografista Integral/Cirujano Pediatra.
 MPPS: [MPPS] CMA: [CMA]
 RIF.: [RIF]
 ```
+
+## Ejemplo APROBADO por Danilo (2026-11-16, Colina): egreso de POSTOPERADO DE APENDICITIS AGUDA — usar SIEMPRE
+Texto listo (anonimizado): `plantillas/egreso-apendicitis.txt`. Pasos:
+1. Rellenar los [..] con los datos del niño: nombre, edad, sexo y concordancia (llevado/a, hidratado/a, orientado/a,
+   El/La cual), Ci **solo si tiene cédula**, fechas de ingreso (dd/mm/aa) y egreso (dd/mm/aaaa, el día que lo pida), fecha de
+   cirugía, localización y fase del apéndice, signos vitales normales para la edad (7 años Fc 95 Fr 22; 11 años Fc 88 Fr 20).
+2. **Preguntar el antibiótico** (y ajustar el plan si dicta otro); presentación por edad: niños pequeños suspensión/jarabe,
+   ≥ 10–11 años Tab. Reposo aprobado: médico 14 días, físico 2 meses, cuidados maternos 14 días.
+3. Armar sobre el resumen de ingreso aprobado del paciente (o cualquier documento de Colina con logo DP y firma):
+   `informe_desde_modelo.py --modelo <resumen de ingreso>.docx --texto egreso.txt --salida "<Paciente> - Resumen de egreso - <fecha>.docx" --centro colinas`
+4. Acabado: `scripts/egreso_estilo.py "<egreso>.docx"` → firma en línea, negrita solo en lo importante, espacios, y firma
+   pequeña en la esquina inferior derecha de la hoja 1. Queda en 2 hojas (está bien así). Comprobar con `pdfinfo` y mirar la vista previa.
+5. Vista previa → PDF cuando apruebe.

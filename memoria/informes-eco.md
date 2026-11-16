@@ -139,6 +139,9 @@ eco abdominal + resumen de ingreso, aunque solo mencione uno. Ambos con la fecha
    (espacio después 1 pt, interlineado sencillo, margen inferior 1.5 cm, sin párrafos vacíos antes de la firma).
 
 ## Resumen/informe de egreso (Colina), aprobado 2026-11-16
+- **Receta completa para postoperado de apendicitis aguda** (Danilo, 2026-11-16: "guarda para el futuro"): plantilla
+  `formatos/plantillas/egreso-apendicitis.txt` + `scripts/egreso_estilo.py` (acabado) — pasos en `formatos/hospitalizacion.md`
+  → "Ejemplo APROBADO … POSTOPERADO DE APENDICITIS AGUDA". Secuencia del paciente: ingreso → eco → extensión → egreso.
 - Formato en `formatos/hospitalizacion.md` (plantilla A). Se arma con `--texto` sobre el resumen de ingreso aprobado del
   paciente (mismo membrete, logo DP, firma). Fecha de ingreso dd/mm/aa y de egreso dd/mm/aaaa; Ci solo si tiene cédula.
 - Apendicitis aguda: "Quién fue llevado/a a mesa operatoria el día [F] donde se realizó apéndicectomía abierta ápico basal,

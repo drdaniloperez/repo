@@ -1,0 +1,28 @@
+INFORME MEDICO DE EGRESO CIRUGÍA PEDIÁTRICA
+Nombre / apellido de paciente: [NOMBRE].[  Ci: X.XXX.XXX. — solo si tiene cédula]	Edad: [EDAD] años
+Médico tratante: Dr. Danilo Pérez.
+Fecha de ingreso: [dd/mm/aa].	Fecha de egreso: [dd/mm/aaaa]
+	Motivo de consulta: Dolor abdominal / nauseas / Anorexia.
+Se trata de escolar [masculino|femenino] de [EDAD] años natural y procedente de la localidad quien inicia enfermedad actual el día [FECHA INICIO] cuando presenta dolor abdominal de moderada intensidad de localización en fosa iliaca derecha, como concomitante nauseas y anorexia, por persistir la sintomatología acude se evalúa e ingresa.
+Quién fue [llevado|llevada] a mesa operatoria el día [FECHA CIRUGÍA] donde se realizó apéndicectomía abierta ápico basal, obteniendo como hallazgo un apéndice cecal de localización [laterocecal interna|retrocecal|…] en fase [congestiva|flegmonosa|gangrenosa|perforada] en toda su extensión. Luego es [trasladado|trasladada] a recuperación hasta recobrar condiciones generales, se envía material a anatomía  patológica, recibe tratamiento médico a base de antibiótico y analgésico, evolucionando de manera satisfactoria.
+Examen físico de egreso:
+Fc: [FC] lpm  Fr: [FR]rpm.  Temp: 36.8 c°    SO2: 99%
+Se evalúa a paciente en buenas condiciones generales, [hidratado|hidratada], [eupneico|eupneica], afebril al momento de la evaluación, tolerando oxigeno ambiente, posición de libre escogencia, en dieta blanda.
+Piel: [normotérmico|normotérmica], [hidratado|hidratada], turgor y elasticidad conservado, llenado capilar menor de 3 seg, mucosa oral húmeda, rosada, sin alteraciones.
+Cardiopulmonar: tórax simétrico expansible, ruidos respiratorios presentes sin agregados, ruidos cardiacos rítmicos y regulares sin soplo ni galope.
+Abdomen: blando, plano, deprimible, doloroso a la palpación periincisional RsHs (+) se evidencia apósito limpio y seco en FID, que cubre herida quirúrgica, sin signos de flogosis ni de irritación peritoneal.
+Genitales: normoconfigurado [masculino|femenino]; sin alteraciones.
+Extremidades: simétricas, eutróficas, sin edema.
+Neurológico: conciente [orientado|orientada] en tiempo espacio y persona.
+[El|La] cual permanece [hospitalizado|hospitalizada] por [48] h recibiendo ATB y analgésico y en vista de mejoría clínica y para clínica, herida limpia y tolerancia de vía oral se indica su egreso.
+IDX.:
+POM de apéndicectomía abierta por apendicitis aguda en fase [congestiva|…].
+Se indica el siguiente plan médico:
+[ANTIBIÓTICO — PREGUNTAR] [suspensión|Tab.].
+Ibuprofeno [jarabe|Tab.].
+Acetaminofen [jarabe|Tab.].
+Curas diarias con alcohol 70%. Deambulación.
+Biopsia de apéndice cecal.
+Reevaluación por cirugía pediátrica en 12 días para retiro de puntos.
+Ameritando reposo médico por 14 días y reposo físico por 2 meses.
+Reposo por cuidados maternos por 14 días. Favor colaboración.
