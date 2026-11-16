@@ -138,6 +138,22 @@ eco abdominal + resumen de ingreso, aunque solo mencione uno. Ambos con la fecha
    quirúrgica el día de mañana) y **"Extensión de hospitalización por 24 horas." AL FINAL**. Todo en **una sola hoja**
    (espacio después 1 pt, interlineado sencillo, margen inferior 1.5 cm, sin párrafos vacíos antes de la firma).
 
+## Resumen/informe de egreso (Colina), aprobado 2026-11-16
+- Formato en `formatos/hospitalizacion.md` (plantilla A). Se arma con `--texto` sobre el resumen de ingreso aprobado del
+  paciente (mismo membrete, logo DP, firma). Fecha de ingreso dd/mm/aa y de egreso dd/mm/aaaa; Ci solo si tiene cédula.
+- Apendicitis aguda: "Quién fue llevado/a a mesa operatoria el día [F] donde se realizó apéndicectomía abierta ápico basal,
+  obteniendo como hallazgo un apéndice cecal de localización [X] en fase [Y]…"; "El/La cual permanece hospitalizado/a por 48 h
+  recibiendo ATB y analgésico…"; IDX "POM de apéndicectomía abierta por apendicitis aguda en fase [Y]."
+- Encabezado del plan: **"Se indica el siguiente plan médico:"** (no "Solicitando el siguiente tratamiento médico:").
+  Plan pedido para una niña: Ampicilina/sulbactam suspensión, Ibuprofeno jarabe, Acetaminofen jarabe, "Curas diarias con
+  alcohol 70%. Deambulación.", Biopsia de apéndice cecal, "Reevaluación por cirugía pediátrica en 12 días para retiro de
+  puntos.", "Ameritando reposo médico por 14 días y reposo físico por 2 meses." + "Reposo por cuidados maternos por 14 días.
+  Favor colaboración." **Preguntar el antibiótico** (no asumir trimetoprim/sulfametoxazol).
+- **Estilo que le gustó** (no todo pegado ni todo en negrita; 2 hojas está bien): negrita solo en datos del paciente,
+  signos vitales, diagnóstico del IDX y títulos de sección (subrayados) + rótulos del examen (Piel:, Abdomen:…); el resto
+  normal. Espacio después 2 pt, interlineado 1.15, 6–8 pt antes de cada sección y tras los párrafos narrativos, 18 pt
+  antes de la firma; cada dato en su línea (no juntar líneas para que quepa en una hoja).
+
 ## Base de datos de informes realizados (creada 2026-11-14)
 - En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
   `policlinica-san-jose.csv` (n, fecha, estudio; SIN nombres porque el repo es público). Danilo dice en cada informe
