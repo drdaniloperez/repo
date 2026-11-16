@@ -153,6 +153,10 @@ eco abdominal + resumen de ingreso, aunque solo mencione uno. Ambos con la fecha
   signos vitales, diagnóstico del IDX y títulos de sección (subrayados) + rótulos del examen (Piel:, Abdomen:…); el resto
   normal. Espacio después 2 pt, interlineado 1.15, 6–8 pt antes de cada sección y tras los párrafos narrativos, 18 pt
   antes de la firma; cada dato en su línea (no juntar líneas para que quepa en una hoja).
+- **Documentos de 2 hojas: firma y sello completos (con rúbrica) pequeños (~4.2 cm) en la esquina inferior derecha de la
+  hoja 1**, "para que se vea que firmé ambas hojas" (aprobado 2026-11-16). Imagen = la firma del modelo, ampliada ×4 con
+  Lanczos + enfoque suave para buena calidad; anclada a la página (x = ancho − 1.3 cm − w, y = alto − 0.6 cm − h) en el
+  párrafo del título, así solo sale en la hoja 1.
 
 ## Base de datos de informes realizados (creada 2026-11-14)
 - En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
