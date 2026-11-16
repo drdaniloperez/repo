@@ -161,6 +161,11 @@ eco abdominal + resumen de ingreso, aunque solo mencione uno. Ambos con la fecha
   Lanczos + enfoque suave para buena calidad; anclada a la página (x = ancho − 1.3 cm − w, y = alto − 0.6 cm − h) en el
   párrafo del título, así solo sale en la hoja 1.
 
+## Base de datos de pacientes operados (Clínicas Colina, creada 2026-11-16)
+- Carpeta **`base-de-datos-pacientes-operados/`** → `clinicas-colina.csv` (sin nombres). Al terminar el egreso de cada
+  operado en Colina: añadir fila (fechas de ingreso/cirugía/egreso, edad, sexo, diagnóstico, procedimiento, hallazgo, días),
+  commit y push; y actualizar el Excel con nombres que guarda Danilo (nunca en el repo).
+
 ## Base de datos de informes realizados (creada 2026-11-14)
 - En el cerebro: carpeta **`base-de-datos-de-informes-realizados/`**, un CSV por clínica: `clinicas-colina.csv` y
   `policlinica-san-jose.csv` (n, fecha, estudio; SIN nombres porque el repo es público). Danilo dice en cada informe
