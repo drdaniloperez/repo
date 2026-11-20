@@ -79,6 +79,10 @@ si no lo tengo en la sesión.
   ecográficos sugestivos de tiroiditis crónica, a correlacionar con perfil tiroideo (TSH, T4 libre, anticuerpos anti-TPO)."
   + "Sin signos de bocio ni compresión de la vía aérea." (útil si hay apnea del sueño) → `Tirads 1`. Sin longitud no hay volumen.
 
+- **ITU alta pediátrica** (aprobado 2026-11-20, San José, niña de 8 años): microlitiasis y edema perirrenal en cada riñón;
+  vejiga "de paredes ligeramente engrosadas de 0.3 cm" (pared ~3 mm). Conclusión `1) Microlitiasis renal bilateral.`
+  `2) Edema perirenal bilateral.` `3) Vejiga de paredes ligeramente engrosadas.` y debajo, en UNA línea:
+  "Hallazgos sugestivos de ITU alta, se sugiere valoración pediátrica."
 - **Coherencia del párrafo Intestino** (Danilo, 2026-11-14): si hay una masa o imagen quística abdominal, NO escribir
   "ni otras masas ocupantes de espacio patológicas"; poner "con presencia de imagen tipo quística en [región] de probable
   origen [X] ya descrita". Revisar siempre que las frases normales de plantilla no contradigan los hallazgos.
