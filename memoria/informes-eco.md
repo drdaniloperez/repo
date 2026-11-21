@@ -115,6 +115,11 @@ si no lo tengo en la sesión.
     conservando la relación médula corteza, [con presencia de litiasis de X cm en seno renal con sombra acústica posterior], sin
     presencia de Pielocalectasia, uréter proximal no dilatado, sin líquido perirrenal." (énfasis renal: ambos riñones; hepático:
     solo el hígado; hepatorrenal: ambos).
+- **Partes blandas: quiste epidermoide** (aprobado 2026-11-21, Colina): "Región [zona]: piel sin alteraciones con ligero aumento
+  de volumen, tejido celular subcutáneo donde se evidencia quiste hipoecogénico heterogéneo de forma ovalada, de bordes regulares
+  bien definidos, semimóvil, no doloroso, con focos de detritos en su interior, de medidas [a] x [b] cm, sin relación con planos
+  profundos, sugestivo de quiste epidermoide." → `1) Quiste epidermoide de [a] x [b] cm en región [zona].` Con UNA sola
+  imagen: va sola, centrada, de 12 cm, separada 16 pt de la firma (todo en 1 página).
 - **Coherencia del párrafo Intestino** (Danilo, 2026-11-14): si hay una masa o imagen quística abdominal, NO escribir
   "ni otras masas ocupantes de espacio patológicas"; poner "con presencia de imagen tipo quística en [región] de probable
   origen [X] ya descrita". Revisar siempre que las frases normales de plantilla no contradigan los hallazgos.
