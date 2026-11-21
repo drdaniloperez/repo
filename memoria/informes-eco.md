@@ -13,6 +13,10 @@ Nunca guardar aquí datos de pacientes (el repo es público).
 - Orden abdominal: hígado → vesícula → páncreas → riñón derecho → riñón izquierdo → bazo → intestino
   (colitis) → vejiga (→ útero/ovarios o próstata).
 
+- **Calidad de imagen** (pedido por Danilo 2026-11-21): tras recortar, pasar los recortes por
+  `scripts/mejorar_imagenes.py rec/*.jpg --salida hq` (quita el moiré arcoíris de la foto a la pantalla dejando la ecografía en
+  grises, conserva rótulos amarillos/verdes y barras del equipo, reduce ruido, CLAHE y enfoque; guarda PNG) y usar `hq/*.png`.
+
 ## Bloque de firma (pedido por Danilo el 2026-11-08)
 - "Dr. Danilo Pérez T." / "CIRUJANO PEDIATRA-ECOGRAFISTA" **pegadito**: interlineado sencillo, espacio
   antes/después 0, centrado, para que no ocupe espacio. Si no hay imagen de firma/sello ni MPPS/CMA/RIF, solo esas dos líneas.
