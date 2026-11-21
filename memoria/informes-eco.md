@@ -58,6 +58,9 @@ si no lo tengo en la sesión.
   rótulo y hora ("QUISTE MAMARIO HORA 12"). Varios quistes: "se evidencian 2 quistes simples… Quiste 1: a x b cm Quiste 2: …".
   Ganglio axilar reactivo: ovalado, hilio graso conservado, no doloroso. `Birads 2.` + (si lo pide) "Se sugiere realización
   de mamografía complementaria." Orden de imágenes: panorámica der → lesión der → panorámica izq → lesión izq.
+  Normal (aprobado 2026-11-21, San José): plantilla corta de `formatos/eco-mamario.md` + `1) Estudio ecográfico sin hallazgos
+  patológicos.` + **Birads 1** (negrita). Con solo 2 fotos (MAMA DER / MAMA IZQ de 4 cuadrantes) todo cabe en 1 página:
+  **imágenes más grandes (9 cm) y separadas de la firma** → `scripts/agrandar_imagenes.py "<docx>" 9.0`.
 - **Varios estudios del mismo paciente** (renal + vesical + prostático): un informe y un PDF por estudio, cada uno con sus
   fotos. Prostático: medidas y volumen tomados del cálculo del equipo ("Vol 70.94 cm³" → 70.9), IPP de otra foto; grado III
   si > 60 cm³. Renal con edema: "con edema perirenal leve" en cada riñón ("perineal" dictado = perirrenal).
