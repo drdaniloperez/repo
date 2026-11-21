@@ -120,6 +120,8 @@ si no lo tengo en la sesión.
   bien definidos, semimóvil, no doloroso, con focos de detritos en su interior, de medidas [a] x [b] cm, sin relación con planos
   profundos, sugestivo de quiste epidermoide." → `1) Quiste epidermoide de [a] x [b] cm en región [zona].` Con UNA sola
   imagen: va sola, centrada, de 12 cm, separada 16 pt de la firma (todo en 1 página).
+- **Sin vesícula** (Danilo, 2026-11-21): "Vesícula Biliar: no posee por antecedente quirúrgico previo." (sin agregar
+  "colecistectomía"). Cierre que pidió en ese caso: "Resto de estructuras dentro de límites normales al momento de la exploración."
 - **Coherencia del párrafo Intestino** (Danilo, 2026-11-14): si hay una masa o imagen quística abdominal, NO escribir
   "ni otras masas ocupantes de espacio patológicas"; poner "con presencia de imagen tipo quística en [región] de probable
   origen [X] ya descrita". Revisar siempre que las frases normales de plantilla no contradigan los hallazgos.
