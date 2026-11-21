@@ -102,6 +102,17 @@ si no lo tengo en la sesión.
   tubulopatía renal.` + "Resto de estructuras dentro de límites normales." + "Se sugiere valoración por nefrología pediátrica
   oportuna." Defecto umbilical en `Nota:` "se explora pared abdominal donde se evidencia un defecto aponeurótico umbilical.
   Se sugiere valoración por cirugía pediátrica." ("subjetiva" dictado = sugestiva).
+- **Énfasis renal / hepático / hepatorrenal** (aprobado por Danilo 2026-11-21, "excelente"): cuando diga "con énfasis renal",
+  "con énfasis hepático" o "hepatorrenal", describir el órgano(s) con un poco más de detalle, sin exagerar ni inventar medidas:
+  - Hígado: "forma y tamaño habitual, de medidas LD: [X] cm y LI: [Y] cm, de contornos regulares y superficie lisa, bordes bien
+    definidos, parénquima homogéneo de ecogenicidad conservada, sin presencia de lesiones focales o expansivas, vena porta de
+    calibre y trayecto normal, venas suprahepáticas sin alteraciones, vías biliares intra y extrahepáticas no dilatadas, sin
+    líquido perihepático." (adaptar si hay hígado graso u otro hallazgo).
+  - Cada riñón: "adecuadamente visible con movilidad respiratoria normal, de medidas long: [L] cm, transv: [T] cm, de tamaño dentro
+    del rango normal, de forma y contornos regulares, parénquima heterogéneo de grosor conservado, ecogenicidad conservada,
+    conservando la relación médula corteza, [con presencia de litiasis de X cm en seno renal con sombra acústica posterior], sin
+    presencia de Pielocalectasia, uréter proximal no dilatado, sin líquido perirrenal." (énfasis renal: ambos riñones; hepático:
+    solo el hígado; hepatorrenal: ambos).
 - **Coherencia del párrafo Intestino** (Danilo, 2026-11-14): si hay una masa o imagen quística abdominal, NO escribir
   "ni otras masas ocupantes de espacio patológicas"; poner "con presencia de imagen tipo quística en [región] de probable
   origen [X] ya descrita". Revisar siempre que las frases normales de plantilla no contradigan los hallazgos.
