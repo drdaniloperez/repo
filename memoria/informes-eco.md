@@ -236,8 +236,8 @@ avisar y pedirla; no inventar la medida. Sin foto "COLITIS" → intestino normal
 - Colina tiene **dos equipos**: la laptop Mindray (C5-2s) y un **Mindray Consona N9** (SC5-1N, pantalla gris oscura,
   medidas en recuadro abajo a la derecha, en cm). En el mismo estudio pueden venir fotos de ambos.
 - **Riñones: parénquima HETEROGÉNEO por defecto** (Danilo, 2026-11-13) en ambos riñones, salvo que dicte otra cosa.
-- **Fecha**: si Danilo dice que todos los informes del día son de una fecha (p. ej. la del estudio), usarla en todos;
-  coincide con la fecha de la pantalla (formato AAAAMMDD en el código del estudio).
+- **Fecha = la que aparece en el equipo** (Danilo, 2026-11-21): usar SIEMPRE la fecha de la pantalla (San José "20/11/2026 …";
+  Colina en el código del estudio AAAAMMDD-…, p. ej. 20261120-141901 → 20/11/2026), no la de hoy ni preguntarla.
 - **Nombre**: el que dicta Danilo manda sobre la grafía de la pantalla; si solo da el apellido, tomar el nombre de la pantalla.
 - Lo que no está en las fotos ni dictado (lito sin medir, ganglio sin foto, medidas de próstata): preguntar en una sola ronda
   y, si quiere avanzar, entregar borrador con [___] y completar cuando responda.
