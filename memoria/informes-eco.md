@@ -104,6 +104,8 @@ si no lo tengo en la sesión.
   Se sugiere valoración por cirugía pediátrica." ("subjetiva" dictado = sugestiva).
 - **Énfasis renal / hepático / hepatorrenal** (aprobado por Danilo 2026-11-21, "excelente"): cuando diga "con énfasis renal",
   "con énfasis hepático" o "hepatorrenal", describir el órgano(s) con un poco más de detalle, sin exagerar ni inventar medidas:
+  - **Medidas que no están en las fotos** (calibre de la porta, grosor cortical, etc.): no inventarlas por defecto; SOLO
+    cuando Danilo lo pida y el órgano esté normal, usar valores normales para la edad (Danilo, 2026-11-21).
   - Hígado: "forma y tamaño habitual, de medidas LD: [X] cm y LI: [Y] cm, de contornos regulares y superficie lisa, bordes bien
     definidos, parénquima homogéneo de ecogenicidad conservada, sin presencia de lesiones focales o expansivas, vena porta de
     calibre y trayecto normal, venas suprahepáticas sin alteraciones, vías biliares intra y extrahepáticas no dilatadas, sin
