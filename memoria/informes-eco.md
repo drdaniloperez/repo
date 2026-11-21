@@ -70,6 +70,9 @@ si no lo tengo en la sesión.
 - **Hernia umbilical hallada en un eco abdominal** (2026-11-12): no como conclusión aparte sino en una `Nota:` tras la
   conclusión: "se explora pared abdominal encontrando hernia umbilical no complicada, con defecto aponeurótico de [X] cm.
   Se sugiere valoración por cirugía pediátrica."
+  Variante aprobada 2026-11-21 (foto "DEFECTO APONEUROTICO", transductor L742): `Nota:` "se evidencia defecto aponeurótico
+  umbilical de [X] cm, motivo por el cual se sugiere valoración por cirugía pediátrica. Control ecográfico en 3 meses."
+- **Sin foto de vejiga → quitar el párrafo de Vejiga** en el eco abdominal (Danilo, 2026-11-21), no describirla normal.
 
 - **Tiroides pequeña / tiroiditis crónica atrófica en obeso** (aprobado 2026-11-13): lóbulos "de tamaño disminuido, de
   bordes regulares poco definidos, parénquima heterogéneo, discretamente hipoecogénico, de ecogenicidad similar a la
