@@ -83,6 +83,11 @@ si no lo tengo en la sesión.
   vejiga "de paredes ligeramente engrosadas de 0.3 cm" (pared ~3 mm). Conclusión `1) Microlitiasis renal bilateral.`
   `2) Edema perirenal bilateral.` `3) Vejiga de paredes ligeramente engrosadas.` y debajo, en UNA línea:
   "Hallazgos sugestivos de ITU alta, se sugiere valoración pediátrica."
+- **Tubulopatía renal pediátrica** (aprobado 2026-11-21, San José, niño de 10 años): en cada riñón "con microlitiasis, con
+  Pielocalectasia leve"; conclusión `1) Microlitiasis renal bilateral.` `2) Dilatación pielocalicial leve bilateral sugestiva de
+  tubulopatía renal.` + "Resto de estructuras dentro de límites normales." + "Se sugiere valoración por nefrología pediátrica
+  oportuna." Defecto umbilical en `Nota:` "se explora pared abdominal donde se evidencia un defecto aponeurótico umbilical.
+  Se sugiere valoración por cirugía pediátrica." ("subjetiva" dictado = sugestiva).
 - **Coherencia del párrafo Intestino** (Danilo, 2026-11-14): si hay una masa o imagen quística abdominal, NO escribir
   "ni otras masas ocupantes de espacio patológicas"; poner "con presencia de imagen tipo quística en [región] de probable
   origen [X] ya descrita". Revisar siempre que las frases normales de plantilla no contradigan los hallazgos.
