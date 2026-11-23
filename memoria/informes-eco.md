@@ -122,6 +122,12 @@ si no lo tengo en la sesión.
   imagen: va sola, centrada, de 12 cm, separada 16 pt de la firma (todo en 1 página).
 - **Sin vesícula** (Danilo, 2026-11-21): "Vesícula Biliar: no posee por antecedente quirúrgico previo." (sin agregar
   "colecistectomía"). Cierre que pidió en ese caso: "Resto de estructuras dentro de límites normales al momento de la exploración."
+- **Dengue con signos de alarma** (aprobado 2026-11-23, San José, 16 años): lo que importa es hígado y bazo → describirlos con
+  detalle (plantilla de "énfasis hepático") y dejar constancia de lo negativo: sin líquido perihepático ni periesplénico, sin líquido
+  libre, vesícula de paredes delgadas. Hepatomegalia: "forma conservada, de tamaño aumentado para edad y estatura, de medidas LD…"
+  → `Hepatomegalia grado I.` Bazo: "de forma y tamaño normal… de contornos regulares, parénquima homogéneo de ecogenicidad
+  conservada… sin líquido periesplénico." Diarrea: Intestino "con presencia de gases y heces semilíquidas en lumen intestinal".
+  `Nota:` "se sugiere valoración por pediatría." (Hepatomegalia/esplenomegalia: comprobar con LD/bazo de la foto.)
 - **Coherencia del párrafo Intestino** (Danilo, 2026-11-14): si hay una masa o imagen quística abdominal, NO escribir
   "ni otras masas ocupantes de espacio patológicas"; poner "con presencia de imagen tipo quística en [región] de probable
   origen [X] ya descrita". Revisar siempre que las frases normales de plantilla no contradigan los hallazgos.
