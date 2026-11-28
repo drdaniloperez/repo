@@ -135,6 +135,10 @@ si no lo tengo en la sesión.
   límites normales, sin líquido perilesional.` `2) Ganglios inguinales de tamaño adecuado para la edad, sin colecciones líquidas ni
   fístulas para el momento de la evaluación.` + `Nota:` antecedente de fístula perianal, control tras antibioticoterapia con mejoría.
   ("acceso" dictado = absceso.)
+- **Cólico nefrítico / lito en unión ureteropiélica** (aprobado 2026-11-28, San José, adulto): en el riñón "con presencia de
+  litiasis de [X] cm a nivel de unión ureteropiélica que deja sombra acústica posterior, con dilatación pielocalicial moderada";
+  conclusión `Litiasis en unión ureteropiélica izquierda con dilatación pielocalicial moderada.`; `Nota:` "paciente con dolor en
+  flanco izquierdo de [N] día(s) de evolución, con hallazgos sugestivos de cólico nefrítico izquierdo." (sin recomendación si no la dicta).
 - **Coherencia del párrafo Intestino** (Danilo, 2026-11-14): si hay una masa o imagen quística abdominal, NO escribir
   "ni otras masas ocupantes de espacio patológicas"; poner "con presencia de imagen tipo quística en [región] de probable
   origen [X] ya descrita". Revisar siempre que las frases normales de plantilla no contradigan los hallazgos.
